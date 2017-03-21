@@ -1,0 +1,138 @@
+<!doctype html>
+<html style="width:100%;height:100%">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Gauge Test "2017-01-16T23:26:14Z"-"2017-01-17T08:59:59Z"</title>
+        <script src="gauge.min.js"></script>
+    </head>
+    <body style="width:100%;height:100%" onload="animateGauges()">
+        <!-- customized gauge -->
+        <canvas id="gauge1" data-type="radial-gauge" data-value-box="true" data-width="180" data-glow="false" data-height="180" data-units="rpm" data-value="0" data-min-value="0" data-max-value="330" data-major-ticks="0,50,100,150,200,250,300,350" data-minor-ticks="2" data-stroke-ticks="false" data-highlights='[
+            { "from": 0, "to": 70, "color": "rgba(0,255,0,1)" },
+            { "from": 70, "to": 142, "color": "rgba(255,255,0,1)" },
+            { "from": 142, "to": 212, "color": "rgba(255,30,0,1)" },
+            { "from": 212, "to": 259, "color": "rgba(255,0,225,1)" },
+            { "from": 259, "to": 330, "color": "rgba(0,0,255,1)" }
+        ]' data-color-plate="#999" data-color-major-ticks="#000000" data-color-minor-ticks="#000000" data-color-title="#000000" data-color-units="#000000" data-color-numbers="#000000" data-color-needle-start="rgba(240, 128, 128, 1)" data-color-needle-end="rgba(255, 160, 122, .9)" data-animation-duration="1000" data-needle-shadow="false"></canvas>
+        <script>
+
+
+
+    if (!Array.prototype.forEach) {
+        Array.prototype.forEach = function(cb) {
+            var i = 0, s = this.length;
+            for (; i < s; i++) {
+                cb && cb(this[i], i, this);
+            }
+        }
+    }
+
+    document.fonts && document.fonts.forEach(function(font) {
+        font.loaded.then(function() {
+            if (font.family.match(/Led/)) {
+                document.gauges.forEach(function(gauge) {
+                    gauge.update();
+                });
+            }
+        });
+    });
+
+
+
+    var data = [];
+    var counter = 0;
+
+    function reqListener() {
+        var i = 0;
+        var ts = [];
+        var value = [];
+
+        i++;
+
+        //gauge.value = value;
+
+
+
+        //var animationDuration = gauge.animation.duration;
+        //document.getElementById("demo1").innerHTML = animationDuration;
+
+
+        console.log(this.responseText);
+        myJSON = this.responseText;
+
+        var i = 0;
+
+        var myObj = JSON.parse(myJSON);
+
+        data = [];
+
+        for (i = 0; i < myObj.results[0].series[0].values.length ; i++) {
+            ts = (myObj.results[0].series[0].values[i][0]);
+            value = (myObj.results[0].series[0].values[i][1]);
+            data.push([new Date(ts),value]);
+            //gauge.value = value;
+
+
+
+        }
+
+        //var xmin = 0;
+        //var xmax = 0;
+        var path = URL;
+        var title = "Windspeed";
+
+    }
+
+    var myJSON = 0;
+    var URL = '/wwdev/gaugetest/WindData/rpm_latest.json';
+    var oReq = new XMLHttpRequest();
+    var result = [];
+
+    oReq.addEventListener("load", reqListener);
+    oReq.open("GET", URL);
+    oReq.send();
+    var timers = [];
+
+    function animateGauges() {
+        var result = [];
+
+        //setInterval(function() { oReq.addEventListener("load", reqListener);oReq.open("GET", URL);oReq.send(); },10000);
+
+        oReq.addEventListener("load", reqListener);
+        oReq.open("GET", URL);
+        oReq.send();
+
+        document.gauges.forEach(function(gauge) {
+            timers.push(setInterval(function() {
+
+                document.gauges.forEach(function (gauge) {
+
+                    //index = Math.round(Math.random() * data.length);
+
+                    if (counter >= data.length) {
+                        counter = 0;
+                        index = counter;
+                        oReq.open("GET", URL);
+                        oReq.send();
+                    } else {
+                        index = counter;
+                    }
+                    gauge.value = data[index][1];
+                   
+                    counter++;
+                    //gauge.update();
+
+
+
+                });
+
+
+            }, gauge.animation.duration + 100)); //how long to stay on value on gauge
+        });
+
+
+    }
+
+</script>
+    </body>
+</html>
