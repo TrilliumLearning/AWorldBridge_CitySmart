@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "Layer": "0Base-Parcels User Added", "SubClasses": "AcDbEntity:AcDbLine", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "6E", "Text": null }, "geometry": { "type": "LineString", "coordinates": [ [ -152.367146211285785, 57.813645401818341, 0.0 ], [ -152.368201230969731, 57.813645363678972, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Layer": "0Base-Parcels User Added", "SubClasses": "AcDbEntity:AcDbLine", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "72", "Text": null }, "geometry": { "type": "LineString", "coordinates": [ [ -152.367738331662935, 57.813699873501122, 0.0 ], [ -152.367735665907531, 57.813895166218352, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Layer": "0Base-Parcels User Added", "SubClasses": "AcDbEntity:AcDbLine", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "73", "Text": null }, "geometry": { "type": "LineString", "coordinates": [ [ -152.367145765331514, 57.81369929921469, 0.0 ], [ -152.367738331662935, 57.813699873501122, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Layer": "0Base-Parcels User Added", "SubClasses": "AcDbEntity:AcDbLine", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "74", "Text": null }, "geometry": { "type": "LineString", "coordinates": [ [ -152.367628983826251, 57.813590361085382, 0.0 ], [ -152.367146456471886, 57.81359035404234, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Layer": "0Base-Parcels User Added", "SubClasses": "AcDbEntity:AcDbLine", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "75", "Text": null }, "geometry": { "type": "LineString", "coordinates": [ [ -152.367629141404223, 57.813171354365416, 0.0 ], [ -152.367628983826251, 57.813590361085382, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Layer": "0Base-Parcels User Added", "SubClasses": "AcDbEntity:AcDbLine", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "76", "Text": null }, "geometry": { "type": "LineString", "coordinates": [ [ -152.367147408991372, 57.813376495060083, 0.0 ], [ -152.367629064022026, 57.813377147173512, 0.0 ] ] } }
+]
+}

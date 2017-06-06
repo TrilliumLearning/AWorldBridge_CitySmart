@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "Layer": "C-ROAD-ASPH-EDGE-N-SOURCE DOT", "SubClasses": "AcDbEntity:AcDbPolyline", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "6E", "Text": null }, "geometry": { "type": "LineString", "coordinates": [ [ -152.523865100212078, 57.69690682184271, -7.924815849631694 ], [ -152.523865309141542, 57.696907352440007, -7.924815849631694 ] ] } }
+]
+}

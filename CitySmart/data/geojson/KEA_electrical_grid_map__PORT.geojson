@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "Layer": "PORT", "SubClasses": "AcDbEntity:AcDbTrace", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "6E", "Text": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -152.883844091222585, 57.866451234815642 ], [ -152.883830319432121, 57.866456654593833 ], [ -152.883867714027303, 57.866475963996947 ], [ -152.883867714027303, 57.866475963996947 ], [ -152.883844091222585, 57.866451234815642 ] ] ] } }
+]
+}

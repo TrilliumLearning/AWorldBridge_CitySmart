@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "Layer": "0-1Phase", "SubClasses": "AcDbEntity:AcDbBlockReference", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "6E", "Text": null }, "geometry": { "type": "GeometryCollection", "geometries": [ { "type": "LineString", "coordinates": [ [ -159.780810155248417, 59.952067672116279, 0.0 ], [ -159.78086446451249, 59.952065505421238, 0.0 ] ] }, { "type": "LineString", "coordinates": [ [ -159.780866624435419, 59.952079125381474, 0.0 ], [ -159.780812315149205, 59.952081292077722, 0.0 ] ] } ] } }
+]
+}
