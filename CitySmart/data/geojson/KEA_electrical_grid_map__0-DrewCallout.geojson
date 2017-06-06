@@ -1,0 +1,14 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "Layer": "0-DrewCallout", "SubClasses": "AcDbEntity:AcDbText:AcDbText", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "6E", "Text": "#6 WP 3PH" }, "geometry": { "type": "Point", "coordinates": [ -152.518217661748025, 57.748913207745417, 0.0 ] } },
+{ "type": "Feature", "properties": { "Layer": "0-DrewCallout", "SubClasses": "AcDbEntity:AcDbText:AcDbText", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "73", "Text": "FDR 13D 1\/0 CU 3PH" }, "geometry": { "type": "Point", "coordinates": [ -152.517494038940981, 57.749559529932007, 0.0 ] } },
+{ "type": "Feature", "properties": { "Layer": "0-DrewCallout", "SubClasses": "AcDbEntity:AcDbText:AcDbText", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "74", "Text": "B Phase" }, "geometry": { "type": "Point", "coordinates": [ -152.49571997604076, 57.757273961163534, 0.0 ] } },
+{ "type": "Feature", "properties": { "Layer": "0-DrewCallout", "SubClasses": "AcDbEntity:AcDbText:AcDbText", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "75", "Text": "To" }, "geometry": { "type": "Point", "coordinates": [ -152.495718149688201, 57.757317913816777, 0.0 ] } },
+{ "type": "Feature", "properties": { "Layer": "0-DrewCallout", "SubClasses": "AcDbEntity:AcDbText:AcDbText", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "76", "Text": "AB Phase" }, "geometry": { "type": "Point", "coordinates": [ -152.495716323330299, 57.757361866469637, 0.0 ] } },
+{ "type": "Feature", "properties": { "Layer": "0-DrewCallout", "SubClasses": "AcDbEntity:AcDbPolyline", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "77", "Text": null }, "geometry": { "type": "LineString", "coordinates": [ [ -152.510162239177902, 57.745838046959072 ], [ -152.507443669908298, 57.746245778111337 ] ] } },
+{ "type": "Feature", "properties": { "Layer": "0-DrewCallout", "SubClasses": "AcDbEntity:AcDbPolyline", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "78", "Text": null }, "geometry": { "type": "LineString", "coordinates": [ [ -152.585965576940822, 57.716256337147193 ], [ -152.585045065836397, 57.716623314182698 ] ] } }
+]
+}
