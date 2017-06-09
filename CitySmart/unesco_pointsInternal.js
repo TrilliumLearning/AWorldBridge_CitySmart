@@ -42,7 +42,7 @@ var i = 0;
 
 var myArray = [];
 
-url = "http://10.194.40.100/wwdev/CitySmart/Compiled_UNESCO1_noITALY.csv";
+url = "http://10.194.40.100/wwdev/CitySmart/Compiled_UNESCO1.csv";
 
 Papa.parse(url, {
     header: true,

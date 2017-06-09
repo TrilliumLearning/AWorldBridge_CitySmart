@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "Layer": "Bells Flats AK83-5F$0$CPA", "SubClasses": "AcDbEntity:AcDbText:AcDbText", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "6E", "Text": "FOR FULL CP LINE" }, "geometry": { "type": "Point", "coordinates": [ -152.579353186329001, 57.701955893606687, 0.0 ] } },
+{ "type": "Feature", "properties": { "Layer": "Bells Flats AK83-5F$0$CPA", "SubClasses": "AcDbEntity:AcDbText:AcDbText", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "71", "Text": "SEE SHEET 605" }, "geometry": { "type": "Point", "coordinates": [ -152.579350882020123, 57.70201458158251, 0.0 ] } },
+{ "type": "Feature", "properties": { "Layer": "Bells Flats AK83-5F$0$CPA", "SubClasses": "AcDbEntity:AcDbText:AcDbText", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "72", "Text": "ADDED 12-9-96" }, "geometry": { "type": "Point", "coordinates": [ -152.57934830660588, 57.702080174016395, 0.0 ] } },
+{ "type": "Feature", "properties": { "Layer": "Bells Flats AK83-5F$0$CPA", "SubClasses": "AcDbEntity:AcDbText:AcDbText", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "73", "Text": "PART OF CP LINE" }, "geometry": { "type": "Point", "coordinates": [ -152.579345866728829, 57.702142314230997, 0.0 ] } }
+]
+}
