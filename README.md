@@ -1,3 +1,3 @@
 # AWorldBridge-Kodiak-CitySmart
 
-Tiger's Branch
+This is the repository for the 2017 NASA Kodiak-FTAA Europa Challenge submission
