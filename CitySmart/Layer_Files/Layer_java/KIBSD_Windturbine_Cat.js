@@ -12,8 +12,7 @@
 
 
 
-function Ortho3() {requirejs(['./src/WorldWind',
-        './LayerManager'],
+function Ortho3() {requirejs(['./src/WorldWind', './LayerManager'],
     function (ww,
               LayerManager) {
         "use strict";
@@ -627,9 +626,9 @@ function Geo() {
 
 
 
-    requirejs(['./src/WorldWind', './LayerManager',],
+    requirejs(['./src/WorldWind', './LayerManager'],
         function (ww,
-                  LayerManager,) {
+                  LayerManager) {
             "use strict";
 
 
@@ -1080,6 +1079,7 @@ function Geo() {
 
 
 
+
 function Placemark_Creation(Layer_Name) {
 
 
@@ -1176,7 +1176,10 @@ function Placemark_Creation(Layer_Name) {
     }
     console.log("Finished importing " +  Layer_Name);
 
-    latitude_longitude = []
+    latitude_longitude = [];
+    k++;
+    if (k < 4){First_Function()}
+    else {Geo()}
 
 
 }
@@ -1189,32 +1192,31 @@ function Placemark_Creation(Layer_Name) {
 
 
 function parseArray() {
-    for (l = 0; l < myArray.length; l++) {
+//    for (l = 0; l < myArray.length; l++) {
 
-        var New_Array = myArray[l];
+    var New_Array = myArray;
 
-        for (q = 0; q < New_Array.length; q++) {
+    for (q = 0; q < New_Array.length; q++) {
 
-            var latitude_longitude1 = New_Array[q]['Latitude and Longitude(Decimal)'];
-            latitude_longitude.push(latitude_longitude1.replace(/\s+/g, '').split(','));
-            //latitude1 = latitude_longitude[i][0];
-            //longitude1 = latitude_longitude[i][1];
+        var latitude_longitude1 = New_Array[q]['Latitude and Longitude(Decimal)'];
+        latitude_longitude.push(latitude_longitude1.replace(/\s+/g, '').split(','));
+        //latitude1 = latitude_longitude[i][0];
+        //longitude1 = latitude_longitude[i][1];
 
-            //latitude.push(latitude1);
-            //longitude.push(longitude1)
-
-        }
-
-
-        //for (p = 0; p < New_Array.length; p++) {
-
-        var Layer_Name = Point_Layers[l][0];
-        Placemark_Creation(Layer_Name);
-
-        //}
+        //latitude.push(latitude1);
+        //longitude.push(longitude1)
 
     }
-    Geo(wwd);
+
+
+    //for (p = 0; p < New_Array.length; p++) {
+
+    var Layer_Name = Point_Layers[k][0];
+    Placemark_Creation(Layer_Name);
+
+    //}
+
+//    }
 }
 
 
@@ -1233,16 +1235,18 @@ function ParseCSV(url, ReferenceArray) {
 
         complete: function (results) {
 
-            var g = Point_Layers.indexOf(ReferenceArray);
+            //var g = Point_Layers.indexOf(ReferenceArray);
 
-            myArray[g] = (results.data);
+            myArray = (results.data);
 
-
-            if (myArray.length === Point_Layers.length) {
-                parseArray()
-            }
-            else {
-            }
+            parseArray();
+            /*
+             if (myArray.length === Point_Layers.length) {
+             parseArray()
+             }
+             else {
+             }
+             */
             //showMe();
             //console.log(myArray);
         }
@@ -1254,13 +1258,48 @@ function ParseCSV(url, ReferenceArray) {
 
 
 
-/*
-function Reset() {
-    for (s = 6; 0 < wwd.layers.length; s++) {
-        wwd.layers[o].enabled = false
-    }
+
+
+function First_Function () {
+
+    CSV_NAME = Point_Layers[k][1];
+
+    ReferenceArray = Point_Layers[k];
+
+    //url = "http://localhost:63342/Github%20Nasa%20CitySmart%20Repository/AWorldBridge-Kodiak-CitySmart/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+    //var url = "http://localhost:40002/file:///Users/kshin/Desktop/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+    //url = "http://10.194.40.100/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+    url = "http://24.237.235.227/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+    /*
+     for(i = 0; i < myArray.length; i++)
+     {
+     for(key in options[i])
+     {
+     alert(options[i][key])
+     }
+
+     }
+     */
+
+    ParseCSV(url, ReferenceArray);
+
 }
-*/
+
+
+
+
+
+
+
+
+
+/*
+ function Reset() {
+ for (s = 6; 0 < wwd.layers.length; s++) {
+ wwd.layers[o].enabled = false
+ }
+ }
+ */
 
 
 var Point_Layers = [
@@ -1295,7 +1334,7 @@ var myArray = [];
 
 
 requirejs(['./src/WorldWind',
-        './LayerManager',],
+        './LayerManager'],
 
     function (ww,
               LayerManager) {
@@ -1304,67 +1343,45 @@ requirejs(['./src/WorldWind',
 
 
 
+        First_Function ();
 
 
 
 
-
-
-    for (k = 0; k < Point_Layers.length; k++) {
-        CSV_NAME = Point_Layers[k][1];
-
-        ReferenceArray =  Point_Layers[k];
-
-		//url = "http://localhost:63342/WebstormProjects/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
-        //var url = "http://localhost:40002/file:///Users/kshin/Desktop/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
-        //url = "http://10.194.40.100/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
-        url = "http://24.237.235.227/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
         /*
-         for(i = 0; i < myArray.length; i++)
-         {
-         for(key in options[i])
-         {
-         alert(options[i][key])
-         }
+         for (k = 0; k < Point_Layers.length; k++) {
+         CSV_NAME = Point_Layers[k][1];
+
+         ReferenceArray =  Point_Layers[k];
+
+         //url = "http://localhost:63342/WebstormProjects/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+         //var url = "http://localhost:40002/file:///Users/kshin/Desktop/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+         //url = "http://10.194.40.100/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+         url = "http://24.237.235.227/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+
+         //         for(i = 0; i < myArray.length; i++)
+         //        {
+         //        for(key in options[i])
+         //         {
+         //         alert(options[i][key])
+         //         }
+         //
+         //        }
+
+
+         ParseCSV(url, ReferenceArray);
+
 
          }
          */
 
-ParseCSV(url, ReferenceArray);
-
-
-}
 
 
 
 
-
-
-console.log(wwd);
+        console.log(wwd);
 
     });
-
-    /*
-     for (i = 0; i < myArray.length; i++) {
-
-     latitude_longitude1 = myArray[i]['Latitude and Longitude(Decimal)'];
-     latitude_longitude.push(latitude_longitude1.replace(/\s+/g, '').split(','));
-
-     }
-
-     for (i = 0; i < myArray.length; i++) {
-     latitude1 = latitude_longitude[i][0];
-     longitude1 = latitude_longitude[i][1];
-
-     latitude.push(latitude1);
-     longitude.push(longitude1)
-
-     }
-     */
-
-//This function seperates all of the columns into their own arrays and then pushes their data into arrays defined above and outside of the function
-
-
 
 
 
