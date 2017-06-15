@@ -116,7 +116,7 @@ function Placemark_Creation(Layer_Name) {
     latitude_longitude = [];
     k++;
     if (k < 4){First_Function()}
-    else {}
+    else {Geo()}
 
 
 }
@@ -203,10 +203,10 @@ function First_Function () {
 
     ReferenceArray = Point_Layers[k];
 
-    url = "http://localhost:63342/Github%20Nasa%20CitySmart%20Repository/AWorldBridge-Kodiak-CitySmart/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+    //url = "http://localhost:63342/Github%20Nasa%20CitySmart%20Repository/AWorldBridge-Kodiak-CitySmart/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
     //var url = "http://localhost:40002/file:///Users/kshin/Desktop/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
     //url = "http://10.194.40.100/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
-    //url = "http://24.237.235.227/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+    url = "http://24.237.235.227/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
     /*
      for(i = 0; i < myArray.length; i++)
      {
@@ -319,92 +319,5 @@ ParseCSV(url, ReferenceArray);
 console.log(wwd);
 
     });
-
-    /*
-     for (i = 0; i < myArray.length; i++) {
-
-     latitude_longitude1 = myArray[i]['Latitude and Longitude(Decimal)'];
-     latitude_longitude.push(latitude_longitude1.replace(/\s+/g, '').split(','));
-
-     }
-
-     for (i = 0; i < myArray.length; i++) {
-     latitude1 = latitude_longitude[i][0];
-     longitude1 = latitude_longitude[i][1];
-
-     latitude.push(latitude1);
-     longitude.push(longitude1)
-
-     }
-     */
-
-//This function seperates all of the columns into their own arrays and then pushes their data into arrays defined above and outside of the function
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-function parseArray() {
-    for (l = 0; l < myArray.length; l++) {
-
-        var New_Array = myArray[l];
-
-        for (q = 0; q < New_Array.length; q++) {
-
-            var latitude_longitude1 = New_Array[q]['Latitude and Longitude(Decimal)'];
-            latitude_longitude.push(latitude_longitude1.replace(/\s+/g, '').split(','));
-            //latitude1 = latitude_longitude[i][0];
-            //longitude1 = latitude_longitude[i][1];
-
-            //latitude.push(latitude1);
-            //longitude.push(longitude1)
-
-        }
-
-
-        //for (p = 0; p < New_Array.length; p++) {
-
-        var Layer_Name = Point_Layers[l][0];
-        Placemark_Creation(Layer_Name);
-
-        //}
-
-    }
-    Geo(wwd);
-}
-*/
-
-
-
-
-
-
-
 
 
