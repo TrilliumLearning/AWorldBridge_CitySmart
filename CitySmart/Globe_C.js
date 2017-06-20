@@ -41,7 +41,7 @@ var i = 0;
 
 var Globe_myArray1 = [];
 
-//var Globe_url = "http://localhost:63342/WebstormProjects/CitySmart/Layer_Files/Layer_csv/Master.csv";
+//var Globe_url = "http://localhost:63342/Github%20Nasa%20CitySmart%20Repository/AWorldBridge-Kodiak-CitySmart/CitySmart/Layer_Files/Layer_csv/Master.csv";
 //var Globe_url = "http://10.194.40.100/wwdev/CitySmart/Layer_Files/Layer_csv/Master.csv";
 var Globe_url = "http://24.237.235.227/wwdev/CitySmart/Layer_Files/Layer_csv/Master.csv";
 
