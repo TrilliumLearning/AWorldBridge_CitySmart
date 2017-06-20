@@ -1080,7 +1080,7 @@ function Geo() {
 
 
 
-function Placemark_Creation(Layer_Name) {
+function Placemark_Creation(Layer_Name,RGB) {
 
 
     var placemark,
@@ -1114,9 +1114,9 @@ function Placemark_Creation(Layer_Name) {
     canvas.height = size;
 //This is the color of the placeholder and appearance (Most likely)
     var gradient = ctx2d.createRadialGradient(c, c, innerRadius, c, c, outerRadius);
-    gradient.addColorStop(0, 'rgb(187, 0, 255)');
-    gradient.addColorStop(0.5, 'rgb(0, 255, 0)');
-    gradient.addColorStop(1, 'rgb(187, 0, 255)');
+    gradient.addColorStop(0, RGB[0]);
+    gradient.addColorStop(0.5, RGB[1]);
+    gradient.addColorStop(1, RGB[2]);
 
     ctx2d.fillStyle = gradient;
     ctx2d.arc(c, c, outerRadius, 0, 2 * Math.PI, false);
@@ -1211,8 +1211,9 @@ function parseArray() {
 
     //for (p = 0; p < New_Array.length; p++) {
 
+    var RGB = Point_Layers[k][2];
     var Layer_Name = Point_Layers[k][0];
-    Placemark_Creation(Layer_Name);
+    Placemark_Creation(Layer_Name,RGB);
 
     //}
 
@@ -1287,26 +1288,17 @@ function First_Function () {
 
 
 
-
-
-
-
-
-
-/*
- function Reset() {
- for (s = 6; 0 < wwd.layers.length; s++) {
- wwd.layers[o].enabled = false
- }
- }
- */
-
+//RGB Pink 'rgb(255,192,203)'
+//RGB Red 'rgb(255,0,0)'
+//RGB Green 'rgb(0,255,0)'
+//RGB Blue 'rgb(0,0,255)'
+//Light Purple 'rgb(204, 204, 255)'
 
 var Point_Layers = [
-    ["World Bridge","World_Bridge_Sites.csv"],
-    ["KIBSD Turbine","KHS_Wind_Turbine.csv"],
-    ["KEA Turbine","KEA_Wind_Turbine.csv"],
-    ["Bear Valley Golf Course","BVGC.csv"],
+    ["World Bridge","World_Bridge_Sites.csv",['rgb(187,0,255)','rgb(0,255,0)','rgb(187,0,255)']],
+    ["KIBSD Turbine","KHS_Wind_Turbine.csv",['rgb(255,192,203)','rgb(255,0,0)','rgb(255,192,203)']],
+    ["KEA Turbine","KEA_Wind_Turbine.csv",['rgb(204, 204, 255)','rgb(0,0,255)','rgb(204, 204, 255)']],
+    ["Bear Valley Golf Course","BVGC.csv",['rgb(0,0,255)','rgb(255,192,203)','rgb(0,0,255)']]
 
 
 ];
@@ -1341,42 +1333,7 @@ requirejs(['./src/WorldWind',
         "use strict";
 
 
-
-
         First_Function ();
-
-
-
-
-        /*
-         for (k = 0; k < Point_Layers.length; k++) {
-         CSV_NAME = Point_Layers[k][1];
-
-         ReferenceArray =  Point_Layers[k];
-
-         //url = "http://localhost:63342/WebstormProjects/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
-         //var url = "http://localhost:40002/file:///Users/kshin/Desktop/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
-         //url = "http://10.194.40.100/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
-         url = "http://24.237.235.227/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
-
-         //         for(i = 0; i < myArray.length; i++)
-         //        {
-         //        for(key in options[i])
-         //         {
-         //         alert(options[i][key])
-         //         }
-         //
-         //        }
-
-
-         ParseCSV(url, ReferenceArray);
-
-
-         }
-         */
-
-
-
 
 
         console.log(wwd);
@@ -1393,53 +1350,8 @@ requirejs(['./src/WorldWind',
 
 
 
-//
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-function parseArray() {
-    for (l = 0; l < myArray.length; l++) {
-
-        var New_Array = myArray[l];
-
-        for (q = 0; q < New_Array.length; q++) {
-
-            var latitude_longitude1 = New_Array[q]['Latitude and Longitude(Decimal)'];
-            latitude_longitude.push(latitude_longitude1.replace(/\s+/g, '').split(','));
-            //latitude1 = latitude_longitude[i][0];
-            //longitude1 = latitude_longitude[i][1];
-
-            //latitude.push(latitude1);
-            //longitude.push(longitude1)
-
-        }
-
-
-        //for (p = 0; p < New_Array.length; p++) {
-
-        var Layer_Name = Point_Layers[l][0];
-        Placemark_Creation(Layer_Name);
-
-        //}
-
-    }
-    Geo(wwd);
-}
-*/
 
 
 
