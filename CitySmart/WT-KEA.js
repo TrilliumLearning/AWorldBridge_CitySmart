@@ -58,9 +58,9 @@ function Find(Display_Name, Reference_Name) {
 /*
 if (wwd.layers[10].enabled === true) {
     wwd.layers[10].enabled = false}
-    
+
 else {wwd.layers[10].enabled = true}
-    
+
     });
 */
 
