@@ -44,7 +44,9 @@ var Globe_myArray1 = [];
 var url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/Master.csv";
 //var Globe_url = "http://localhost:63342/AWorldBridge_CitySmart/CitySmart/Layer_Files/Layer_csv/Master.csv";
 //var Globe_url = "http://10.194.40.100/wwdev/CitySmart/Layer_Files/Layer_csv/Master.csv";
-//var Globe_url = "http://24.237.235.227/wwdev/CitySmart/Layer_Files/Layer_csv/Master.csv";
+
+var Globe_url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/Master.csv";
+
 
 var Globe_new_list = [];
 
@@ -226,6 +228,3 @@ requirejs(['./src/WorldWind',
         //return wwd;
         console.log(wwd)
     });
-
-
-
