@@ -1,0 +1,78 @@
+body{
+  padding:4em;
+}
+*{
+  box-sizing:border-box;
+}
+
+
+.acc-menu, .acc-menu ul{
+  line-height:1.5;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.acc-menu{
+  margin-left:-1.5em;
+}
+.acc-menu > li{
+  padding-left:1.5em;
+  margin-bottom:0.5em;
+}
+.acc-menu li a{
+  display:block;
+  padding:0.25em;
+  background:rgb(230,230,230);
+  color:#444;
+  text-decoration:none;
+}
+.acc-menu li a:hover{
+  background:rgb(130,130,130);
+}
+.acc-menu > li > a{
+    background:red;
+    color:white;
+    font-weight:bold;
+}
+.acc-menu > li > a:hover{
+  background:darkred;
+}
+.acc-menu input[type="checkbox"] ~ ul li,
+.acc-menu input[type="checkbox"].current:checked ~ ul li{
+  height:0;
+  overflow:hidden;
+  transition:.2s ease-in;
+}
+.acc-menu input[type="checkbox"]:checked ~ ul li,
+.acc-menu input[type="checkbox"].current ~ ul li{
+  height:auto;
+}
+.acc-menu input[type="checkbox"]{
+  display:none;
+}
+.acc-menu label{
+  display:block;
+  float:left;
+  content:"";
+  margin-left:-1.5em;
+  width:1.5em;
+  padding:0.25em;
+  text-align:center;
+  background:red;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+.acc-menu  label:hover{
+  background:darkred;
+}
+.acc-menu  label:before,
+/*This flip-reverses the label */
+.acc-menu input[type="checkbox"]:checked.current  ~ label:before{
+  content:"+";
+}
+.acc-menu input[type="checkbox"]:checked ~ label:before,
+.acc-menu input[type="checkbox"].current  ~ label:before{
+  content:"-";
+}
