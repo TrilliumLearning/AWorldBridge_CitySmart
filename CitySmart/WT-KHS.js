@@ -12,7 +12,7 @@ var KIBSD_Point_Num;
 $(document).ready(function(){
     $("#khsT").click(function(){
 
-function Find(Display_Name, Reference_Name) {
+        function Find(Display_Name, Reference_Name) {
             for (m = 0; m < wwd.layers.length; m++) {
                 if (Display_Name.indexOf(wwd.layers[m].displayName) === 0) {
                     window[Reference_Name] = m;

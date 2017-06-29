@@ -17,7 +17,7 @@ html {
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */ 
+  /* 2 */
 }
 
 /**
@@ -1813,7 +1813,7 @@ select {
 .accordion {
   list-style-type: none;
   background: #efefef;
-  margin-left: 0; 
+  margin-left: 0;
 }
 
 .accordion-item:first-child > :first-child {

@@ -1178,7 +1178,7 @@ function Placemark_Creation(Layer_Name,RGB) {
 
     latitude_longitude = [];
     k++;
-    if (k < 4){First_Function()}
+    if (k < Point_Layers.length){First_Function()}
     else {Geo()}
 
 
@@ -1267,10 +1267,13 @@ function First_Function () {
 
     ReferenceArray = Point_Layers[k];
 
-    //url = "http://localhost:63342/Github%20Nasa%20CitySmart%20Repository/AWorldBridge-Kodiak-CitySmart/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+    var url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+    //url = "http://localhost:63342/AWorldBridge_CitySmart/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
     //var url = "http://localhost:40002/file:///Users/kshin/Desktop/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
     //url = "http://10.194.40.100/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
-    url = "http://24.237.235.227/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+
+    url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+
     /*
      for(i = 0; i < myArray.length; i++)
      {
@@ -1339,25 +1342,3 @@ requirejs(['./src/WorldWind',
         console.log(wwd);
 
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
