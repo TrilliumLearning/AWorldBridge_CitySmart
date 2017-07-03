@@ -1,0 +1,15 @@
+Country,City,Category,Sub Category,Name,Button Reference
+United States of America,Kodiak,Energy,Wind Energy,KHS Wind Turbine,KHS_Turbine
+United States of America,Kodiak,Water,Treatment,Kodiak Water Treatment Plant,Kodiak_Purification
+United States of America,Kodiak,Agriculture,Treatment Areas,Bear Valley Golf Course,Kodiak_Golf_Course
+United States of America,Kodiak,Transportation,Airports,Kodiak Municipal Airport,Kodiak_Municipal
+United States of America,Kodiak,Health Services,Hospitals,Kodiak Hospital,Kodiak_Hospital
+United States of America,Kodiak,Risk Management,Law Enforcement,Kodiak Police Department,Kodiak_Police
+United States of America,Kodiak,Education,A World Bridge,Kodiak High School,Kodiak_High
+United States of America,Fei-Tian,Energy,Wind Energy,Fei-Tian Wind Turbine,Fei-Tian_Wind_Turbine
+United States of America,Fei-Tian,Water,Treatment,Fei-Tian Water Treatment Plant,Fei-Tian_Purification
+United States of America,Fei-Tian,Agriculture,Treatment Areas,Fei-Tian Golf Course,Fei-Tian_Golf_Course
+United States of America,Fei-Tian,Transportation,Airports,Fei-Tian Municipal Airport,Fei-Tian_Purification
+United States of America,Fei-Tian,Health Services,Hospitals,Fei-Tian Hospital,Fei-Tian_Tian
+United States of America,Fei-Tian,Risk Management,Law Enforcement,Fei-Tian Police Department,Fei-Tian_Police_Department
+United States of America,Fei-Tian,Education,A World Bridge,Fei-Tian High School,Fei-Tian_Purification
