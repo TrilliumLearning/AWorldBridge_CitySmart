@@ -68,7 +68,7 @@ body{
   background:darkred;
 }
 .acc-menu  label:before,
-
+/*This flip-reverses the label */
 .acc-menu input[type="checkbox"]:checked.current  ~ label:before{
   content:"+";
 }

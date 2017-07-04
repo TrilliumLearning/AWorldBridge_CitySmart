@@ -225,7 +225,8 @@ textarea {
 
 /**
    * Address `overflow` set to `hidden` in IE 8/9/10/11.
-   */button {
+   */
+button {
   overflow: visible; }
 
 /**
@@ -233,7 +234,8 @@ textarea {
    * All other form control elements do not inherit `text-transform` values.
    * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
    * Correct `select` style inheritance in Firefox.
-   */button,
+   */
+button,
 select {
   text-transform: none; }
 
@@ -243,7 +245,8 @@ select {
    * 2. Correct inability to style clickable `input` types in iOS.
    * 3. Improve usability and consistency of cursor style between image-type
    *    `input` and others.
-   */button,
+   */
+button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -1665,7 +1668,7 @@ select {
     height: auto;
     background-image: none; }
 
-.is-invalid-input:not(:focus)))))))))))))))) {
+.is-invalid-input:not(:focus) {
   background-color: rgba(236, 88, 64, 0.1);
   border-color: #ec5840; }
 
@@ -2186,7 +2189,7 @@ select {
     left: 0;
     -webkit-box-shadow: 0 7px 0 #fefefe, 0 14px 0 #fefefe;
             box-shadow: 0 7px 0 #fefefe, 0 14px 0 #fefefe; }
-  .menu-icon:hover::after::after::after::after::after::after::after::after::after::after::after::after::after::after::after::after {
+  .menu-icon:hover::after {
     background: #cacaca;
     -webkit-box-shadow: 0 7px 0 #cacaca, 0 14px 0 #cacaca;
             box-shadow: 0 7px 0 #cacaca, 0 14px 0 #cacaca; }
@@ -2209,7 +2212,7 @@ select {
     left: 0;
     -webkit-box-shadow: 0 7px 0 #0a0a0a, 0 14px 0 #0a0a0a;
             box-shadow: 0 7px 0 #0a0a0a, 0 14px 0 #0a0a0a; }
-  .menu-icon.dark:hover::after::after::after::after::after::after::after::after::after::after::after::after::after::after::after::after {
+  .menu-icon.dark:hover::after {
     background: #8a8a8a;
     -webkit-box-shadow: 0 7px 0 #8a8a8a, 0 14px 0 #8a8a8a;
             box-shadow: 0 7px 0 #8a8a8a, 0 14px 0 #8a8a8a; }
@@ -3116,7 +3119,7 @@ html.is-reveal-open body {
     background: #2199e8; }
     input:checked ~ .switch-paddle::after {
       left: 2.25rem; }
-  [data-whatinput='mouse'] input:focus ~ .switch-paddle ~ .switch-paddle ~ .switch-paddle ~ .switch-paddle ~ .switch-paddle ~ .switch-paddle ~ .switch-paddle ~ .switch-paddle ~ .switch-paddle ~ .switch-paddle ~ .switch-paddle ~ .switch-paddle ~ .switch-paddle ~ .switch-paddle ~ .switch-paddle ~ .switch-paddle {
+  [data-whatinput='mouse'] input:focus ~ .switch-paddle {
     outline: 0; }
 
 .switch-active, .switch-inactive {
@@ -3348,7 +3351,7 @@ table.hover tr:nth-of-type(even):hover {
     left: 0;
     -webkit-box-shadow: 0 7px 0 #0a0a0a, 0 14px 0 #0a0a0a;
             box-shadow: 0 7px 0 #0a0a0a, 0 14px 0 #0a0a0a; }
-  .menu-icon.dark:hover::after::after::after::after::after::after::after::after::after::after::after::after::after::after::after::after {
+  .menu-icon.dark:hover::after {
     background: #8a8a8a;
     -webkit-box-shadow: 0 7px 0 #8a8a8a, 0 14px 0 #8a8a8a;
             box-shadow: 0 7px 0 #8a8a8a, 0 14px 0 #8a8a8a; }
@@ -3574,3 +3577,5 @@ table.hover tr:nth-of-type(even):hover {
 
 .clearfix::after {
   clear: both; }
+
+/*# sourceMappingURL=foundation.css.map */
