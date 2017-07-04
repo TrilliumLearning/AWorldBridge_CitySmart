@@ -4,14 +4,14 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
     <head>
         <style>
-            .switch, .pg-file-cs-7, .pg-file-cs-1 {
+            .switch, .pg-file-cs-7, .pg-file-cs-1, .pg-file-cs-1 {
             position: relative;
             display: inline-block;
             width: 30px;
             height: 17px;
             }
-            .switch input, .pg-file-cs-7, .pg-file-cs-1 {display:none;}
-            .slider, .pg-file-cs-7, .pg-file-cs-1 {
+            .switch input, .pg-file-cs-7, .pg-file-cs-1, .pg-file-cs-1 {display:none;}
+            .slider, .pg-file-cs-7, .pg-file-cs-1, .pg-file-cs-1 {
             position: absolute;
             cursor: pointer;
             top: 0;
@@ -22,7 +22,7 @@
             -webkit-transition: .4s;
             transition: .4s;
             }
-            .slider:before, .pg-file-cs-7, .pg-file-cs-1 {
+            .slider:before, .pg-file-cs-7, .pg-file-cs-1, .pg-file-cs-1 {
             position: absolute;
             content: "";
             height: 8px;
@@ -33,38 +33,40 @@
             -webkit-transition: .4s;
             transition: .4s;
             }
-            input:checked + .slider, .pg-file-cs-7, .pg-file-cs-1 {
+            input:checked + .slider, .pg-file-cs-7, .pg-file-cs-1, .pg-file-cs-1 {
             background-color: #2196F3;
             }
-            input:focus + .slider + .slider, .pg-file-cs-7,input.pg-state-focus + .slider + .slider, .pg-file-cs-1 {
+            input:focus + .slider + .slider, .pg-file-cs-7 + .slider + .slider, .pg-file-cs-1,input.pg-state-focus + .slider + .slider, .pg-file-cs-1 {
             box-shadow: 0 0 1px #2196F3;
             }
-            input:checked + .slider:before, .pg-file-cs-7, .pg-file-cs-1 {
+            input:checked + .slider:before, .pg-file-cs-7, .pg-file-cs-1, .pg-file-cs-1 {
             -webkit-transform: translateX(13px);
             -ms-transform: translateX(13px);
             transform: translateX(13px);
             }
             /* Rounded sliders */
-            .slider.round, .pg-file-cs-7, .pg-file-cs-1 {
+            .slider.round, .pg-file-cs-7, .pg-file-cs-1, .pg-file-cs-1 {
             border-radius: 10px;
             }
-            .slider.round:before, .pg-file-cs-7, .pg-file-cs-1 {
+            .slider.round:before, .pg-file-cs-7, .pg-file-cs-1, .pg-file-cs-1 {
             border-radius: 60%;
             }
+
 </style>
         <style>
-            body, .pg-file-cs-8, .pg-file-cs-2 {
+            body, .pg-file-cs-8, .pg-file-cs-2, .pg-file-cs-2 {
             color: rgb(26, 26, 153)
             }
-            a, .pg-file-cs-8, .pg-file-cs-2 {
+            a, .pg-file-cs-8, .pg-file-cs-2, .pg-file-cs-2 {
             color: rgb(26, 26, 153)
             }
-            p, .pg-file-cs-8, .pg-file-cs-2 {
+            p, .pg-file-cs-8, .pg-file-cs-2, .pg-file-cs-2 {
             color: rgb(26, 26, 153)
             }
-            p, .pg-file-cs-8, .pg-file-cs-2 {
+            p, .pg-file-cs-8, .pg-file-cs-2, .pg-file-cs-2 {
             color: rgb(26, 26, 153)
             }
+
 </style>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -418,7 +420,7 @@
                                         <a href="#"> Kodiak AK-KEA</a>
                                     </li>
                                     <li>
-                                        <a href="GraphPage.html"> Kodiak AK-KIBSD</a>
+                                        <a href="../GraphPage.html"> Kodiak AK-KIBSD</a>
                                     </li>
                                     <li>
                                         <a href="#"> FTAA-NY</a>
@@ -546,7 +548,7 @@
                 </ul>
             </div>
             <div class="row">
-                <a href="TableofContents.html" class="button float-right small">Table of Contents</a>
+                <a href="../TableofContents.html" class="button float-right small">Table of Contents</a>
                 <ul class="dropdown menu float-right" data-dropdown-menu>
                     <li>
                         <a>Education</a>
@@ -882,7 +884,7 @@
                                         <a href="#"> Kodiak AK-KEA</a>
                                     </li>
                                     <li>
-                                        <a href="GraphPage.html"> Kodiak AK-KIBSD</a>
+                                        <a href="../GraphPage.html"> Kodiak AK-KIBSD</a>
                                     </li>
                                     <li>
                                         <a href="#"> FTAA-NY</a>
@@ -1296,22 +1298,23 @@
             //-->
         </script>
         <style type="text/css">
-            #PopupBoxPosition, .pg-file-cs-12, .pg-file-cs-6{
+            #PopupBoxPosition, .pg-file-cs-12, .pg-file-cs-6, .pg-file-cs-6{
             top: 0; left: 0; position: fixed; width: 100%; height: 120%;
             background-color: rgba(0,0,0,0.7); display: none;
             }
-            .popupBoxWrapper, .pg-file-cs-12, .pg-file-cs-6{
+            .popupBoxWrapper, .pg-file-cs-12, .pg-file-cs-6, .pg-file-cs-6{
             width: 550px; margin: 50px auto; text-align: left; max-height: calc(100vh - 210px); overflow-y: auto;
             }
-            .popupBoxContent, .pg-file-cs-12, .pg-file-cs-6{
+            .popupBoxContent, .pg-file-cs-12, .pg-file-cs-6, .pg-file-cs-6{
             background-color: #FFF; padding: 15px;
             }
+
 </style>
         <div id="PopupBoxPosition">
             <div class="popupBoxWrapper">
                 <div class="popupBoxContent">
                     <h3>Bryggen (1979)</h3>
-                    <img src="Pics/HM1.jpg" />
+                    <img src="../Pics/HM1.jpg" />
                     <p>
                         Copyright</p>
                     <p>Site Description</p>
