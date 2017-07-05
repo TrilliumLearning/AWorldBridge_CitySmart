@@ -4,6 +4,56 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
     <head>
         <style>
+            .switch, .pg-file-cs-7 {
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            height: 17px;
+            }
+            .switch input, .pg-file-cs-7 {display:none;}
+            .slider, .pg-file-cs-7 {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+            }
+            .slider:before, .pg-file-cs-7 {
+            position: absolute;
+            content: "";
+            height: 8px;
+            width: 13px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            }
+            input:checked + .slider, .pg-file-cs-7 {
+            background-color: #2196F3;
+            }
+            input:focus + .slider,input.pg-state-focus + .slider, .pg-file-cs-7 {
+            box-shadow: 0 0 1px #2196F3;
+            }
+            input:checked + .slider:before, .pg-file-cs-7 {
+            -webkit-transform: translateX(13px);
+            -ms-transform: translateX(13px);
+            transform: translateX(13px);
+            }
+            /* Rounded sliders */
+            .slider.round, .pg-file-cs-7 {
+            border-radius: 10px;
+            }
+            .slider.round:before, .pg-file-cs-7 {
+            border-radius: 60%;
+            }
+
+</style>
+        <style>
             body, .pg-file-cs-8 {
             color: rgb(26, 26, 153)
             }
@@ -16,11 +66,12 @@
             p, .pg-file-cs-8 {
             color: rgb(26, 26, 153)
             }
+
 </style>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Kodiak-A World Bridge CitySmart</title>
-        <link rel="stylesheet" href="css/foundationFRAME.css" />
+        <link rel="stylesheet" href="css/foundation.css" />
         <link rel="stylesheet" href="style.css" />
         <script src="js/vendor/modernizr.js"></script>
         <link href="menu.css" rel="stylesheet" type="text/css">
@@ -960,6 +1011,8 @@
                     </li>
                 </ul>
             </div>
+            <!-- Main Content Section -->
+            <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
             <div class="large-9 columns medium-push-3">
                 <div style="position: absolute; top: 16px; left: 0px;">
                     <!-- Create a canvas for Web World Wind. -->
@@ -968,113 +1021,262 @@
 </canvas>
                 </div>
             </div>
-            <!-- Main Content Section -->
-            <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
             <div class="columns medium-pull-9 large-3 large-offset-2">
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Country</button>
-                    <div id="myDropdownCountry" class="dropdown-content">
-                        <a href="#US">US</a>
-                        <a href="#Germany">Germany</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                </div>
-                <div style="height:6px" class="clearfix clear-columns"></div>
-                <div class="dropdown">
-                    <button onclick="myFunction2()" class="dropbtn">City</button>
-                    <div id="myDropdownCity" class="dropdown-content">
-                        <a href="#ADQ">Kodiak</a>
-                        <a href="#NY">New York</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                </div>
-                <div style="height:6px" class="clearfix clear-columns"></div>
+                <div class="button-group">
+</div>
                 <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                     <li class="accordion-item">
-                        <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>List</h5></a>
-                        <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+                        <a style="height:60px" href="#panel172" role="tab" class="accordion-title" id="panel172-heading" aria-controls="panel172"><h5>Energy</h5></a>
+                        <div id="panel172" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel172-heading">
                             <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                                 <li class="accordion-item">
-                                    <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>Category 1</h5></a>
-                                    <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
-                                        <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
-                                            <li class="accordion-item">
-                                                <a href="#panel538" role="tab" class="accordion-title" id="panel538-heading" aria-controls="panel538"><h5><h6>Subcategory A</h6></h5></a>
-                                                <div id="panel538" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel538-heading">
-                                                    <div>
-                                                        <a href="#" class="button">Button 1</a>
-                                                    </div>
-                                                    <div>
-                                                        <a href="#" class="button">Button 2</a>
-                                                    </div>
-                                                    <div>
-                                                        <div>
-                                                            <h6><a href="#">- Kodiak </a></h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="accordion-item">
-                                                <a href="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h5><h6>Subcategory B</h6></h5></a>
-                                                <div id="panel538" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel538-heading">
-                                                    <div>
-                                                        <a href="#" class="button">Button 1</a>
-                                                    </div>
-                                                    <div>
-                                                        <a href="#" class="button">Button 2</a>
-                                                    </div>
-                                                    <div>
-                                                        <div>
-                                                            <h6><a href="#">- Kodiak </a></h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <a href="#panel538" role="tab" class="accordion-title" id="panel538-heading" aria-controls="panel538"><h5><h6>Wind Turbines</h6></h5></a>
+                                    <div id="panel538" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel538-heading">
+                                        <div>
+                                            <div>
+                                                <h6><a>- Kodiak AK-KEA  </a></h6>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <h6><a>- Kodiak AK-KIBSD    </a></h6>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <h6><a>- FTAA-NY  </a></h6>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <h6><a>- Akiachack AK  </a></h6>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+</div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <h6></h6>
+                                            </div>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="accordion-item">
-                                    <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>Category 2</h5></a>
-                                    <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
-                                        <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
-                                            <li class="accordion-item">
-                                                <a href="#panel538" role="tab" class="accordion-title" id="panel538-heading" aria-controls="panel538"><h5><h6>Subcategory C</h6></h5></a>
-                                                <div id="panel538" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel538-heading">
-                                                    <div>
-                                                        <a href="#" class="button">Button 1</a>
-                                                    </div>
-                                                    <div>
-                                                        <a href="#" class="button">Button 2</a>
-                                                    </div>
-                                                    <div>
-                                                        <div>
-                                                            <h6><a href="#">- Kodiak </a></h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="accordion-item">
-                                                <a href="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h5><h6>Subcategory D</h6></h5></a>
-                                                <div id="panel538" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel538-heading">
-                                                    <div>
-                                                        <a href="#" class="button">Button 1</a>
-                                                    </div>
-                                                    <div>
-                                                        <a href="#" class="button">Button 2</a>
-                                                    </div>
-                                                    <div>
-                                                        <div>
-                                                            <h6><a href="#">- Kodiak </a></h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <a href="#panel538" role="tab" class="accordion-title" id="panel538-heading" aria-controls="panel538"><h5><h6>Hydroelectric</h6></h5></a>
+                                    <div id="panel538" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel538-heading">
+                                        <div>
+                                            <div>
+                                                <h6><a>- Kodiak-KEA  </a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="accordion-item">
+                                    <a href="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h5><h6>Solar</h6></h5></a>
+                                    <div id="panel539" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel539-heading">
+                                        <div>
+                                            <div>
+                                                <h6><a>- Kodiak-KEA  </a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="accordion-item">
+                                    <a href="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h5><h6>Biofuel</h6></h5></a>
+                                    <div id="panel539" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel539-heading">
+                                        <div>
+                                            <div>
+                                                <h6><a>- Kodiak-KEA  </a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="accordion-item">
+                                    <a href="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h5><h6>Diesel</h6></h5></a>
+                                    <div id="panel539" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel539-heading">
+                                        <div>
+                                            <div>
+                                                <h6><a>- Kodiak-KEA  </a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="accordion-item">
+                                    <a href="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h5><h6>Energy Budget</h6></h5></a>
+                                    <div id="panel539" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel539-heading">
+                                        <div>
+                                            <div>
+                                                <h6><a>- Kodiak-KEA  </a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="accordion-item">
+                                    <a href="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h6><h6>Economic Development</h6></h6></a>
+                                    <div id="panel539" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel539-heading">
+                                        <div>
+                                            <div>
+                                                <h6><a>- Kodiak-KEA  </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- FTAA-NY  </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- Akiachak AK  </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- Akiak AK  </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- Tuluksak AK  </a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="accordion-item">
+                                    <a href="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h6>Power Distribution</h6></a>
+                                    <div id="panel539" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel539-heading">
+                                        <div>
+                                            <div>
+                                                <h6><a>- Kodiak-KEA Grid   </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- Kodiak-KEA Pole   </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- FTAA-NY  </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- Akiachak AK  </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- Akiak AK  </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- Tuluksak AK  </a></h6>
+                                            </div>
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
+                        </div>
+                    </li>
+                    <li class="accordion-item">
+                        <a style="height:60px" href="#panel172" role="tab" class="accordion-title" id="panel172-heading" aria-controls="panel172"><h5>Water</h5></a>
+                        <div id="panel172" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel172-heading">
+                            <div>
+                                <h6><a href="#">+ Purification</a></h6>
+                                <h6><a href="#">+ Treatment</a></h6>
+                                <h6><a href="#">+ Wells</a></h6>
+                                <h6><a href="#">+ Water Budget</a></h6>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion-item">
+                        <a style="height:60px" href="#panel172" role="tab" class="accordion-title" id="panel172-heading" aria-controls="panel172"><h5>Agriculture</h5></a>
+                        <div id="panel172" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel172-heading">
+                            <div>
+                                <h6><a href="#">+ Farm Production</a></h6>
+                                <h6><a href="#">+ Greenhouses</a></h6>
+                                <h6><a href="#">+ Imported Food</a></h6>
+                                <h6><a href="#">+ Food Budget</a></h6>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion-item">
+                        <a style="height:60px" href="#panel172" role="tab" class="accordion-title" id="panel172-heading" aria-controls="panel172"><h5>Transportation</h5></a>
+                        <div id="panel172" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel172-heading">
+                            <div>
+                                <h6><a href="#">+ Paved Roads</a></h6>
+                                <h6><a href="#">+ Unpaved Roads</a></h6>
+                                <h6><a href="#">+ Bike/Walking Paths</a></h6>
+                                <h6><a href="#">+ Under Maintenance</a></h6>
+                                <h6><a href="#">+ Airports</a></h6>
+                                <h6><a href="#">+ Boat Harbors/Marnias</a></h6>
+                                <h6><a href="#">+ Ferry</a></h6>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion-item">
+                        <a href="#panel172" role="tab" class="accordion-title" id="panel172-heading" aria-controls="panel172"><h5>Health Services</h5></a>
+                        <div id="panel172" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel172-heading">
+                            <div>
+                                <h6><a href="#">+ Emergency Medical</a></h6>
+                                <h6><a href="#">+ Treatment</a></h6>
+                                <h6><a href="#">+ Hospitals</a></h6>
+                                <h6><a href="#">+ Walk-in Service</a></h6>
+                                <h6><a href="#">+ Veterinary</a></h6>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion-item">
+                        <a style="height:60px" href="#panel172" role="tab" class="accordion-title" id="panel172-heading" aria-controls="panel172"><h5>Risk Management</h5></a>
+                        <div id="panel172" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel172-heading">
+                            <div>
+                                <h6><a href="#">+ Law Enforcement</a></h6>
+                                <h6><a href="http://esp.trilliumlearning.com">+ Earthquake Signal Precursors</a></h6>
+                                <h6><a href="#">+ Public safety Systems</a></h6>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion-item">
+                        <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>Education</h5></a>
+                        <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
                             <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
-</ul>
+                                <li class="accordion-item">
+                                    <a href="#panel538" role="tab" class="accordion-title" id="panel538-heading" aria-controls="panel538"><h5><h6>K-12</h6></h5></a>
+                                    <div id="panel538" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel538-heading">
+                                        <div>
+                                            <div>
+                                                <h6><a>- Kodiak  </a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="accordion-item">
+                                    <a href="#panel538" role="tab" class="accordion-title" id="panel538-heading" aria-controls="panel538"><h5><h6>University</h6></h5></a>
+                                    <div id="panel538" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel538-heading">
+                                        <div>
+                                            <div>
+                                                <h6><a>- Kodiak </a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="accordion-item">
+                                    <a href="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h5><h6>A World Bridge</h6></h5></a>
+                                    <div id="panel539" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel539-heading">
+                                        <div>
+                                            <div>
+                                                <h6><a>A World Bridge Sites  </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- Akiachak AK  </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- Akiak AK  </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- Copper River AK  </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- Ketchikan AK  </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- Kodiak AK </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- Middletown NY  </a></h6>
+                                            </div>
+                                            <div>
+                                                <h6><a>- Tuluksak AK  </a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                 </ul>
@@ -1106,6 +1308,7 @@
             .popupBoxContent, .pg-file-cs-12{
             background-color: #FFF; padding: 15px;
             }
+
 </style>
         <div id="PopupBoxPosition">
             <div class="popupBoxWrapper">
@@ -1139,47 +1342,6 @@
         <script>
           $(document).foundation();
         </script>
-        <script>
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdownCountry").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-function myFunction2() {
-    document.getElementById("myDropdownCity").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
         <!--NOTE: Most Web World Wind examples use jquery, Bootstrap and requirejs but those technologies are NOT-->
         <!--required by Web World Wind. See SimplestExample.html for an example of using Web World Wind without them.-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
