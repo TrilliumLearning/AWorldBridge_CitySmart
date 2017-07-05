@@ -9,21 +9,20 @@ var category = [];
 var subCategory = [];
 var nameAndButton = [];
 
-//window[Reference_Name]
-
-
 var interfaceArray = [];
 var Interface_URL = "http://localhost:63342/AWorldBridge_CitySmart/CitySmart/User_Interface_Upgrade/Interface_CSV.csv";
 
 
-function contains(Array_Name, Variable) {
-
-   if (Array_Name.indexOf(Variable) === -1){return false}
-   else {return true}
-}
 
 
-function Interface_Creation (Interface_CSV_URL) {
+
+function interfaceParse (Interface_CSV_URL) {
+
+    function contains(Array_Name, Variable) {
+
+        if (Array_Name.indexOf(Variable) === -1){return false}
+        else {return true}
+    }
 
 
     Papa.parse(Interface_CSV_URL, {
@@ -298,15 +297,21 @@ function Interface_Creation (Interface_CSV_URL) {
 }
 
 
-
-Interface_Creation(Interface_URL);
-
+interfaceParse(Interface_URL);
 
 
 
 
 
 
+function interfaceCreation() {
+
+
+
+
+
+
+}
 
 
 
