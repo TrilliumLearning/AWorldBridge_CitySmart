@@ -1,35 +1,74 @@
 <!DOCTYPE html>
-<!--Created by Team GEFS-KHS$-->
-<!--Authors: -->
 <html>
+    <head>
+        <style>
+            .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            width: 160px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            }
+            .dropbtn:hover, .dropbtn:focus {
+            background-color: #3e8e41;
+            }
+            .dropdown {
+            position: relative;
+            display: inline-block;
+            }
+            .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+            .dropdown-content a {
+            color: black;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+            }
+            .dropdown a:hover {background-color: #f1f1f1}
+            .show {display:block;}
+</style>
+    </head>
     <body>
-        <head>
-            <link rel="stylesheet" href="../CSS" type="text/css">
-            <base target="_parent" />
-        </head>
-        <script src="../live.js"></script>
-        <div class="header">
-            <div class="container">
-                <div class="logo">
-                    <img src="../images/croppedLogo.png" height="75" width="75" alt="Unable to Display Image" style="position: absolute;left:1em;">
-                </div>
-                <div class="nav">
-                    <ul>
-                        <li>
-                            <a href="esp1-graph.html">ESP Kenny Lake-1, Alaska</a>
-                        </li>
-                        <li>
-                            <a href="esp2-graph.html">ESP Kodiak-2, Alaska</a>
-                        </li>
-                        <li>
-                            <a href="esp3-graph.html">ESP Kodiak-3, Alaska</a>
-                        </li>
-                        <li>
-                            <a href="esp4-graph.html">ESP Kodiak-4, Alaska</a>
-                        </li>
-                    </ul>
-                </div>
+        <h2>Clickable Dropdown</h2>
+        <p>Click on the button to open the dropdown menu.</p>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
+        <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
     </body>
 </html>
