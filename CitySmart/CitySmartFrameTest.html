@@ -970,10 +970,6 @@
             </div>
             <!-- Main Content Section -->
             <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
-
-
-
-
             <div class="columns medium-pull-9 large-3 large-offset-2">
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Country</button>
@@ -993,11 +989,6 @@
                     </div>
                 </div>
                 <div style="height:6px" class="clearfix clear-columns"></div>
-
-
-
-
-
                 <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                     <li class="accordion-item">
                         <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>List</h5></a>
@@ -1011,69 +1002,18 @@
                                                 <a href="#panel538" role="tab" class="accordion-title" id="panel538-heading" aria-controls="panel538"><h5><h6>Subcategory A</h6></h5></a>
                                                 <div id="panel538" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel538-heading">
                                                     <div>
-                                                        <a href="#" class="buttonG">Button 2</a>
-                                                    </div>
-                                                    <div style="height:15px"></div>
-                                                    <div>
-                                                        <h6><a href="#">- Kodiak </a><a href="#" class="buttonG"> &nbsp</a></h6>
-                                                    </div>
-                                                    <div>
-                                                        <h6><a href="#">- Kodiak </a><a href="#" class="buttonG"> &nbsp</a></h6>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="accordion-item">
-                                                <a href="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h5><h6>Subcategory B</h6></h5></a>
-                                                <div id="panel538" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel538-heading">
-                                                    <div>
-                                                        <a href="#" class="button">Button 1</a>
+                                                        <h6><a href="#">- Kodiak </a><label class="switch right">
+                                                                <input type="checkbox">
+                                                                <div id="kodiak" style="height:12px" class="slider round">
+</div>
+                                                            </label></h6>
                                                     </div>
                                                     <div>
-                                                        <a href="#" class="button">Button 2</a>
-                                                    </div>
-                                                    <div>
-                                                        <div>
-                                                            <h6><a href="#">- Kodiak </a></h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="accordion-item">
-                                    <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>Category 2</h5></a>
-                                    <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
-                                        <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
-                                            <li class="accordion-item">
-                                                <a href="#panel538" role="tab" class="accordion-title" id="panel538-heading" aria-controls="panel538"><h5><h6>Subcategory C</h6></h5></a>
-                                                <div id="panel538" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel538-heading">
-                                                    <div>
-                                                        <a href="#" class="button">Button 1</a>
-                                                    </div>
-                                                    <div>
-                                                        <a href="#" class="button">Button 2</a>
-                                                    </div>
-                                                    <div>
-                                                        <div>
-                                                            <h6><a href="#">- Kodiak </a></h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="accordion-item">
-                                                <a href="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h5><h6>Subcategory D</h6></h5></a>
-                                                <div id="panel538" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel538-heading">
-                                                    <div>
-                                                        <a href="#" class="button">Button 1</a>
-                                                    </div>
-                                                    <div>
-                                                        <a href="#" class="button">Button 2</a>
-                                                    </div>
-                                                    <div>
-                                                        <div>
-                                                            <h6><a href="#">- Kodiak </a></h6>
-                                                        </div>
+                                                        <h6><a href="#">- Kodiak </a><label class="switch right">
+                                                                <input type="checkbox">
+                                                                <div id="kodiak" style="height:12px" class="slider round">
+</div>
+                                                            </label></h6>
                                                     </div>
                                                 </div>
                                             </li>
@@ -1081,23 +1021,14 @@
                                     </div>
                                 </li>
                             </ul>
-                            <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true"></ul>
+                            <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+</ul>
                         </div>
                     </li>
                 </ul>
-
-
-
-
-
             </div>
             <!-- Nav Sidebar -->
             <!-- This is source ordered to be pulled to the left on larger screens -->
-
-
-
-
-
         </div>
         <!-- End Header and Nav -->
         <!-- Footer -->
@@ -1176,7 +1107,7 @@ window.onclick = function(event) {
       }
     }
   }
-};
+}
 
 function myFunction2() {
     document.getElementById("myDropdownCity").classList.toggle("show");
