@@ -2601,9 +2601,9 @@ select
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
     -webkit-background-size: 9px 6px;
     background-size: 9px 6px;
-    background-position: right -1rem center;
+    background-position: right -1rem ;
     -webkit-background-origin: content-box;
-    background-origin: content-box;
+    background-origin: content-box center;
     background-repeat: no-repeat;
     padding-right: 1.5rem;
 }
@@ -2883,8 +2883,9 @@ select[multiple]
     top: -0.1em;
 }
 
-.dropbtn {
-      background-color: #4CAF50;
+.dropbtn
+{
+    background-color: #4CAF50;
     color: white;
     padding: 10px 16px;
     font-size: 16px;
@@ -2893,12 +2894,14 @@ select[multiple]
     width: 265px;
 }
 
-.dropdown {
+.dropdown
+{
     position: relative;
     display: inline-block;
 }
 
-.dropdown-content {
+.dropdown-content
+{
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -2907,23 +2910,28 @@ select[multiple]
     z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content a
+{
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover
+{
+    background-color: #f1f1f1;
+}
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content
+{
     display: block;
 }
 
-.dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn
+{
     background-color: #3e8e41;
 }
-
 
 .show
 {
@@ -5846,7 +5854,6 @@ table.hover tr:nth-of-type(even):hover
     box-shadow: 0 4px #999;
 }
 
-
 .buttonG:hover
 {
     background-color: #3e8e41;
@@ -5858,3 +5865,4 @@ table.hover tr:nth-of-type(even):hover
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+
