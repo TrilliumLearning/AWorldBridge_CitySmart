@@ -2,14 +2,18 @@
 
 
 var KIBSD_Point = "KIBSD Turbine";
+//Layer name
 var KIBSD_Point_Ref = "KIBSD_Point_Num";
+//Name of third variable
 var KIBSD_Point_Num;
+//A Variable to hold the number of the layer
 
 
 
 
 
 $(document).ready(function(){
+
     $("#khsT").click(function(){
 
         function Find(Display_Name, Reference_Name) {
