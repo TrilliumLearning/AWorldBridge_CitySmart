@@ -16,8 +16,15 @@ CCStringEnd = `
     </select></p>
 `;
 
+var accordianEnd = `
+                                            </div>
+                                       </li>
+                                </ul>
+`;
 
-function interfaceCreation() {console.log('hello there');
+
+
+function interfaceCityCreation() {console.log('hello there');
 
 
 //TcityString = cityString;
@@ -68,14 +75,133 @@ function interfaceCreation() {console.log('hello there');
 
 
 
+function interfaceCreation() {
+
+
+    if (Number($('#myListCity').val()) === -1) {
+    }
+    else if (Number($('#myListCity').val()) === temporaryCountryValue) {
+    }
+    else if (typeof Number($('#myListCity').val()) === 'undefined') {
+    }
+    else {
+
+
+        CountryN = Number($('#myListCountry').val());
+        CityN = Number($('#myListCity').val());
+
+        Ca1 = category[CountryN];
+        Ca2 = Ca1[CityN];
+
+        stringStorage = [];
+
+        for (b = 0; b < Ca2.length; b++){
+            Sb1 = subCategory[CountryN];
+            Sb2 = Sb1[CityN];
+            Sb3 = Sb2[b];
+
+/*
+            categoryAccordianStart = `
+        <ul class="accordion" data-accordion="mw6gud-accordion" role="tablist" data-allow-all-closed="true">
+                <li class="accordion-item">
+                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Ca2[b] + `</h5></a>
+            <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading" aria-hidden="true" style="display:none;">
+            `;
+*/
+
+            categoryAccordianStart =`
+
+        <ul id="` + Ca2[b] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+                <li class="accordion-item">
+                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Ca2[b] + `</h5></a>
+            <div id="` + Ca2[b] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+`;
 
 
 
 
-if (Number($('#myListCity').val()) === -1){}
-else if (Number($('#myListCity').val()) === temporaryCountryValue){}
-else if (typeof Number($('#myListCity').val()) === 'undefined'){}
-else{
+
+            stringStorage.push(categoryAccordianStart);
+
+            for (c = 0; c < Sb3.length; c++) {
+                NR1 = nameAndButton[CountryN];
+                NR2 = NR1[CityN];
+                NR3 = NR2[b];
+                NR4 = NR3[c];
+/*
+                subCategoryAccordianStart = `
+        <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+                <li class="accordion-item">
+                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Sb3[c] + `</h5></a>
+            <div id="` + Sb3[c] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading" aria-hidden="true" style="display:none;">
+
+            `;
+*/
+                subCategoryAccordianStart =`
+
+        <ul id="` + Ca2[b] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+                <li class="accordion-item">
+                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Ca2[b] + `</h5></a>
+            <div id="` + Ca2[b] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+`;
+
+
+                stringStorage.push(subCategoryAccordianStart);
+
+
+                var checkBoxStringList = [];
+
+                for (d = 0; d < NR4.length; d++){
+
+                    TempString = `
+                        <div>
+                        <h6><a href="#">-` + NR4[d][0] + `</a><label class="switch right">
+                        <input type="checkbox">
+                        <div id= "` + NR4[d][1] + `" style="height:12px" class="slider round"></div>
+                        </label></h6>
+                        </div>
+                    `;
+                    checkBoxStringList.push(TempString)
+                }
+
+                var checkBoxString = checkBoxStringList[0];
+                for (e = 1; e < checkBoxStringList.length; e++){
+
+                    checkBoxString = checkBoxString + checkBoxStringList[e]
+
+                }
+                stringStorage.push(checkBoxString);
+
+
+                stringStorage.push(accordianEnd);
+            }
+
+
+
+
+
+            stringStorage.push(accordianEnd);
+        }
+
+
+
+        TS = stringStorage[0];
+
+        for (f = 1; f < stringStorage.length; f++){
+
+            TS = TS + stringStorage[f];
+
+
+        }
+
+        var q = document.getElementById('Layer Menu');
+
+        q.innerHTML = TS
+    }
+
+
+
+
 
 
 
@@ -84,122 +210,20 @@ else{
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var HTMLSTRING = `
-
-<div id = "Layer Selection Row" class="row">
-    <div class="columns large-3">
-    <div id = "Country Selection">
-    <p><label>Country</label><select id="myListCountry">
-    <option value="0">1</option>
-    <option value="1">2</option>
-    <option value="2">3</option>
-    <option value="3">4</option>
-    </select></p>
-    </div>
-
-
-
-    <div id = "City Selection">
-    <p><label>City</label><select id="myListCity">
-    <option value="0">one</option>
-    <option value="1">two</option>
-    <option value="2">three</option>
-    <option value="3">four</option>
-    </select></p>
-    </div>
-
-
-
-    <div style="height:6px" class="clearfix clear-columns"></div>
-
-
-
-    <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
-    <li class="accordion-item">
-    <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>List</h5></a>
-    <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
-
-
-
-    <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+/*
+var accordianStart = `
+<ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
     <li class="accordion-item">
     <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>Category 1</h5></a>
 <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+`;
+*/
 
 
 
-    <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
-    <li class="accordion-item">
-    <a href="#panel538" role="tab" class="accordion-title" id="panel538-heading" aria-controls="panel538"><h5><h6>Subcategory A</h6></h5></a>
-<div id="panel538" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel538-heading">
-
-
-    <div>
-    <h6><a href="#">- Kodiak </a><label class="switch right">
-    <input type="checkbox">
-    <div id= "kodiak" style="height:12px" class="slider round"></div>
-    </label></h6>
-    </div>
-
-
-    <div>
-    <h6><a href="#">- Kodiak </a><label class="switch right">
-    <input type="checkbox">
-    <div id= "kodiak" style="height:12px" class="slider round"></div>
-    </label></h6>
-    </div>
-
-
-    </div>
-    </li>
-    </ul>
 
 
 
-    </div>
-    </li>
-    </ul>
-    <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
-    </ul>
 
 
 
-    </div>
-    </li>
-    </ul>
-
-
-
-    </div>
-    <div class="large-9 columns">
-    <canvas id="canvasOne" style="width: 100%; height: auto">
-    Your browser does not support HTML5 Canvas.
-</canvas>
-</div>
-</div>
-
-`

@@ -2,7 +2,10 @@
 <html class="no-js" lang="en">
 <script src="./PapaParse-4.1.2/papaparse.min.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
-
+<!--<link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+<script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>-->
+<!--<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>-->
 
 
 
@@ -550,7 +553,7 @@
     <div class="columns large-3">
 
 
-        <div id = "Country Selection" href="javascript:void(0)" onclick="interfaceCreation()" >
+        <div id = "Country Selection" href="javascript:void(0)" onclick="interfaceCityCreation()" >
             <p><label>Country</label><select id="myListCountry">
                 <option value="-1">-Select a Country-</option>
             </select></p>
@@ -558,9 +561,9 @@
 
 
 
-        <div id = "City Selection">
+        <div id = "City Selection" href="javascript:void(0)" onclick="interfaceCreation()">
             <p><label>City</label><select id="myListCity">
-                <option value="0">-Select a City-</option>
+                <option value="-1">-Select a City-</option>
 
             </select></p>
         </div>
@@ -571,17 +574,17 @@
 
 
 
-        <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+        <ul id = "ACR" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
             <li class="accordion-item">
-                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>List</h5></a>
-                <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>Layer Menu!</h5></a>
+                <div id="Layer Menu" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
 
 
 
                     <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                         <li class="accordion-item">
                             <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>Category 1</h5></a>
-                            <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+                            <div id="" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
 
 
 
@@ -616,8 +619,7 @@
                             </div>
                         </li>
                     </ul>
-                    <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
-                    </ul>
+
 
 
 
