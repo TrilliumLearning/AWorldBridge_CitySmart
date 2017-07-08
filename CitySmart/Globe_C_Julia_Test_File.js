@@ -218,6 +218,61 @@ requirejs(['./src/WorldWind',
                 wwd.redraw(); // redraw to make the highlighting changes take effect on the screen
             }
         };
+        var handleMouseCLK = function (o) {
+
+            // The input argument is either an Event or a TapRecognizer. Both have the same properties for determining
+            // the mouse or tap location.
+            var x = o.clientX,
+                y = o.clientY;
+
+            // Perform the pick. Must first convert from window coordinates to canvas coordinates, which are
+            // relative to the upper left corner of the canvas rather than the upper left corner of the page.
+
+            var pickList = wwd.pick(wwd.canvasCoordinates(x, y));
+            for (var q = 0; q<pickList.objects.length; q++) {
+                var pickedPL = pickList.objects[q].userObject;
+                if (pickedPL instanceof WorldWind.Placemark) {
+
+                    sitePopUp(pickedPL.label);
+
+                    $(document).ready(function () {
+                        // Make a popup Box after insert popup list items.
+
+                        var modal = document.getElementById('popupBox');// Get the modal
+                        var span = document.getElementById('closeIt');// Get the <span> element that closes the modal
+
+                        // When the user double clicks the placemark, open the modal
+                        modal.style.display = "block";
+
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function () {
+                            modal.style.display = "none";
+                        };
+
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+
+                    })
+                }
+            }
+
+            pickList = [];
+        };
+
+        wwd.addEventListener("click", handleMouseCLK);
+
+        // Listen for taps on mobile devices and then pop up a new dialog box.
+        var tapRecognizer = new WorldWind.TapRecognizer(wwd, handleMouseCLK);
+
+        // Listen for mouse moves and highlight the placemarks that the cursor rolls over.
+        wwd.addEventListener("mousemove", handleMouseMove);
+
+        // Listen for taps on mobile devices and highlight the placemarks that the user taps.
+        var tapRecognizer = new WorldWind.TapRecognizer(wwd, handleMouseMove);
 
         // Listen for mouse moves and highlight the placemarks that the cursor rolls over.
         wwd.addEventListener("click", handlePick);

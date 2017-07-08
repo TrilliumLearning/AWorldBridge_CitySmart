@@ -1360,12 +1360,26 @@
         background-color: #84c77d;
         color: white;
     }
+    .close {
+        color: rgba(173, 236, 141, 0.64);
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: rgba(173, 236, 141, 0.71);
+        text-decoration: none;
+        cursor: pointer;
+    }
 
 </style>
 <div id="PopupBoxPosition">
     <div class="popupBoxWrapper">
         <div class="popupBoxContent">
             <div class="popup-Header">
+                <span class="close" id="closeIt">&times;</span>
             </div>
             <h3>Bryggen (1979)</h3>
             <img src="Pics/" />

@@ -11,6 +11,7 @@ function changeHTML(id) {
 //Depending on the version of javascript there might be a problem.
     e[0].innerHTML =
         `\<div class="popup-Header">
+                <span class="close" id="closeIt"><a style="color: rgba(173,236,141,0.56)" href="javascript:void(0)" onclick="toggle_visibility('PopupBoxPosition');">&times;</a></span>
             </div>
             <br>
         <h4 style="color: rgb(36,118,51)" >  Site Name: ` + Globe_siteName[Globe_index_num] + `\</h4>
@@ -233,3 +234,4 @@ requirejs(['./src/WorldWind',
         //return wwd;
         console.log(wwd)
     });
+

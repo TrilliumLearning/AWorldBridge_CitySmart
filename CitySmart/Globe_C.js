@@ -11,6 +11,7 @@ function changeHTML(id) {
 //Depending on the version of javascript there might be a problem.
     e[0].innerHTML =
         `\<div class="popup-Header">
+                <span class="close" id="closeIt"><a style="color: rgba(173,236,141,0.56)" href="javascript:void(0)" onclick="toggle_visibility('PopupBoxPosition');">&times;</a></span>
             </div>
             <br>
         <h4 style="color: rgb(36,118,51)" >  Site Name: ` + Globe_siteName[Globe_index_num] + `\</h4>
@@ -27,7 +28,6 @@ function changeHTML(id) {
             </div>`
 
 }
-
 var Globe_latitude = [];
 var Globe_longitude = [];
 
@@ -47,10 +47,10 @@ var i = 0;
 var Globe_myArray1 = [];
 
 
-//var Globe_url = "http://localhost:63342/AWorldBridge_CitySmart2/CitySmart/Layer_Files/Layer_csv/Master.csv";
+var Globe_url = "http://localhost:63342/AWorldBridge_CitySmart2/CitySmart/Layer_Files/Layer_csv/Master.csv";
 //var Globe_url = "http://10.194.40.100/wwdev/CitySmart/Layer_Files/Layer_csv/Master.csv";
 
-var Globe_url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/Master.csv";
+//var Globe_url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/Master.csv";
 
 
 var Globe_new_list = [];
