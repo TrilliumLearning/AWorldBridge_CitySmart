@@ -25,7 +25,7 @@ function changeHTML(id) {
 		<p style="color: rgb(89,89,89)">Site Link: <a style="color: rgb(0, 136, 234)" href="` + Globe_linkToSiteLocation[Globe_index_num] + `">` + Globe_linkToSiteLocation[Globe_index_num] + ` </a>\</p>
         <div class="popup-Header">
             </div>`
-
+    
 }
 var Globe_latitude = [];
 var Globe_longitude = [];
