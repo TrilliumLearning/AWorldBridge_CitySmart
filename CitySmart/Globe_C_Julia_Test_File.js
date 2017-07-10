@@ -11,7 +11,7 @@ function changeHTML(id) {
 //Depending on the version of javascript there might be a problem.
     e[0].innerHTML =
         `\<div class="popup-Header">
-                <span class="close" id="closeIt"><a style="color: rgba(234,7,0,0.65)" href="javascript:void(0)" onclick="toggle_visibility('PopupBoxPosition');">&times;</a></span>
+                <span class="close" id="closeIt"><a style="color: rgba(228,7,0,0.65)" href="javascript:void(0)" onclick="toggle_visibility('PopupBoxPosition');">&times;</a></span>
             </div>
             <br>
         <h4 style="color: rgb(36,118,51)" >  Site Name: ` + Globe_siteName[Globe_index_num] + `\</h4>
