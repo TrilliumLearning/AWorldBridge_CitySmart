@@ -11,7 +11,7 @@ function changeHTML(id) {
 //Depending on the version of javascript there might be a problem.
     e[0].innerHTML =
         `\<div class="popup-Header">
-                <span class="close" id="closeIt"><a style="color: rgba(173,236,141,0.56)" href="javascript:void(0)" onclick="toggle_visibility('PopupBoxPosition');">&times;</a></span>
+                <span class="close" id="closeIt"><a style="color: rgba(234,7,0,0.65)" href="javascript:void(0)" onclick="toggle_visibility('PopupBoxPosition');">&times;</a></span>
             </div>
             <br>
         <h4 style="color: rgb(36,118,51)" >  Site Name: ` + Globe_siteName[Globe_index_num] + `\</h4>
@@ -23,7 +23,6 @@ function changeHTML(id) {
         <p style="color: rgb(89,89,89)">Latitude and Longitude: ` + Globe_latitude_longitude[Globe_index_num] + `\</p>
 		<br>
 		<p style="color: rgb(89,89,89)">Site Link: <a style="color: rgb(0, 136, 234)" href="` + Globe_linkToSiteLocation[Globe_index_num] + `">` + Globe_linkToSiteLocation[Globe_index_num] + ` </a>\</p>
-        <p style="font-weight: bolder; color: rgb(89,89,89)">Click <a style="color: rgb(0, 136, 234)" href="javascript:void(0)" onclick="toggle_visibility('PopupBoxPosition');" >here</a> to close popup box.</p>
         <div class="popup-Header">
             </div>`
 
