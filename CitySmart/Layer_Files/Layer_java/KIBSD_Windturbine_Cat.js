@@ -117,7 +117,8 @@ function Placemark_Creation(Layer_Name,RGB) {
     latitude_longitude = [];
     k++;
     if (k < Point_Layers.length){First_Function()}
-    else {Geo()}
+    //else {Geo()}
+    else {Ortho1()}
 
 
 }

@@ -416,7 +416,8 @@ function Ortho1() {
             // Tell World Wind to log only warnings.
             WorldWind.Logger.setLoggingLevel(WorldWind.Logger.LEVEL_WARNING);
 
-            var server = addWMSServer("http://24.237.235.227/geoserver/");
+            var server =  addWMSServer("cs.aworldbridge.com/geoserver/")
+            //var server = addWMSServer("http://24.237.235.227/geoserver/");
             //var server = addWMSServer("http://10.194.40.100/geoserver/");
             //var server = addWMSServer("http://24.237.235.227:8080/geoserver/gwc/service/wms");
             //var server = addWMSServer("http://10.194.40.100:8080/geoserver/gwc/service/wms");
@@ -488,7 +489,8 @@ function Ortho1() {
 
     function loadServerCapabilites(serverAddress, wmsCapsDoc) {
 
-        wmsCapsDoc.service.onlineResource = "http://24.237.235.227/geoserver/?SERVICE=WMS&";
+        wmsCapsDoc.service.onlineResource = "http://cs.aworldbridge.com/geoserver/?SERVICE=WMS&";
+        //wmsCapsDoc.service.onlineResource = "http://24.237.235.227/geoserver/?SERVICE=WMS&";
         //wmsCapsDoc.service.onlineResource = "http://10.194.40.100/geoserver/?SERVICE=WMS&";
         var wmsService = wmsCapsDoc.service,
             wmsLayers = wmsCapsDoc.capability.layers,
