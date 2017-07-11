@@ -1,9 +1,0 @@
-{
-"type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-                                                                                
-"features": [
-{ "type": "Feature", "properties": { "Layer": "Bells Flats AK83-5F$0$RCA", "SubClasses": "AcDbEntity:AcDbText:AcDbText", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "72", "Text": "SPARE CONDUIT " }, "geometry": { "type": "Point", "coordinates": [ -152.58072561797411, 57.701190003839038, 0.0 ] } },
-{ "type": "Feature", "properties": { "Layer": "Bells Flats AK83-5F$0$RCA", "SubClasses": "AcDbEntity:AcDbLine", "ExtendedEntity": null, "Linetype": "Bells Flats AK83-5F$0$DASHED", "EntityHandle": "74", "Text": null }, "geometry": { "type": "LineString", "coordinates": [ [ -152.581314398873047, 57.701273285222975, 0.0 ], [ -152.581317293515212, 57.701209317451095, 0.0 ] ] } }
-]
-}

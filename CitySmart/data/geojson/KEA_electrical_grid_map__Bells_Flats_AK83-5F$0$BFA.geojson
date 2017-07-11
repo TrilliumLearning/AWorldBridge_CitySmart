@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-                                                                                
-"features": [
-{ "type": "Feature", "properties": { "Layer": "Bells Flats AK83-5F$0$BFA", "SubClasses": "AcDbEntity:AcDbText:AcDbText", "ExtendedEntity": null, "Linetype": null, "EntityHandle": "6E", "Text": "W.O. 8104" }, "geometry": { "type": "Point", "coordinates": [ -152.59037799430746, 57.717062796566736, 0.0 ] } }
-]
-}
