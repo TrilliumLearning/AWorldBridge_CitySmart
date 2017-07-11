@@ -12,27 +12,21 @@
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
     </head>
     <body>
-        <div class="top-bar">
-            <div class="top-bar-left">
-                <ul class="dropdown menu" data-dropdown-menu>
-                    <li class="menu-text">CitySmart- World Wise</li>
-                    <li>
-                        <a href="CitySmartRe-Framed.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">About us</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="top-bar-right">
-                <ul class="menu">
-                    <li>
-                        <input type="search" placeholder="Search">
-                    </li>
-                    <li>
-                        <button type="button" class="button">Search</button>
-                    </li>
-                </ul>
+        <div data-sticky-container>
+            <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%">
+                <div class="top-bar-left">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                        <li class="menu-text">CitySmart- World Wise</li>
+                        <li>
+                            <a style="color:white;" href="CitySmartRe-Framed.html">Home</a>
+                        </li>
+                        <li>
+                            <a style="color:white;" href="#">About us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-bar-right">
+</div>
             </div>
         </div>
         <!-- Navigation -->
@@ -40,20 +34,21 @@
         <!-- Header -->
         <div class="row">
             <br />
-            <div class="columns large-12">
-                <div id="Logo">
-                    <div class="logo-image">
-                        <img src="NASACitySmartLogo_Kodiak.jpg" style="min-height: 32px;" />
-                    </div>
-                    <div class="logo-image">
-                        <img src="TLWBBanner .jpg" style="min-height: 32px;" />
-                    </div>
+            <div id="Logo">
+                <div class="logo-image">
+                    <img src="NASACitySmartLogo_Kodiak.jpg" style="min-height: 32px;" />
+                </div>
+                <div class="logo-image">
+                    <img src="TLWBBanner .jpg" style="min-height: 32px;" />
                 </div>
             </div>
+            <div class="columns large-12">
+</div>
         </div>
         <div class="row">
-            <img style="height:20px" src="Placeholder-White.png" class="float-right" />
-            <a href="TableofContents.html" class="button float-right small">Table of Contents</a>
+            <img style="height:5px" src="Placeholder-White.png" class="float-right" />
+            <a href="TableofContentsRe-Framed.html" class="button float-right small">O&amp;M</a>
+            <img style="height:10px" src="Placeholder-White.png" class="float-right" />
             <ul class="dropdown menu float-right" data-dropdown-menu>
                 <li>
                     <a>Education</a>
@@ -515,19 +510,8 @@
                     </ul>
                 </li>
             </ul>
-        </div>
-        <!-- End Header -->
-        <div class="row">
-            <div class="columns large-3">
-                <div>
-                    <p><label>Country</label><select id="myListCountry">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select></p>
-                </div>
-                <div>
+            <ul class="dropdown menu float-right" data-dropdown-menu>
+                <div style="width:120px">
                     <p><label>City</label><select id="myListCity">
                             <option value="1">one</option>
                             <option value="2">two</option>
@@ -535,6 +519,22 @@
                             <option value="4">four</option>
                         </select></p>
                 </div>
+            </ul>
+            <img style="height:10px" src="Placeholder-White.png" class="float-right" />
+            <ul class="dropdown menu float-right" data-dropdown-menu>
+                <div style="width:120px">
+                    <p><label>Country</label><select id="myListCountry">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select></p>
+                </div>
+            </ul>
+        </div>
+        <!-- End Header -->
+        <div class="row">
+            <div class="columns large-3">
                 <div style="height:6px" class="clearfix clear-columns"></div>
                 <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                     <li class="accordion-item">
@@ -622,11 +622,6 @@
         <footer class="row">
             <div class="large-12 columns">
                 <hr />
-                <div class="row">
-                    <div class="large-6 columns">
-                        <p>© Copyright ----</p>
-                    </div>
-                </div>
             </div>
         </footer>
         <script src="js/vendor/jquery.min.js"></script>
