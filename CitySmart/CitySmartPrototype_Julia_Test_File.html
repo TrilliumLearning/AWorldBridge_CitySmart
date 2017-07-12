@@ -1054,7 +1054,7 @@
                                     <div>
                                         <h6><a>- FTAA-NY  </a><label class="switch right">
                                             <input type="checkbox">
-                                            <div id="ftaa" style="height:12px" class="slider round"></div>
+                                            <div id="" style="height:12px" class="slider round"></div>
                                         </label></h6>
                                     </div>
                                 </div>
@@ -1130,9 +1130,24 @@
                             <div id="panel539" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel539-heading">
                                 <div>
                                     <div>
-                                        <h6><a>- Kodiak-KEA  </a></h6>
+                                        <div>
+                                            <h6><a>&nbsp &nbsp- Kodiak AK-KEA  </a><label class="switch right">
+                                                <input type="checkbox">
+                                                <div id="keaEB" style="height:12px" class="slider round">
+                                                </div>
+                                            </label></h6>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div>
+                                        <div>
+                                            <h6><a>&nbsp &nbsp- FTAA-NY  </a><label class="switch right">
+                                                <input type="checkbox">
+                                                <div id="ftaa_energy" style="height:12px" class="slider round">
+                                                </div>
+                                            </label></h6>
+                                        </div>
+                                    </div>
+                            </div>
                             </div>
                         </li>
                         <li class="accordion-item">
@@ -1176,7 +1191,7 @@
                                         </label></h6>
                                     </div>
                                     <div>
-                                        <h6><a>- FTAA-NY  </a>/h6>
+                                        <h6><a>- FTAA-NY  </a></h6>
                                     </div>
                                     <div>
                                         <h6><a>- Akiachak AK  </a></h6>
@@ -1196,12 +1211,53 @@
             <li class="accordion-item">
                 <a style="height:60px" href="#panel172" role="tab" class="accordion-title" id="panel172-heading" aria-controls="panel172"><h5>Water</h5></a>
                 <div id="panel172" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel172-heading">
-                    <div>
-                        <h6><a href="#">+ Purification</a></h6>
-                        <h6><a href="#">+ Treatment</a></h6>
-                        <h6><a href="#">+ Wells</a></h6>
-                        <h6><a href="#">+ Water Budget</a></h6>
-                    </div>
+                    <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+                        <li class="accordion-item">
+                            <a style="height:55px" href="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h6>Purification</h6></a>
+                            <div id="panel539" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel539-heading">
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a style="height:55px" href="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h6>Treatment</h6></a>
+                            <div id="panel539" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel539-heading">
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a style="height:55px" href="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h6>Wells</h6></a>
+                            <div id="panel539" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel539-heading">
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a style="height:55px" ref="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h6>Water Budget</h6></a>
+                            <div id="panel539" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel539-heading">
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <a style="height:55px" href="#panel539" role="tab" class="accordion-title" id="panel539-heading" aria-controls="panel539"><h6>Experiment</h6></a>
+                            <div id="panel539" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel539-heading">
+                                <div>
+                                    <div>
+                                        <div>
+                                            <h6><a>&nbsp &nbsp- Kodiak AK-KEA  </a><label class="switch right">
+                                                <input type="checkbox">
+                                                <div id="keaEB" style="height:12px" class="slider round">
+                                                </div>
+                                            </label></h6>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h6><a>&nbsp &nbsp- FTAA-NY  </a><label class="switch right">
+                                                <input type="checkbox">
+                                                <div id="ftaa_water" style="height:12px" class="slider round">
+                                                </div>
+                                            </label></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </li>
             <li class="accordion-item">
@@ -1347,25 +1403,47 @@
 <style type="text/css">
     #PopupBoxPosition{
         top: 0; left: 0; position: fixed; width: 100%; height: 120%;
-        background-color: rgba(0,0,0,0.7); display: none;
+        background-color: rgba(46, 46, 46, 0.63); display: none;
     }
     .popupBoxWrapper{
-        width: 550px; margin: 50px auto; text-align: left; max-height: calc(100vh - 210px); overflow-y: auto;
+        width: 550px; margin: 50px auto; text-align: left; max-height: calc(100vh - 110px); overflow-y: auto;
     }
     .popupBoxContent{
-        background-color: #FFF; padding: 15px;
+        background-color: #FFF; padding: 25px;
+    }
+    .popup-Header {
+        padding: 10px 16px;
+        background-color: #84c77d;
+        color: white;
+    }
+    .close {
+        color: rgba(173, 236, 141, 0.64);
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: rgba(173, 236, 141, 0.71);
+        text-decoration: none;
+        cursor: pointer;
     }
 
 </style>
 <div id="PopupBoxPosition">
     <div class="popupBoxWrapper">
         <div class="popupBoxContent">
+            <div class="popup-Header">
+                <span class="close" id="closeIt">&times;</span>
+            </div>
             <h3>Bryggen (1979)</h3>
-            <img src="Pics/KEA_Turbine.jpg" />
+            <img src="Pics/" />
             <p>Copyright</p>
             <p>Site Description</p>
             <p>Click <a href="javascript:void(0)" onclick="toggle_visibility('PopupBoxPosition');">here</a> to close popup box.</p>
         </div>
+        <div class="conticlear"></div>
     </div>
 </div>
 <div id="wrapper"></div>
@@ -1384,7 +1462,8 @@
     <script src="Layer_Files/Layer_Toggle_Java/BVGC.js"></script>
     <script src="Layer_Files/Layer_Toggle_Java/WB_Placemark.js"></script>
     <script src="Layer_Files/Layer_Toggle_Java/WT-KHS.js"></script>
-    <script src="Layer_Files/Layer_Toggle_Java/FTAA.js"></script>
+    <script src="Layer_Files/Layer_Toggle_Java/FTAA_Energy.js"></script>
+    <script src="Layer_Files/Layer_Toggle_Java/FTAA_Water.js"></script>
     <script>
         $(document).foundation();
     </script>

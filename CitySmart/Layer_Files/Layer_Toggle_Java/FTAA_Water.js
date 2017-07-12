@@ -1,16 +1,16 @@
 
 
 
-var FTAA_Point = "Building 1";
-var FTAA_Point_Ref = "FTAA_Point_Num";
-var FTAA_Point_Num;
+var FTAA_Point2 = "Water";
+var FTAA_Point_Ref2 = "FTAA_Point_Num2";
+var FTAA_Point_Num2;
 
 
 
 
 
 $(document).ready(function(){
-    $("#ftaa").click(function(){
+    $("#ftaa_water").click(function(){
 
         function Find(Display_Name, Reference_Name) {
             for (m = 0; m < wwd.layers.length; m++) {
@@ -20,11 +20,11 @@ $(document).ready(function(){
                 }
             }}
 
-        Find(FTAA_Point, FTAA_Point_Ref);
-if (wwd.layers[FTAA_Point_Num].enabled === true) {
-    wwd.layers[FTAA_Point_Num].enabled = false}
+        Find(FTAA_Point2, FTAA_Point_Ref2);
+if (wwd.layers[FTAA_Point_Num2].enabled === true) {
+    wwd.layers[FTAA_Point_Num2].enabled = false}
     
-else {wwd.layers[FTAA_Point_Num].enabled = true}
+else {wwd.layers[FTAA_Point_Num2].enabled = true}
     
     });
     
