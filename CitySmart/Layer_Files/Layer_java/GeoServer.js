@@ -1,7 +1,12 @@
 /**
  * Created by docto on 7/1/2017.
  */
+/*
+var cors = require('cors');
 
+// use it before all route definitions
+app.use(cors({origin: 'http://localhost:8888'}));
+*/
 
 function Ortho3() {requirejs(['./src/WorldWind', './LayerManager'],
     function (ww,
@@ -416,7 +421,24 @@ function Ortho1() {
             // Tell World Wind to log only warnings.
             WorldWind.Logger.setLoggingLevel(WorldWind.Logger.LEVEL_WARNING);
 
-            var server = addWMSServer("http://24.237.235.227/geoserver/");
+            //var server = addWMSServer('http://24.237.235.227/geoserver/');
+            //var server = addWMSServer('http://24.237.235.227:8080/geoserver/');
+
+            //var server =  addWMSServer("http://cs.aworldbridgelabs.com:8080/geoserver/");
+            //var server =  addWMSServer("http://cs.aworldbridgelabs.com/geoserver/");
+
+            //var server =  addWMSServer("http://cs.aworldbridgelabs:8080/geoserver/");
+            //var server =  addWMSServer("http://cs.aworldbridgelabs/geoserver/");
+
+            //var server =  addWMSServer("http://aworldbridgelabs.com:8080/geoserver/");
+            //var server =  addWMSServer("http://aworldbridgelabs.com/geoserver/");
+
+            //var server =  addWMSServer("http://aworldbridgelabs/geoserver/");
+            //var server =  addWMSServer("http://aworldbridgelabs:8080/geoserver/");
+
+            var server = addWMSServer("http://cs.aworldbridgelabs.com:8080/geoserver/ows/");
+
+            //var server = addWMSServer("http://24.237.235.227/geoserver/");
             //var server = addWMSServer("http://10.194.40.100/geoserver/");
             //var server = addWMSServer("http://24.237.235.227:8080/geoserver/gwc/service/wms");
             //var server = addWMSServer("http://10.194.40.100:8080/geoserver/gwc/service/wms");
@@ -444,7 +466,9 @@ function Ortho1() {
             request = new XMLHttpRequest(),
             url = WorldWind.WmsUrlBuilder.fixGetMapString(serverAddress);
 
-        url += "service=WMS&request=GetCapabilities&vers";
+        //url += "service=WMS&request=GetCapabilities&vers";
+        url += "service=WMS&request=GetCapabilities&version=1.1.1";
+
 
         request.open("GET", url, true);
         request.onreadystatechange = function () {
@@ -488,7 +512,31 @@ function Ortho1() {
 
     function loadServerCapabilites(serverAddress, wmsCapsDoc) {
 
-        wmsCapsDoc.service.onlineResource = "http://24.237.235.227/geoserver/?SERVICE=WMS&";
+
+
+
+        //wmsCapsDoc.service.onlineResource = 'http://24.237.235.227/geoserver/?SERVICE=WMS&';
+        //wmsCapsDoc.service.onlineResource = 'http://24.237.235.227:8080/geoserver/?SERVICE=WMS&';
+
+        //wmsCapsDoc.service.onlineResource = "http://cs.aworldbridgelabs.com:8080/geoserver/?SERVICE=WMS&";
+        //wmsCapsDoc.service.onlineResource = "http://cs.aworldbridgelabs.com/geoserver/?SERVICE=WMS&";
+
+        //wmsCapsDoc.service.onlineResource = "http://cs.aworldbridgelabs:8080/geoserver/?SERVICE=WMS&";
+        //wmsCapsDoc.service.onlineResource = "http://cs.aworldbridgelabs/geoserver/?SERVICE=WMS&";
+
+        //wmsCapsDoc.service.onlineResource = "http://aworldbridgelabs.com:8080/geoserver/?SERVICE=WMS&";
+        //wmsCapsDoc.service.onlineResource = "http://aworldbridgelabs.com/geoserver/?SERVICE=WMS&";
+
+        //wmsCapsDoc.service.onlineResource = "http://aworldbridgelabs/geoserver/?SERVICE=WMS&";
+        //wmsCapsDoc.service.onlineResource = "http://aworldbridgelabs:8080/geoserver/?SERVICE=WMS&";
+
+
+        wmsCapsDoc.service.onlineResource =  "http://cs.aworldbridgelabs.com:8080/geoserver/ows/?SERVICE=WMS&";
+
+
+
+        //wmsCapsDoc.service.onlineResource = "http://aworldbridgelabs.com/geoserver/?SERVICE=WMS&";
+        //wmsCapsDoc.service.onlineResource = "http://24.237.235.227/geoserver/?SERVICE=WMS&";
         //wmsCapsDoc.service.onlineResource = "http://10.194.40.100/geoserver/?SERVICE=WMS&";
         var wmsService = wmsCapsDoc.service,
             wmsLayers = wmsCapsDoc.capability.layers,
@@ -510,9 +558,11 @@ function Ortho1() {
         }
 
 
-        addLayerFromCapabilities(wmsLayers[0].layers[15],null);
-        //layer = new WorldWind.WmsLayer(wmsLayers, null);
-        //wwd.addOverlayLayer(layer);
+        for (z = 0; z < wmsLayers.length; z ++) {
+            addLayerFromCapabilities(wmsLayers[z], null);
+            //layer = new WorldWind.WmsLayer(wmsLayers, null);
+            //wwd.addOverlayLayer(layer);
+        }
 
 
         //this.assembleLayers(wmsLayers, server.layers);
@@ -554,7 +604,33 @@ function Ortho1() {
                 layer.timeSequence = timeSequence;
             } else {
 
-                config.service = "http://24.237.235.227/geoserver/?SERVICE=WMS&";
+
+
+
+
+
+                //config.service = 'http://24.237.235.227/geoserver/?SERVICE=WMS&';
+                //config.service = 'http://24.237.235.227:8080/geoserver/?SERVICE=WMS&';
+
+                //config.service = "http://cs.aworldbridgelabs.com:8080/geoserver/?SERVICE=WMS&";
+                //config.service = "http://cs.aworldbridgelabs.com/geoserver/?SERVICE=WMS&";
+
+                //config.service = "http://cs.aworldbridgelabs:8080/geoserver/?SERVICE=WMS&";
+                //config.service = "http://cs.aworldbridgelabs/geoserver/?SERVICE=WMS&";
+
+                //config.service = "http://aworldbridgelabs.com:8080/geoserver/?SERVICE=WMS&";
+                //config.service = "http://aworldbridgelabs.com/geoserver/?SERVICE=WMS&";
+
+                //config.service = "http://aworldbridgelabs/geoserver/?SERVICE=WMS&";
+                //config.service = "http://aworldbridgelabs:8080/geoserver/?SERVICE=WMS&";
+
+
+
+                config.service = "http://cs.aworldbridgelabs.com:8080/geoserver/ows/?SERVICE=WMS&";
+                //config.service = "http://cs.aworldbridgelabs.com:8080/geoserver/ows/?SERVICE=WMS&";
+
+                //config.service = "http://aworldbridgelabs.com/geoserver/?SERVICE=WMS&";
+                //config.service = "http://24.237.235.227/geoserver/?SERVICE=WMS&";
                 //config.service = "http://10.194.40.100/geoserver/?SERVICE=WMS&";
 
                 layer = new WorldWind.WmsLayer(config, null);

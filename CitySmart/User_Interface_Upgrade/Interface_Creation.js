@@ -1,303 +1,74 @@
-/**
- * Created by docto on 7/2/2017.
- */
+var temporaryCountryValue = -1;
+
+var countryString = `
+    <p><label>Country</label><select id="myListCountry">
+    <option value="-1">-Select a Country-</option>
+`;
 
 
-var country = [];
-var city = [];
-var category = [];
-var subCategory = [];
-var nameAndButton = [];
-
-var interfaceArray = [];
-var Interface_URL = "http://localhost:63342/AWorldBridge_CitySmart/CitySmart/User_Interface_Upgrade/Interface_CSV.csv";
+var cityString =`
+    <p><label>City</label><select id="myListCountry">
+    <option value="-1">-Select a City-</option>
+`;
 
 
+CCStringEnd = `
+    </select></p>
+`;
 
-
-
-function interfaceParse (Interface_CSV_URL) {
-
-    function contains(Array_Name, Variable) {
-
-        if (Array_Name.indexOf(Variable) === -1){return false}
-        else {return true}
-    }
-
-
-    Papa.parse(Interface_CSV_URL, {
-
-        header: true,
-
-        skipEmptyLines: true,
-
-        download: true,
-
-        complete: function (results) {
-            interfaceArray = results.data;
-
-
-            //console.log(A_interfaceArray);
-            country_parse(interfaceArray);
-
-
-        }
-    });
+var accordianEnd = `
+                                            </div>
+                                       </li>
+                                </ul>
+`;
 
 
 
-    function country_parse() {
+function interfaceCityCreation() {console.log('hello there');
 
-        for (var a = 0; a < interfaceArray.length; a++) {
 
-            //console.log(a);
-            if (contains(country, interfaceArray[a]['Country']) === false) {
-                country.push(interfaceArray[a]['Country'])
+//TcityString = cityString;
+
+
+    if (Number($('#myListCountry').val()) === -1){}
+    else if (Number($('#myListCountry').val()) === temporaryCountryValue){}
+    else if (typeof Number($('#myListCountry').val()) === 'undefined'){}
+    else{
+
+        //console.log(typeof Number($('#myListCountry').val()));
+        //console.log($('#myListCountry').val());
+
+        CV = Number($('#myListCountry').val());
+
+        console.log(CV);
+
+///////////////////////////////////////////////////////////////////
+        function cityStringCreation(id){
+
+            tempCity = city[CV];
+            TcityString = cityString;
+
+            for (a = 0; a < tempCity.length; a ++){
+
+                cityMidString = `<option value="` + a.toString() + `"/>` + tempCity[a] + `</option>`;
+
+                TcityString = TcityString + cityMidString
             }
 
+            TcityString = TcityString + CCStringEnd;
 
+            var e = document.getElementById(id);
+
+            e.innerHTML = TcityString
         }
-        //console.log(interfaceArray);
-        //console.log(a);
-        console.log('Country', country);
-        cityParse()
+
+        cityStringCreation('myListCity')
 
     }
 
-
-
-    function cityParse() {
-
-        for (a = 0; a < country.length; a++) {
-
-            city.push(cityParse2());
-
-
-            function cityParse2() {
-
-
-                window[country[a]] = [];
-
-                for (b = 0; b < interfaceArray.length; b++) {
-
-                    if (interfaceArray[b]['Country'] === country[a]) {
-                        if (contains(window[country[a]], interfaceArray[b]['City']) === false) {
-                            window[country[a]].push(interfaceArray[b]['City'])
-                        }
-                    }
-
-                }
-                //console.log(window[country[a]]);
-                return window[country[a]]
-            }
-
-
-        }
-        console.log('City', city);
-        categoryParse();
-    }
-
-
-
-    function categoryParse() {
-        for (x = 0; x < country.length; x++) {
-
-            tempCity = city[x];
-
-            category.push(categoryParse2());
-
-            function categoryParse2() {
-
-                window[country[x]] = [];
-
-                for (z = 0; z < city[x].length; z++) {
-
-                    window[country[x]].push(categoryParse3());
-
-                    function categoryParse3() {
-
-                        window[tempCity[z]] = [/* Holds categories */];
-
-                        for (b = 0; b < interfaceArray.length; b++) {
-
-                            //window[interfaceArray[b]['Category']] = [];
-
-                            if (interfaceArray[b]['City'] === tempCity[z] && interfaceArray[b]['Country'] === country[x]) {
-                                if (contains(window[tempCity[z]], interfaceArray[b]['Category']) === false) {
-
-                                    window[tempCity[z]].push(interfaceArray[b]['Category'])
-
-                                }
-                            }
-
-                        }
-
-
-                        return window[tempCity[z]]
-                    }
-
-
-                }
-                return window[country[x]]
-            }
-        }
-        console.log('Category', category);
-        subCategoryParse()
-    }
-
-
-
-    function subCategoryParse() {
-        for (x = 0; x < country.length; x++) {
-
-            tempCity = city[x];
-            tc1 = category[x];
-
-            subCategory.push(subCategoryParse2());
-
-            function subCategoryParse2() {
-
-                window[country[x]] = [/* Holds Cities */];
-
-                for (z = 0; z < city[x].length; z++) {
-
-                    window[country[x]].push(categoryParse3());
-
-                    function categoryParse3() {
-
-                        window[tempCity[z]] = [/* Holds categories */];
-
-                        tc2 = tc1[z];
-
-                        for (b = 0; b < tc2.length; b++) {
-
-                            window[tempCity[z]].push(subCategoryParse4());
-
-                            function subCategoryParse4() {
-
-                                window[tc2[b]] = [/* Holds Sub Categories */];
-
-                                for (c = 0; c < interfaceArray.length; c++) {
-
-
-                                    if (interfaceArray[c]['City'] === tempCity[z] && interfaceArray[c]['Country'] === country[x] && interfaceArray[c]['Category'] === tc2[b]) {
-                                        if (contains(window[tc2[b]], interfaceArray[c]['Sub Category']) === false) {
-
-                                            window[tc2[b]].push(interfaceArray[c]['Sub Category'])
-
-                                        }
-                                    }
-
-                                }
-                                return window[tc2[b]]
-                            }
-
-
-
-
-                        }
-
-
-                        return window[tempCity[z]]
-                    }
-
-
-                }
-                return window[country[x]]
-            }
-        }
-        console.log('Sub Category', subCategory);
-        nrParse();
-
-    }
-
-
-
-    function nrParse() {
-        for (x = 0; x < country.length; x++) {
-
-            tempCity = city[x];
-            tc1 = category[x];
-            nr1 = subCategory[x];
-
-            nameAndButton.push(nrParse2());
-
-            function nrParse2() {
-
-                window[country[x]] = [/* Holds Cities */];
-
-                for (z = 0; z < city[x].length; z++) {
-
-                    window[country[x]].push(nrParse3());
-
-                    function nrParse3() {
-
-                        window[tempCity[z]] = [/* Holds categories */];
-
-                        tc2 = tc1[z];
-                        nr2 = nr1[z];
-
-                        for (b = 0; b < tc2.length; b++) {
-
-                            nr3 = nr2[b];
-
-                            window[tempCity[z]].push(nrParse4());
-
-                            function nrParse4() {
-
-                                window[tc2[b]] = [/* Holds Sub Categories */];
-
-                                for (c = 0; c < nr3.length; c++) {
-
-                                    window[tc2[b]].push(nrParse5());
-
-
-                                    function nrParse5() {
-
-                                        window[nr3[c]] = [];
-
-                                        for (d = 0; d < interfaceArray.length; d++) {
-                                            if (interfaceArray[d]['City'] === tempCity[z] && interfaceArray[d]['Country'] === country[x] && interfaceArray[d]['Category'] === tc2[b] && interfaceArray[d]['Sub Category'] === nr3[c]) {
-
-                                                if (contains(window[nr3[c]], interfaceArray[d]['Sub Category']) === false) {
-
-
-                                                    window[nr3[c]].push(interfaceArray[d]['Name'], interfaceArray[d]['Button Reference'])
-
-                                                }
-
-                                            }
-                                        }
-                                        return window[nr3[c]]
-                                    }
-
-                                }
-                                return window[tc2[b]]
-                            }
-
-
-                        }
-
-
-                        return window[tempCity[z]]
-                    }
-
-
-                }
-                return window[country[x]]
-            }
-        }
-        //console.log(category);
-        console.log("Name and Button Reference", nameAndButton)
-    }
-
-
-
+    temporaryCountryValue = $('#myListCountry').val()
 
 }
-
-
-interfaceParse(Interface_URL);
 
 
 
@@ -307,11 +78,149 @@ interfaceParse(Interface_URL);
 function interfaceCreation() {
 
 
+    if (Number($('#myListCity').val()) === -1) {
+    }
+    else if (Number($('#myListCity').val()) === temporaryCountryValue) {
+    }
+    else if (typeof Number($('#myListCity').val()) === 'undefined') {
+    }
+    else {
+
+
+        CountryN = Number($('#myListCountry').val());
+        CityN = Number($('#myListCity').val());
+
+        Ca1 = category[CountryN];
+        Ca2 = Ca1[CityN];
+
+        stringStorage = [];
+
+        for (b = 0; b < Ca2.length; b++){
+            Sb1 = subCategory[CountryN];
+            Sb2 = Sb1[CityN];
+            Sb3 = Sb2[b];
+
+/*
+            categoryAccordianStart = `
+        <ul class="accordion" data-accordion="mw6gud-accordion" role="tablist" data-allow-all-closed="true">
+                <li class="accordion-item">
+                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Ca2[b] + `</h5></a>
+            <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading" aria-hidden="true" style="display:none;">
+            `;
+*/
+
+            categoryAccordianStart =`
+
+        <ul id="` + Ca2[b] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+                <li class="accordion-item">
+                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Ca2[b] + `</h5></a>
+            <div id="` + Ca2[b] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+`;
+
+
+
+
+
+            stringStorage.push(categoryAccordianStart);
+
+            for (c = 0; c < Sb3.length; c++) {
+                NR1 = nameAndButton[CountryN];
+                NR2 = NR1[CityN];
+                NR3 = NR2[b];
+                NR4 = NR3[c];
+/*
+                subCategoryAccordianStart = `
+        <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+                <li class="accordion-item">
+                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Sb3[c] + `</h5></a>
+            <div id="` + Sb3[c] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading" aria-hidden="true" style="display:none;">
+
+            `;
+*/
+                subCategoryAccordianStart =`
+
+        <ul id="` + Ca2[b] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+                <li class="accordion-item">
+                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Ca2[b] + `</h5></a>
+            <div id="` + Ca2[b] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+`;
+
+
+                stringStorage.push(subCategoryAccordianStart);
+
+
+                var checkBoxStringList = [];
+
+                for (d = 0; d < NR4.length; d++){
+
+                    TempString = `
+                        <div>
+                        <h6><a href="#">-` + NR4[d][0] + `</a><label class="switch right">
+                        <input type="checkbox">
+                        <div id= "` + NR4[d][1] + `" style="height:12px" class="slider round"></div>
+                        </label></h6>
+                        </div>
+                    `;
+                    checkBoxStringList.push(TempString)
+                }
+
+                var checkBoxString = checkBoxStringList[0];
+                for (e = 1; e < checkBoxStringList.length; e++){
+
+                    checkBoxString = checkBoxString + checkBoxStringList[e]
+
+                }
+                stringStorage.push(checkBoxString);
+
+
+                stringStorage.push(accordianEnd);
+            }
+
+
+
+
+
+            stringStorage.push(accordianEnd);
+        }
+
+
+
+        TS = stringStorage[0];
+
+        for (f = 1; f < stringStorage.length; f++){
+
+            TS = TS + stringStorage[f];
+
+
+        }
+
+        var q = document.getElementById('Layer Menu');
+
+        q.innerHTML = TS
+    }
+
+
+
+
+
+
 
 
 
 
 }
+
+/*
+var accordianStart = `
+<ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+    <li class="accordion-item">
+    <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>Category 1</h5></a>
+<div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+`;
+*/
+
+
+
 
 
 

@@ -117,7 +117,7 @@ function Placemark_Creation(Layer_Name,RGB) {
     latitude_longitude = [];
     k++;
     if (k < Point_Layers.length){First_Function()}
-    else {Geo()}
+    //else {Geo()}
 
 
 }
@@ -205,8 +205,9 @@ function First_Function () {
 
     ReferenceArray = Point_Layers[k];
 
+     //var url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+     var url = "http://localhost:63342/AWorldBridge_CitySmart2/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
     // var url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
-    var url = "http://localhost:63342/AWorldBridge_CitySmart/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
     //var url = "http://localhost:40002/file:///Users/kshin/Desktop/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
     //url = "http://10.194.40.100/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
 
@@ -240,8 +241,10 @@ var Point_Layers = [
     ["World Bridge","World_Bridge_Sites.csv",['rgb(187,0,255)','rgb(0,255,0)','rgb(187,0,255)']],
     ["KIBSD Turbine","KHS_Wind_Turbine.csv",['rgb(255,192,203)','rgb(255,0,0)','rgb(255,192,203)']],
     ["KEA Turbine","KEA_Wind_Turbine.csv",['rgb(204, 204, 255)','rgb(0,0,255)','rgb(204, 204, 255)']],
-    ["Bear Valley Golf Course","BVGC.csv",['rgb(0,0,255)','rgb(255,192,203)','rgb(0,0,255)']]
-    ["Building 1","FTAA.csv",['rgb(0,0,255)','rgb(255,192,203)','rgb(0,0,255)']]
+    ["Bear Valley Golf Course","BVGC.csv",['rgb(0,0,255)','rgb(255,192,203)','rgb(0,0,255)']],
+    ["Energy","FTAA_Energy.csv",['rgb(255,255,0)','rgb(255,150,0)','rgb(255,100,0)']],
+    ["Water","FTAA_Water.csv",['rgb(0,200,255)','rgb(0,150,255)','rgb(0,100,255)']]
+
 
 
 
