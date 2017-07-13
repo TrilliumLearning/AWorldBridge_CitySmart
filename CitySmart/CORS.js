@@ -1,7 +1,9 @@
-/**
- * Created by docto on 7/13/2017.
- */
 
+/*
+var cors = new EnableCorsAttribute("http://cs.aworldbridgelabs.com:8080/geoserver/ows/", "*", "*");
+config.EnableCors(cors);
+
+*/
 
 function createCORSRequest(method, url) {
     var xhr = new XMLHttpRequest();
@@ -25,9 +27,9 @@ function getTitle(text) {
 }
 
 // Make the actual CORS request.
-function makeCorsRequest(url) {
+function makeCorsRequest() {
     // This is a sample server that supports CORS.
-    //var url = 'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html';
+    var url = 'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html';
 
     var xhr = createCORSRequest('GET', url);
     if (!xhr) {
