@@ -3,6 +3,7 @@ var temporaryCountryValue = -1;
 var countryString = `
     <p><label>Country</label><select id="myListCountry">
     <option value="-1">-Select a Country-</option>
+    <option value="-2">All Layers</option>
 `;
 
 
@@ -34,6 +35,17 @@ function interfaceCityCreation() {
         e.innerHTML = `
         <option value="-1">-Select a City-</option>
         `
+
+    }
+    else if (Number($('#myListCountry').val()) === -2){
+
+        var e = document.getElementById("myListCity");
+
+        e.innerHTML = `
+        <option value="-2">All Layers</option>
+        `;
+
+        interfaceCreation();
 
     }
     else if (Number($('#myListCountry').val()) === temporaryCountryValue){}
@@ -81,13 +93,118 @@ function interfaceCityCreation() {
 
 
 
-
-
 function interfaceCreation() {
 
 
     if (Number($('#myListCity').val()) === -1) {
     }
+    else if (Number($('#myListCity').val()) === -2) {
+
+        stringStorage = [];
+
+        for (b = 0; b < ALLcategory.length; b++) {
+            SBC = ALLsubCategory[b];
+
+            /*
+             categoryAccordianStart = `
+             <ul class="accordion" data-accordion="mw6gud-accordion" role="tablist" data-allow-all-closed="true">
+             <li class="accordion-item">
+             <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Ca2[b] + `</h5></a>
+             <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading" aria-hidden="true" style="display:none;">
+             `;
+             */
+
+            categoryAccordianStart = `
+
+        <ul id="` + ALLcategory[b] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+                <li class="accordion-item">
+                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + ALLcategory[b] + `</h5></a>
+            <div id="` + ALLcategory[b] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+`;
+
+
+            stringStorage.push(categoryAccordianStart);
+
+            for (c = 0; c < SBC.length; c++) {
+
+
+                NBR = ALLnameAndButton[b];
+                NBR2 = NBR[c];
+
+
+
+                subCategoryAccordianStart = `
+
+        <ul id="` + SBC[c] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+                <li class="accordion-item">
+                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + SBC[c] + `</h5></a>
+            <div id="` + SBC[c] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+`;
+
+
+                stringStorage.push(subCategoryAccordianStart);
+
+
+                var checkBoxStringList = [];
+
+
+
+                for (d = 0; d < NBR2.length; d++) {
+
+                    TempString = `
+                        <div>
+                        <h6><a href="#">-` + NBR2[d][0] + `</a><label class="switch right">
+                        <input type="checkbox">
+                        <div id= "` + NBR2[d][1] + `" style="height:12px" class="slider round"></div>
+                        </label></h6>
+                        </div>
+                    `;
+                    checkBoxStringList.push(TempString)
+                }
+
+                var checkBoxString = checkBoxStringList[0];
+                for (e = 1; e < checkBoxStringList.length; e++) {
+
+                    checkBoxString = checkBoxString + checkBoxStringList[e]
+
+                }
+                stringStorage.push(checkBoxString);
+
+
+                stringStorage.push(accordianEnd);
+            }
+
+
+            stringStorage.push(accordianEnd);
+        }
+
+
+        TS = stringStorage[0];
+
+        for (f = 1; f < stringStorage.length; f++) {
+
+            TS = TS + stringStorage[f];
+
+
+        }
+
+        var q = document.getElementById('Layer Menu');
+
+        q.innerHTML = TS;
+
+        $(document).foundation()
+    }
+
+
+
+
+
+
+
+
+
+
+
     else if (Number($('#myListCity').val()) === temporaryCountryValue) {
     }
     else if (typeof Number($('#myListCity').val()) === 'undefined') {
