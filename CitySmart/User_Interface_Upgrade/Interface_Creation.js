@@ -24,23 +24,31 @@ var accordianEnd = `
 
 
 
-function interfaceCityCreation() {console.log('hello there');
+function interfaceCityCreation() {
 
 
-//TcityString = cityString;
+    if (Number($('#myListCountry').val()) === -1){
 
+        var e = document.getElementById("myListCity");
 
-    if (Number($('#myListCountry').val()) === -1){}
+        e.innerHTML = `
+        <option value="-1">-Select a City-</option>
+        `
+
+    }
     else if (Number($('#myListCountry').val()) === temporaryCountryValue){}
     else if (typeof Number($('#myListCountry').val()) === 'undefined'){}
     else{
 
+        var q = document.getElementById('Layer Menu');
+
+
+        q.innerHTML = ``;
         //console.log(typeof Number($('#myListCountry').val()));
         //console.log($('#myListCountry').val());
 
         CV = Number($('#myListCountry').val());
 
-        console.log(CV);
 
 ///////////////////////////////////////////////////////////////////
         function cityStringCreation(id){
@@ -139,10 +147,10 @@ function interfaceCreation() {
 */
                 subCategoryAccordianStart =`
 
-        <ul id="` + Ca2[b] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+        <ul id="` + Sb3[c] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                 <li class="accordion-item">
-                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Ca2[b] + `</h5></a>
-            <div id="` + Ca2[b] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Sb3[c] + `</h5></a>
+            <div id="` + Sb3[c] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
 `;
 
 
@@ -196,7 +204,9 @@ function interfaceCreation() {
 
         var q = document.getElementById('Layer Menu');
 
-        q.innerHTML = TS
+        q.innerHTML = TS;
+
+        $(document).foundation()
     }
 
 
