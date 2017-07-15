@@ -3,7 +3,7 @@
     <script src="dygraph-combined.js"></script>
     <script src="jquery.min.js"></script>
     <script src="gauge.min.js"></script>
-    <script src="graphsRev.js"></script>
+    <script src="graphsTrend.js"></script>
     <link rel="stylesheet" href="http://dygraphs.com/dist/dygraph.css">
     <script type="text/javascript" src="http://dygraphs.com/dist/dygraph.js"></script>
     <script type="text/javascript" src="data.js"></script>
@@ -57,7 +57,7 @@
                     <div class="columns large-4">
                         <div>
                             <p><label>Wind Turbine Graph</label><select id="myListWIND">
-                                    <option value="null">select</option>                                     
+                                    <option value="null">select</option>
                                     <option value="1">one</option>
                                     <option value="2">two</option>
                                     <option value="3">three</option>
@@ -67,8 +67,8 @@
                     </div>
                     <div class="columns large-4">
                         <div>
-                            <p><label>HydroElectric Generator Graph</label><select id="myListHYDRO">
-                                    <option value="null">select</option>                                     
+                            <p><label>Hydroelectric Generator Graph</label><select id="myListHYDRO">
+                                    <option value="null">select</option>
                                     <option value="1">one</option>
                                     <option value="2">two</option>
                                     <option value="3">three</option>
@@ -89,7 +89,7 @@
                                     <option value="consumersR">Residental- Number of Consumers</option>
                                     <option value="salesR">Residental- Sales</option>
                                     <option value="revenueR">Residental- Revenue</option>
-                                </select></p>
+                                </select><input type="button" onclick="fun()" value="click here"></p>
                         </div>
                     </div>
                     <!-- End Thumbnails -->
