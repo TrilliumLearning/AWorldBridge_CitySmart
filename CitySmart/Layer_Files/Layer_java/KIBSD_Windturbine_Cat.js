@@ -118,7 +118,7 @@ function Placemark_Creation(Layer_Name,RGB) {
     k++;
     if (k < Point_Layers.length){First_Function()}
     //else {Geo()}
-    else {Ortho1()}
+    //else {Ortho1()}
 
 
 }
@@ -206,8 +206,8 @@ function First_Function () {
 
     ReferenceArray = Point_Layers[k];
 
-    var url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
-    //url = "http://localhost:63342/AWorldBridge_CitySmart/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+    //var url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+    url = "http://localhost:63342/AWorldBridge_CitySmart/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
     //var url = "http://localhost:40002/file:///Users/kshin/Desktop/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
     //url = "http://10.194.40.100/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
 
