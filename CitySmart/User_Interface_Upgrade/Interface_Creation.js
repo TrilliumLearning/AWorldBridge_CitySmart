@@ -162,7 +162,7 @@ function interfaceCreation() {
 
                     TempString = `
                         <div>
-                        <h6><a href="#">-` + NBR2[d][0] + `</a><label class="switch right">
+                        <h6><a href="#">-` + NBR2[d][0] + ` ` + `</a><label class="switch right">
                         <input type="checkbox">
                         <div id= "` + NBR2[d][1] + `" style="height:12px" class="slider round"></div>
                         </label></h6>
@@ -282,7 +282,7 @@ function interfaceCreation() {
 
                     TempString = `
                         <div>
-                        <h6><a href="#">-` + NR4[d][0] + `</a><label class="switch right">
+                        <h6><a href="#">-` + NR4[d][0] +` ` + `</a><label class="switch right">
                         <input type="checkbox">
                         <div id= "` + NR4[d][1] + `" style="height:12px" class="slider round"></div>
                         </label></h6>

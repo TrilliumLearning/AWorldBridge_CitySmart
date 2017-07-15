@@ -34,7 +34,7 @@ function Ortho1() {
             //var server =  addWMSServer("http://aworldbridgelabs/geoserver/");
             //var server =  addWMSServer("http://aworldbridgelabs:8080/geoserver/");
 
-            var server = addWMSServer("http://cs.aworldbridgelabs.com:8080/geoserver/ows/");
+            var server = addWMSServer("http://cs.aworldbridgelabs.com:8080/geoserver/ows");
 
             //var server = addWMSServer("http://24.237.235.227/geoserver/");
             //var server = addWMSServer("http://10.194.40.100/geoserver/");
@@ -75,7 +75,7 @@ function Ortho1() {
         url += "service=WMS&request=GetCapabilities&version=1.1.1";
 
 
-
+/*
         if ("withCredentials" in request) {
             // XHR for Chrome/Firefox/Opera/Safari.
             request.open("GET", url, true);
@@ -87,11 +87,11 @@ function Ortho1() {
             // CORS not supported.
             request = null;
         }
+*/
 
 
-
-        //request.open("GET", url, true);
-        request.setRequestHeader('Access-Control-Allow-Origin', '*');
+        request.open("GET", url, true);
+        //request.setRequestHeader('Access-Control-Allow-Origin', '*');
         request.onreadystatechange = function () {
             if (request.readyState === 4 && request.status === 200) {
                 var xmlDom = request.responseXML,
@@ -152,7 +152,7 @@ function Ortho1() {
         //wmsCapsDoc.service.onlineResource = "http://aworldbridgelabs:8080/geoserver/?SERVICE=WMS&";
 
 
-        wmsCapsDoc.service.onlineResource =  "http://cs.aworldbridgelabs.com:8080/geoserver/ows/?SERVICE=WMS&";
+        wmsCapsDoc.service.onlineResource =  "http://cs.aworldbridgelabs.com:8080/geoserver/ows?SERVICE=WMS&";
 
 
 
@@ -184,7 +184,7 @@ function Ortho1() {
             //layer = new WorldWind.WmsLayer(wmsLayers, null);
             //wwd.addOverlayLayer(layer);
 
-            console.log('Finished importing', wmsLayers[0].title)
+            console.log('Finished importing', wmsLayers[z].title)
         }
 
 
@@ -249,7 +249,7 @@ function Ortho1() {
 
 
 
-                config.service = "http://cs.aworldbridgelabs.com:8080/geoserver/ows/?SERVICE=WMS&";
+                config.service = "http://cs.aworldbridgelabs.com:8080/geoserver/ows?SERVICE=WMS&";
                 //config.service = "http://cs.aworldbridgelabs.com:8080/geoserver/ows/?SERVICE=WMS&";
 
                 //config.service = "http://aworldbridgelabs.com/geoserver/?SERVICE=WMS&";
