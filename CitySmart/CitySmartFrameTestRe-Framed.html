@@ -498,75 +498,57 @@
                 </li>
             </ul>
             <ul class="dropdown menu float-right" data-dropdown-menu>
-                <div style="width:120px">
-                    <p><label>City</label><select id="myListCity">
-                            <option value="1">one</option>
-                            <option value="2">two</option>
-                            <option value="3">three</option>
-                            <option value="4">four</option>
+
+
+                <div style="width:125px"  href="javascript:void(0)" onclick="interfaceCreation()">
+                    <p><select id="myListCity">
+                        <option value="-1">-Select a City-</option>
+
                         </select></p>
                 </div>
             </ul>
             <img style="height:10px" src="Placeholder-White.png" class="float-right" />
             <ul class="dropdown menu float-right" data-dropdown-menu>
-                <div style="width:120px">
-                    <p><label>Country</label><select id="myListCountry">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
+
+
+
+                <div style="width:125px" href="javascript:void(0)" onclick="interfaceCityCreation()">
+                    <p><select id="myListCountry">
+                        <option value="-1">-Select a Country-</option>
+
                         </select></p>
                 </div>
             </ul>
         </div>
         <!-- End Header -->
+
+
+
+
         <div class="row">
             <div class="columns large-3">
                 <div style="height:6px" class="clearfix clear-columns"></div>
-                <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+
+
+
+                <ul id = "ACR" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                     <li class="accordion-item">
-                        <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>List</h5></a>
-                        <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
-                            <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
-                                <li class="accordion-item">
-                                    <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>Category 1</h5></a>
-                                    <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
-                                        <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
-                                            <li class="accordion-item">
-                                                <a href="#panel538" role="tab" class="accordion-title" id="panel538-heading" aria-controls="panel538"><h5><h6>Subcategory A</h6></h5></a>
-                                                <div id="panel538" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel538-heading">
-                                                    <div>
-                                                        <h6><a href="#">- Kodiak </a><label class="switch right">
-                                                                <input type="checkbox">
-                                                                <div id="kodiak" style="height:12px" class="slider round">
-</div>
-                                                            </label></h6>
-                                                    </div>
-                                                    <div>
-                                                        <h6><a href="#">- Kodiak </a><label class="switch right">
-                                                                <input type="checkbox">
-                                                                <div id="kodiak" style="height:12px" class="slider round">
-</div>
-                                                            </label></h6>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
-</ul>
+                        <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>Layer Menu</h5></a>
+                        <div id="Layer Menu" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+
+
+
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="large-9 columns">
-                <canvas id="canvasOne" style="width: 100%; height: auto">
-                    Your browser does not support HTML5 Canvas.
-</canvas>
+                <canvas id="canvasOne" style="width: 100%; height: auto">Your browser does not support HTML5 Canvas.</canvas>
             </div>
         </div>
+
+
+
         <!-- Footer -->
         <script type="text/javascript">
             <!--
@@ -595,7 +577,7 @@
             <div class="popupBoxWrapper">
                 <div class="popupBoxContent">
                     <h3>Bryggen (1979)</h3>
-                    <img src="Pics/HM1.jpg" />
+                    <img src="Pics/KEA_Turbine.jpg" />
                     <p>
                         Copyright</p>
                     <p>Site Description</p>
@@ -617,7 +599,11 @@
         <script src="js/vendor/jquery.min.js"></script>
         <script src="require.js"></script>
         <script src="js/foundation.min.js"></script>
+        <script src="User_Interface_Upgrade/Interface_Parsing.js"></script>
+        <script src="User_Interface_Upgrade/All_Interface_Parsing.js"></script>
+        <script src="User_Interface_Upgrade/Interface_Creation.js"></script>
         <script src="Globe_C.js"></script>
+        <script src="Layer_Files/Layer_java/GeoServer.js"></script>
         <script src="Layer_Files/Layer_java/KIBSD_Windturbine_Cat.js" id="points"></script>
         <script src="Layer_Files/Layer_Toggle_Java/WT-KEA.js"></script>
         <script src="Layer_Files/Layer_Toggle_Java/BVGC.js"></script>

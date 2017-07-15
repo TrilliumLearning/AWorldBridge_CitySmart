@@ -20,6 +20,7 @@ var CCStringEnd = `
 var countryString = `
     <p><label>Country</label><select id="myListCountry">
     <option value="-1">-Select a Country-</option>
+    <option value="-2">All Layers</option>
 `;
 
 

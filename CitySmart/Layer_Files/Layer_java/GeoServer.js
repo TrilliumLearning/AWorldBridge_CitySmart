@@ -61,7 +61,9 @@ function Ortho1() {
         }
 
         var self = this,
-            request = new XMLHttpRequest(),
+            request = new XMLHttpRequest();
+
+
             //request = makeCorsRequest(url);
             //request = createCORSRequest('get',"http://cs.aworldbridgelabs.com:8080/geoserver/ows/"),
 
@@ -80,17 +82,16 @@ function Ortho1() {
         } else if (typeof XDomainRequest != "undefined") {
             // XDomainRequest for IE.
             request = new XDomainRequest();
-            request.open("GET", url);
+            request.open("GET", url).setRequestHeader('Access-Control-Allow-Origin', '*');
         } else {
             // CORS not supported.
             request = null;
         }
 
-        request.setRequestHeader(
-            'Access-Control-Allow-Origin', 'value');
 
 
         //request.open("GET", url, true);
+        request.setRequestHeader('Access-Control-Allow-Origin', '*');
         request.onreadystatechange = function () {
             if (request.readyState === 4 && request.status === 200) {
                 var xmlDom = request.responseXML,
