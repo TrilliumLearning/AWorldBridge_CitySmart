@@ -36,6 +36,11 @@ function interfaceCityCreation() {
         <option value="-1">-Select a City-</option>
         `
 
+
+        var b = document.getElementById("Layer Menu");
+
+        b.innerHTML = ``
+
     }
     else if (Number($('#myListCountry').val()) === -2){
 
@@ -98,7 +103,11 @@ function interfaceCreation() {
 
     if (Number($('#myListCity').val()) === -1) {
     }
+    else if (Number($('#myListCity').val()) === temporaryCountryValue) {
+    }
     else if (Number($('#myListCity').val()) === -2) {
+
+
 
         stringStorage = [];
 
@@ -200,13 +209,6 @@ function interfaceCreation() {
 
 
 
-
-
-
-
-
-    else if (Number($('#myListCity').val()) === temporaryCountryValue) {
-    }
     else if (typeof Number($('#myListCity').val()) === 'undefined') {
     }
     else {
