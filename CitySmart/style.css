@@ -2,11 +2,10 @@
 
 #Logo
 {
-    height: 80px;
-    background-color: white;
+    height: 20px;
     white-space: nowrap;
     width: 100%;
-    display: table;
+    display: inline-table;
 }
 
 .logo-image
