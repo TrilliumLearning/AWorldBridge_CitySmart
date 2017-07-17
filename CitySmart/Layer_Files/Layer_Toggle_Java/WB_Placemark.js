@@ -3,7 +3,7 @@
 
 
 
-var AWB_Point = "World Bridge";
+var AWB_Point = "US A World Bridge Sites";
 var AWB_Point_Ref = "AWB_Point_Num";
 var AWB_Point_Num;
 
@@ -16,7 +16,9 @@ var AWB_Point_Num;
 $(document).ready(function(){
 
 
-    $("#WBmaster").click(function(){
+    $(document).on("click", '#US_A_World_Bridge_Sites',
+
+        function(){
 
 function Find(Display_Name, Reference_Name) {
             for (m = 0; m < wwd.layers.length; m++) {
@@ -33,6 +35,6 @@ function Find(Display_Name, Reference_Name) {
 
         else {wwd.layers[AWB_Point_Num].enabled = true}
 
-        layerManager.goToAnimator.goTo(new WorldWind.Position(57.7855, -152.56, 2500));
+
 
 })});

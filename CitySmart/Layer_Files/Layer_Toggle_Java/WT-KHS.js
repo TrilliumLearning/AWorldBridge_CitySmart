@@ -27,9 +27,9 @@ $(document).ready(function(){
         if (wwd.layers[KIBSD_Point_Num].enabled === true) {
             wwd.layers[KIBSD_Point_Num].enabled = false}
 
-        else {wwd.layers[KIBSD_Point_Num].enabled = true}
+        else {wwd.layers[KIBSD_Point_Num].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.793083,-152.397157, 2500));}
 
-        layerManager.goToAnimator.goTo(new WorldWind.Position(57.793083,-152.397157, 2500));
+
 
 
     })});

@@ -1,44 +1,82 @@
 Country,City,Category,Sub Category,Name,Button Reference
 
 
+
+
+
+Italy, Florence, Energy, Renewable Energy,(TBD),TBD
+Finland, Helsinki, Energy, Renewable Energy,(TBD),TBD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 United States of America,Kodiak,Energy,Wind Energy,KHS Wind Turbine,KHS_Turbine
 United States of America,Kodiak,Energy,Wind Energy,KEA Wind Turbine,KEA_Wind_Turbine
 
 
 
-United States of America,Cuddebackville,Water,Containment,Cuddebackville Dam,Cuddebackville_Dam
-United States of America,Kodiak,Water,Water Treatment,Kodiak Water Treatment Plant,Kodiak_Water_Treatment_Plant
+United States of America,Cuddebackville,Water Testing,(TBD) Fei Tian Academy Water Tests,Fei_Tian_Academy_Water_Tests
+United States of America,Kodiak,Water,Containment,(TBD) Terror Dam,Terror_Dam
 
 
 
-United States of America,Cuddebackville,Agriculture,Farming,Chester Meadow Farm,Chester_Meadow_Farm
+
 United States of America,Kodiak,Agriculture,Soil Testing,Bear Valley Golf Course,Bear_Valley_Golf_Course
 
 
 
-United States of America,Cuddebackville,Transportation,Auto Repair,Westbrookville Auto Body,Westbrookville_Auto_Body
-United States of America,Kodiak,Transportation,Airports,Kodiak Municipal Airport,Kodiak_Municipal_Airport
-United States of America,Kodiak,Transportation,Airports,Kodiak Benny Benson State Airport,Kodiak_Benny_Benson_State_Airport
+
+United States of America,Kodiak,Transportation,Airports,(TBD) Kodiak Municipal Airport,Kodiak_Municipal_Airport
+United States of America,Kodiak,Transportation,Airports,(TBD) Kodiak Benny Benson State Airport,Kodiak_Benny_Benson_State_Airport
 
 
 
-United States of America,Cuddebackville,Health Services,Hospitals and Clinics,KDL Home Health Care,KDL_Home_Health_Care
-United States of America,Kodiak,Health Services,Hospitals and Clinics,Providence Kodiak Island Medical Center,Providence_Kodiak_Island_Medical_Center
 
 
 
-United States of America,Cuddebackville,Risk Management,Fire Stations, Cuddebackville Fire Department,Cuddebackville_Fire_Department
-United States of America,Kodiak,Risk Management,Fire Stations,Kodiak City Fire Department,Kodiak_City_Fire_Department
-United States of America,Kodiak,Risk Management,Fire Stations,Bayside Volunteer Fire Department,Bayside_Volunteer_Fire_Department
-United States of America,Kodiak,Risk Management,Police Stations,Kodiak Police Department,Kodiak_Police_Department
+
+United States of America,Kodiak,Health Services,Hospitals and Clinics,(TBD) Providence Kodiak Island Medical Center,Providence_Kodiak_Island_Medical_Center
 
 
 
-United States of America,Cuddebackville,Education,Primary & Secondary Education,Fei Tian Academy of the Arts,Fei_Tian_Academy_of_the_Arts
-United States of America,Cuddebackville,Education,World Bridge Sites,Fei Tian Academy of The Arts,WB_Fei_Tian_Academy_of_the_Arts
-United States of America,Cuddebackville,Education,World Bridge Sites,Fei Tian Academy of The Arts Lab,Fei_Tian_Academy_of_the_Arts_Lab
-United States of America,Kodiak,Education,Primary & Secondary Education,Kodiak Middle School,Kodiak_Middle_School
-United States of America,Kodiak,Education,Primary & Secondary Education,Kodiak High School,Kodiak_High_School
+United States of America,Cuddebackville,Risk Management,Fire Stations,(TBD) Cuddebackville Fire Department,Cuddebackville_Fire_Department
+United States of America,Kodiak,Risk Management,Fire Stations,(TBD) Kodiak City Fire Department,Kodiak_City_Fire_Department
+United States of America,Kodiak,Risk Management,Fire Stations,(TBD) Bayside Volunteer Fire Department,Bayside_Volunteer_Fire_Department
+United States of America,Kodiak,Risk Management,Police Stations,(TBD) Kodiak Police Department,Kodiak_Police_Department
+United States of America,Kodiak,Risk Management,Earthquake Signal Precursors,(TBD) Kodiak ESP Sensors,Kodiak_ESP_Sensors
+
+
+
+United States of America,Cuddebackville,Education,Primary & Secondary Education,(TBD) Fei Tian Academy of the Arts,Fei_Tian_Academy_of_the_Arts
+United States of America,Cuddebackville,Education,A World Bridge Sites,US A World Bridge Sites,US_A_World_Bridge_Sites
+United States of America,Cuddebackville,Education, UNESCO WHS,(TBD) Fei Tian UNESCO Prototype,Fei_Tian_UNESCO_Prototype
+
+
+
+United States of America,Kodiak,Education,Primary & Secondary Education,(TBD) Kodiak Middle School,Kodiak_Middle_School
+United States of America,Kodiak,Education,Primary & Secondary Education,(TBD) Kodiak High School,Kodiak_High_School
+United States of America,Kodiak,Education,Higher Education,(TBD) Kodiak Community College,Kodiak_Community_College
+
 
 
 

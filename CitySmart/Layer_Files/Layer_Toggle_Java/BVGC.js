@@ -42,7 +42,7 @@ function Find(Display_Name, Reference_Name) {
     if (wwd.layers[BVGC_Orthomosaic_Num].enabled === true) {
         wwd.layers[BVGC_Orthomosaic_Num].enabled = false}
 
-    else {wwd.layers[BVGC_Orthomosaic_Num].enabled = true}
+    else {wwd.layers[BVGC_Orthomosaic_Num].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.7855, -152.56, 2500));}
 
-        layerManager.goToAnimator.goTo(new WorldWind.Position(57.7855, -152.56, 2500));
+
 })});

@@ -32,7 +32,7 @@ $(document).ready(function(){
         if (wwd.layers[Parcel_Map_Num].enabled === true) {
             wwd.layers[Parcel_Map_Num].enabled = false}
 
-        else {wwd.layers[Parcel_Map_Num].enabled = true}
+        else {wwd.layers[Parcel_Map_Num].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.7855, -152.56, 15000));}
 
     });
 

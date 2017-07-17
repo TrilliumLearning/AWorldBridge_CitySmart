@@ -26,8 +26,7 @@ function Find(Display_Name, Reference_Name) {
                 if (Display_Name.indexOf(wwd.layers[m].displayName) === 0) {
                     window[Reference_Name] = m;
                     m = wwd.layers.length
-                }
-        }}
+                }}}
 
             Find(KEA_Point,KEA_Point_Ref);
 
@@ -41,10 +40,10 @@ function Find(Display_Name, Reference_Name) {
         if (wwd.layers[KEA_Orthomosaic_Num].enabled === true) {
             wwd.layers[KEA_Orthomosaic_Num].enabled = false}
 
-        else {wwd.layers[KEA_Orthomosaic_Num].enabled = true}
+        else {wwd.layers[KEA_Orthomosaic_Num].enabled = true;  layerManager.goToAnimator.goTo(new WorldWind.Position(57.785,-152.45, 2500));}
 
 
-            layerManager.goToAnimator.goTo(new WorldWind.Position(57.785,-152.45, 2500));
+
 
 
 
