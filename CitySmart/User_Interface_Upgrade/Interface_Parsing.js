@@ -10,7 +10,10 @@ var subCategory = [];
 var nameAndButton = [];
 
 var interfaceArray = [];
-var Interface_URL = "http://localhost:63342/AWorldBridge_CitySmart/CitySmart/User_Interface_Upgrade/Interface_CSV.csv";
+
+
+//var Interface_URL = "http://localhost:63342/AWorldBridge_CitySmart/CitySmart/User_Interface_Upgrade/Interface_CSV.csv";
+var Interface_URL = "http://cs.aworldbridgelabs.com/CitySmart/User_Interface_Upgrade/Interface_CSV.csv";
 
 
 var CCStringEnd = `
@@ -20,6 +23,7 @@ var CCStringEnd = `
 var countryString = `
     <p><label>Country</label><select id="myListCountry">
     <option value="-1">-Select a Country-</option>
+    <option value="-2">All Layers</option>
 `;
 
 

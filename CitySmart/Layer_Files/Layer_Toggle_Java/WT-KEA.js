@@ -5,7 +5,7 @@ var KEA_Point = "KEA Turbine";
 var KEA_Point_Ref = "KEA_Point_Num";
 var KEA_Point_Num;
 
-var KEA_Orthomosaic;
+var KEA_Orthomosaic = "KEA Mosaic";
 var KEA_Orthomosaic_Ref = "KEA_Orthomosaic_Num";
 var KEA_Orthomosaic_Num;
 
@@ -17,7 +17,9 @@ var KEA_Orthomosaic_Num;
 $(document).ready(function(){
 
 
-    $("#keaT").click(function(){
+    $(document).on('click', "#KEA_Wind_Turbine",
+
+        function(){
 
 function Find(Display_Name, Reference_Name) {
             for (m = 0; m < wwd.layers.length; m++) {
@@ -44,25 +46,6 @@ function Find(Display_Name, Reference_Name) {
 
 
 
-
-
-
-
-
-        /*
-        if (wwd.layers[8].enabled === true) {
-            wwd.layers[8].enabled = false}
-
-        else {wwd.layers[8].enabled = true}
-        */
-/*
-if (wwd.layers[10].enabled === true) {
-    wwd.layers[10].enabled = false}
-
-else {wwd.layers[10].enabled = true}
-
-    });
-*/
 
 
 

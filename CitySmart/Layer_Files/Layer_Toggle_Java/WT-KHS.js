@@ -14,7 +14,7 @@ var KIBSD_Point_Num;
 
 $(document).ready(function(){
 
-    $("#khsT").click(function(){
+    $(document).on("click","#KHS_Turbine", function(){
 
         function Find(Display_Name, Reference_Name) {
             for (m = 0; m < wwd.layers.length; m++) {
@@ -31,5 +31,5 @@ if (wwd.layers[KIBSD_Point_Num].enabled === true) {
 else {wwd.layers[KIBSD_Point_Num].enabled = true}
     
     });
-    
+
 });
