@@ -28,8 +28,7 @@ function Find(Display_Name, Reference_Name) {
                 if (Display_Name.indexOf(wwd.layers[m].displayName) === 0) {
                     window[Reference_Name] = m;
                     m = wwd.layers.length
-                }
-        }}
+                }}}
 
             Find(BVGC_Point,BVGC_Point_Ref);
 
@@ -45,4 +44,5 @@ function Find(Display_Name, Reference_Name) {
 
     else {wwd.layers[BVGC_Orthomosaic_Num].enabled = true}
 
+        layerManager.goToAnimator.goTo(new WorldWind.Position(57.7855, -152.56, 2500));
 })});

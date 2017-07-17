@@ -21,15 +21,15 @@ $(document).ready(function(){
                 if (Display_Name.indexOf(wwd.layers[m].displayName) === 0) {
                     window[Reference_Name] = m;
                     m = wwd.layers.length
-                }
-            }}
+                }}}
 
         Find(KIBSD_Point, KIBSD_Point_Ref);
-if (wwd.layers[KIBSD_Point_Num].enabled === true) {
-    wwd.layers[KIBSD_Point_Num].enabled = false}
-    
-else {wwd.layers[KIBSD_Point_Num].enabled = true}
-    
-    });
+        if (wwd.layers[KIBSD_Point_Num].enabled === true) {
+            wwd.layers[KIBSD_Point_Num].enabled = false}
 
-});
+        else {wwd.layers[KIBSD_Point_Num].enabled = true}
+
+        layerManager.goToAnimator.goTo(new WorldWind.Position(57.793083,-152.397157, 2500));
+
+
+    })});

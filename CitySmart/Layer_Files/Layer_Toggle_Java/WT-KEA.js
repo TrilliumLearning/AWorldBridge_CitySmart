@@ -44,7 +44,7 @@ function Find(Display_Name, Reference_Name) {
         else {wwd.layers[KEA_Orthomosaic_Num].enabled = true}
 
 
-
+            layerManager.goToAnimator.goTo(new WorldWind.Position(57.785,-152.45, 2500));
 
 
 

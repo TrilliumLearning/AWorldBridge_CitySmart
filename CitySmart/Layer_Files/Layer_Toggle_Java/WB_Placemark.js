@@ -33,4 +33,6 @@ function Find(Display_Name, Reference_Name) {
 
         else {wwd.layers[AWB_Point_Num].enabled = true}
 
+        layerManager.goToAnimator.goTo(new WorldWind.Position(57.7855, -152.56, 2500));
+
 })});
