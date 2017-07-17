@@ -118,7 +118,15 @@ function Placemark_Creation(Layer_Name,RGB) {
     k++;
     if (k < Point_Layers.length){First_Function()}
     //else {Geo()}
-    else {Ortho1()}
+    else {
+
+
+        document.getElementById("myListCountry").selectedIndex = 1;
+        interfaceCityCreation();
+
+        Ortho1()
+
+    }
 
 
 }
