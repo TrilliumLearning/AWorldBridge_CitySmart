@@ -1,10 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
-        <title>Kodiak-A World Bridge CitySmart</title>
+        <title>CitySmart-WorldWise</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Foundation | Welcome</title>
         <link rel="stylesheet" href="css/foundationFRAME.css" />
         <link rel="stylesheet" href="style.css" />
         <script src="js/vendor/modernizr.js"></script>
@@ -17,7 +16,7 @@
             <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%">
                 <div class="top-bar-left">
                     <ul class="dropdown menu" data-dropdown-menu>
-                        <li class="menu-text">CitySmart- World Wise</li>
+                        <li class="menu-text">CitySmart-WorldWise</li>
                         <li>
                             <a style="color:white;" href="CitySmartRe-Framed.html">Home</a>
                         </li>
@@ -37,10 +36,10 @@
             <br />
             <div id="Logo">
                 <div class="logo-image">
-                    <img src="NASACitySmartLogo_Kodiak.jpg" style="min-height: 32px;" />
+                    <img src="NASACitySmartLogo Kodiak_FTAA.jpg" style="min-height: 32px;" />
                 </div>
                 <div class="logo-image">
-                    <img src="TLWBBanner .jpg" style="min-height: 32px;" />
+                    <img src="TL WB Banner 1000x134.jpg" style="min-height: 32px;" />
                 </div>
             </div>
             <div class="columns large-12">
@@ -48,9 +47,18 @@
         </div>
         <div class="row">
             <img style="height:5px" src="Placeholder-White.png" class="float-right" />
-            <a href="GraphPageKEA.html" class="button float-right small"><i class="fa fa-bar-chart-o fa-lg"></i></a>
+            <div class="tooltip float-right">
+                <div href="GraphPageKEA.html" class="button float-right small">
+                    <i class="fa fa-bar-chart-o fa-lg"></i>
+                </div>                 
+                <span class="tooltiptext">Interactive Graphs</span>
+            </div>
             <img style="height:10px" src="Placeholder-White.png" class="float-right" />
-            <a href="TableofContentsRe-Framed.html" class="button float-right small">TOC</a>
+            <div class="tooltip float-right">
+                <div class="button float-right small" href="TableofContentsRe-Framed.html">TOC
+</div>
+                <span class="tooltiptext">Table of Contents</span>
+            </div>
             <img style="height:10px" src="Placeholder-White.png" class="float-right" />
             <ul class="dropdown menu float-right" data-dropdown-menu>
                 <li>
@@ -176,33 +184,6 @@
                     <a>Financials</a>
                     <ul class="menu">
                         <li>
-                            <a href="#"> Prediction Chart</a>
-                            <ul class="menu">
-                                <li>
-                                    <a href="#"> Chart</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"> Savings Using Renewable Energy</a>
-                            <ul class="menu">
-                                <li>
-                                    <a href="#"> Chart</a>
-                                </li>
-                                <li>
-                                    <a href="#"> Simpler Chart</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"> Balance Sheet</a>
-                            <ul class="menu">
-                                <li>
-                                    <a href="#"> Chart</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
                             <a href="#"> 2012</a>
                             <ul class="menu">
                                 <li>
@@ -252,6 +233,33 @@
                                 </li>
                             </ul>
                         </li>
+                        <li>
+                            <a href="#"> Prediction Chart</a>
+                            <ul class="menu">
+                                <li>
+                                    <a href="#"> Chart</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> Savings Using Renewable Energy</a>
+                            <ul class="menu">
+                                <li>
+                                    <a href="#"> Chart</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Simpler Chart</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> Balance Sheet</a>
+                            <ul class="menu">
+                                <li>
+                                    <a href="#"> Chart</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -260,7 +268,7 @@
                     <a>Economics</a>
                     <ul class="menu">
                         <li>
-                            <a href="#"> Grand Application</a>
+                            <a href="#" style="font-weight:bold"> Grant Application</a>
                             <ul class="menu">
                                 <li>
                                     <a href="#"> PDF File</a>
@@ -367,9 +375,6 @@
                     </ul>
                 </li>
             </ul>
-
-
-
             <ul class="dropdown menu float-right" data-dropdown-menu>
                 <div style="width:192px" href="javascript:void(0)" onclick="interfaceCreation()">
                     <p><select id="myListCity">
@@ -387,8 +392,6 @@
             </ul>
         </div>
         <!-- End Header -->
-
-
         <div class="row">
             <div class="columns large-3">
                 <div style="height:6px" class="clearfix clear-columns"></div>
@@ -454,11 +457,9 @@
         <script src="js/vendor/jquery.min.js"></script>
         <script src="require.js"></script>
         <script src="js/foundation.min.js"></script>
-
         <script src="User_Interface_Upgrade/Interface_Creation.js"></script>
         <script src="User_Interface_Upgrade/Interface_Parsing.js"></script>
         <script src="User_Interface_Upgrade/All_Interface_Parsing.js"></script>
-
         <script src="Globe_C.js"></script>
         <script src="Layer_Files/Layer_java/GeoServer.js"></script>
         <script src="Layer_Files/Layer_java/KIBSD_Windturbine_Cat.js" id="points"></script>
@@ -471,4 +472,3 @@
           $(document).foundation();
         </script>
     </body>
-</html>
