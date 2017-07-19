@@ -32,7 +32,7 @@ Finland,Helsinki,Energy,Renewable Energy,(TBD),TBD
 United States of America,Cuddebackville,Energy,Fei Tian Energy Tests (TBD),Fei_Tian_Energy_Tests
 United States of America,Kodiak,Energy,Wind Energy,KHS Wind Turbine,KHS_Turbine
 United States of America,Kodiak,Energy,Wind Energy,KEA Wind Turbine,KEA_Wind_Turbine
-
+United States of America,Kodiak,Energy,Energy Distribution,KEA Grid Map,KEA_Grid_Map
 
 
 United States of America,Cuddebackville,Water,Water Testing,Fei Tian Water Tests (TBD),Fei_Tian_Academy_Water_Tests
@@ -51,6 +51,7 @@ United States of America,Kodiak,Transportation,Airports,Kodiak Benny Benson Stat
 
 
 United States of America,Kodiak,Economics,Property,Kodiak Parcel Map,Kodiak_Parcel_Map
+United States of America,Kodiak,Economics,Roads,Base Roads,Base_Roads
 
 
 
