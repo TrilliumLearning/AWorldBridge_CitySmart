@@ -3,7 +3,7 @@
     <script src="dygraph-combined.js"></script>
     <script src="jquery.min.js"></script>
     <script src="gauge.min.js"></script>
-    <script src="graphsTrend.js"></script>
+    <script src="graphsKEA.js"></script>
     <link rel="stylesheet" href="http://dygraphs.com/dist/dygraph.css">
     <script type="text/javascript" src="http://dygraphs.com/dist/dygraph.js"></script>
     <script type="text/javascript" src="data.js"></script>
@@ -27,7 +27,7 @@
                 <ul class="dropdown menu" data-dropdown-menu>
                     <li class="menu-text">CitySmart-WorldWise</li>
                     <li>
-                        <a style="color:white;" href="CitySmartRe-Framed.html">Home</a>
+                        <a style="color:white;" href="CitySmartFrameTestRe-Framed.html">Home</a>
                     </li>
                     <li>
                         <a style="color:white;" href="#">About us</a>
@@ -54,23 +54,20 @@
             <div class="large-12 columns">
                 <div class="row">
                     <!-- Thumbnails -->
-                    <div class="columns large-4">
+                    <img style="height:50px" src="Placeholder-White.png" class="float-left" />
+                    <div class="columns large-5 medium-5 small-5 float-left">
                         <div>
-                            <p><H6>Wind Farm Graph (2012-2016)</H6><label>description </label><br><select id="myListWIND">
+                            <p><H6>Generation& Demand Graph</H6><label>description </label><br><select id="myListGEN">
                                     <option value="null">select</option>
-                                    <option value="grossWTF">Generated Power/ Month</option>
-                                </select><input type="button" onclick="fun3()" value="click here"></p>
-                        </div>
-                    </div>
-                    <div class="columns large-4">
-                        <div>
-                            <p><H6>Hydroelectric Power Plant Graph (2012-2016)</H6><label>description </label><br><select id="myListHYDRO">
-                                    <option value="null">select</option>
-                                    <option value="grossTL">Generated Power/ Month</option>
+                                    <option value="grossTL">Hydroelectric Plant Power Production (2012-2016)</option>
+                                    <option value="grossWTF">Wind Farm Power Production (2012-2016)</option>
+                                    <option value="systemGROSS">System Gross Generation (2006-2012)</option>
+                                    <option value="systemPEAK">System Peak Demand (2006-2012)</option>
                                 </select><input type="button" onclick="fun2()" value="click here"></p>
                         </div>
                     </div>
-                    <div class="columns large-4">
+                    <img style="height:90px" src="Placeholder-White.png" class="float-left" />
+                    <div class="columns large-5 medium-5 small-5 float-left">
                         <div>
                             <p><H6>Sales Revenue Graph (2012-2017)</H6><label>description </label><br><select id="myListTREND">
                                     <option value="null">select</option>
