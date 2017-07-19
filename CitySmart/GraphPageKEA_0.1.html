@@ -3,14 +3,14 @@
     <script src="dygraph-combined.js"></script>
     <script src="jquery.min.js"></script>
     <script src="gauge.min.js"></script>
-    <script src="graphsTrend.js"></script>
+    <script src="graphsKEA.js"></script>
     <link rel="stylesheet" href="http://dygraphs.com/dist/dygraph.css">
     <script type="text/javascript" src="http://dygraphs.com/dist/dygraph.js"></script>
     <script type="text/javascript" src="data.js"></script>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CitySmart-World Wise</title>
+        <title>CitySmart-WorldWise</title>
         <link rel="stylesheet" href="css/foundation.css" />
         <link rel="stylesheet" href="style.css" />
         <script src="js/vendor/modernizr.js"></script>
@@ -25,9 +25,9 @@
         <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%">
             <div class="top-bar-left">
                 <ul class="dropdown menu" data-dropdown-menu>
-                    <li class="menu-text">CitySmart- World Wise</li>
+                    <li class="menu-text">CitySmart-WorldWise</li>
                     <li>
-                        <a style="color:white;" href="CitySmartRe-Framed.html">Home</a>
+                        <a style="color:white;" href="CitySmart-WorldWise_0.1.html">Home</a>
                     </li>
                     <li>
                         <a style="color:white;" href="#">About us</a>
@@ -54,31 +54,22 @@
             <div class="large-12 columns">
                 <div class="row">
                     <!-- Thumbnails -->
-                    <div class="columns large-4">
+                    <img style="height:50px" src="Placeholder-White.png" class="float-left" />
+                    <div class="columns large-5 medium-5 small-5 float-left">
                         <div>
-                            <p><label>Wind Turbine Graph</label><select id="myListWIND">
+                            <p><H6>Generation& Demand Graph</H6><label>description </label><br><select id="myListGEN">
                                     <option value="null">select</option>
-                                    <option value="1">one</option>
-                                    <option value="2">two</option>
-                                    <option value="3">three</option>
-                                    <option value="4">four</option>
-                                </select></p>
+                                    <option value="grossTL">Hydroelectric Plant Power Production (2012-2016)</option>
+                                    <option value="grossWTF">Wind Farm Power Production (2012-2016)</option>
+                                    <option value="systemGROSS">System Gross Generation (2006-2012)</option>
+                                    <option value="systemPEAK">System Peak Demand (2006-2012)</option>
+                                </select><input type="button" onclick="fun2()" value="click here"></p>
                         </div>
                     </div>
-                    <div class="columns large-4">
+                    <img style="height:90px" src="Placeholder-White.png" class="float-left" />
+                    <div class="columns large-5 medium-5 small-5 float-left">
                         <div>
-                            <p><label>Hydroelectric Generator Graph</label><select id="myListHYDRO">
-                                    <option value="null">select</option>
-                                    <option value="1">one</option>
-                                    <option value="2">two</option>
-                                    <option value="3">three</option>
-                                    <option value="4">four</option>
-                                </select></p>
-                        </div>
-                    </div>
-                    <div class="columns large-4">
-                        <div>
-                            <p><label>Five Years Trend Graph</label><select id="myListTREND">
+                            <p><H6>Sales Revenue Graph (2012-2017)</H6><label>description </label><br><select id="myListTREND">
                                     <option value="null">select</option>
                                     <option value="consumersC">Commercial- Number of Consumers</option>
                                     <option value="salesC">Commercial- Sales</option>
@@ -97,13 +88,14 @@
             </div>
         </div>
         <div id="Graphs" class="row">
-            <center class="large-12 columns">
+            <center class="large-12 columns medium-12 small-12">
+                <br>
                 <div id="Graph" class="chart" style="width:1000px">
 </div>
                 <!-- Desktop Slider -->
                 <div style="width:1000px; ">
                     <br>
-                    <h6 style="color:red;">Zoom-in available: Hold and drag either x or y range to zoom.</h6>
+                    <h6 style="color:#C70039;">Zoom-in: click, hold and drag graph area either horizontally or vertically&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear zoom-in: double click graph area</h6>
                 </div>
                 <!-- End Desktop Slider -->
                 <!-- Mobile Header -->
