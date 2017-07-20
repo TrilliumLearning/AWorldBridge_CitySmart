@@ -27,7 +27,7 @@ $(document).ready(function(){
         if (wwd.layers[KEA_Grid_Map_Num].enabled === true) {
             wwd.layers[KEA_Grid_Map_Num].enabled = false}
 
-        else {wwd.layers[KEA_Grid_Map_Num].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.793083,-152.397157, 100000));}
+        else {wwd.layers[KEA_Grid_Map_Num].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75, -152.50, 25000));}
 
 
 

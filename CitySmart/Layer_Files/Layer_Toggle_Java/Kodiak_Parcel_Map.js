@@ -5,7 +5,7 @@
 
 
 
-var Parcel_Map = "Kodiak Parcel Map";
+var Parcel_Map = "KEAParcelMap_Layer";
 //Layer name
 var Parcel_Map_Ref = "Parcel_Map_Num";
 //Name of third variable
@@ -32,7 +32,7 @@ $(document).ready(function(){
         if (wwd.layers[Parcel_Map_Num].enabled === true) {
             wwd.layers[Parcel_Map_Num].enabled = false}
 
-        else {wwd.layers[Parcel_Map_Num].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.7855, -152.56, 45000));}
+        else {wwd.layers[Parcel_Map_Num].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75, -152.50, 400000));}
 
     });
 

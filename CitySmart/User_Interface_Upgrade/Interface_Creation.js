@@ -127,7 +127,7 @@ function interfaceCreation() {
 
         <ul id="` + ALLcategory[b] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                 <li class="accordion-item">
-                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + ALLcategory[b] + `</h5></a>
+                <a style="height:55px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h6>` + ALLcategory[b] + `</h6></a>
             <div id="` + ALLcategory[b] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
 `;
 
@@ -146,7 +146,7 @@ function interfaceCreation() {
 
         <ul id="` + SBC[c] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                 <li class="accordion-item">
-                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + SBC[c] + `</h5></a>
+                <a style="height:55px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h6>` + SBC[c] + `</h6></a>
             <div id="` + SBC[c] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
 `;
 
@@ -240,7 +240,7 @@ function interfaceCreation() {
 
         <ul id="` + Ca2[b] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                 <li class="accordion-item">
-                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Ca2[b] + `</h5></a>
+                <a style="height:55px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h6>` + Ca2[b] + `</h6></a>
             <div id="` + Ca2[b] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
 `;
 
@@ -268,7 +268,7 @@ function interfaceCreation() {
 
         <ul id="` + Sb3[c] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                 <li class="accordion-item">
-                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Sb3[c] + `</h5></a>
+                <a style="height:55px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h6>` + Sb3[c] + `</h6></a>
             <div id="` + Sb3[c] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
 `;
 

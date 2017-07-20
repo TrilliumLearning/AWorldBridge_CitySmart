@@ -10,8 +10,8 @@ var BVGC_Point_Ref = "BVGC_Point_Num";
 var BVGC_Point_Num;
 
 
-var BVGC_Orthomosaic = "Bear Valley Gold Course Mosaic";
-var BVGC_Orthomosaic_Ref = "BVGC_Point_Num";
+var BVGC_Orthomosaic = "Bear_Valley_Golf_Course_Mosaic";
+var BVGC_Orthomosaic_Ref = "BVGC_Orthomosaic_Num";
 var BVGC_Orthomosaic_Num;
 
 
