@@ -41,8 +41,9 @@ $(document).ready(function() {
                 legend: 'always',
                 title: 'Commercial Revenue ($1000)',
                 includeZero: false,
-                dateWindow: [ Date.parse("2011/12/12"), Date.parse("2017/02/26") ],
-                animatedZooms: true,
+                showRangeSelector: true,
+                rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                 plotter: barChartPlotter,
                 axes: {
                   x: {
@@ -110,8 +111,9 @@ $(document).ready(function() {
                 legend: 'always',
                 title: 'Number of Commercial Consumers',
                 includeZero: false,
-                dateWindow: [ Date.parse("2011/12/12"), Date.parse("2017/02/26") ],
-                animatedZooms: true,
+                showRangeSelector: true,
+                rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                 plotter: barChartPlotter,
                 axes: {
                   x: {
@@ -175,8 +177,9 @@ $(document).ready(function() {
                 legend: 'always',
                 title: 'Commercial Sales',
                 includeZero: false,
-                dateWindow: [ Date.parse("2011/12/12"), Date.parse("2017/02/26") ],
-                animatedZooms: true,
+                showRangeSelector: true,
+                rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                 plotter: barChartPlotter,
                 axes: {
                   x: {
@@ -240,8 +243,9 @@ $(document).ready(function() {
                 legend: 'always',
                 title: 'Commercial Revenue ($1000)',
                 includeZero: false,
-                dateWindow: [ Date.parse("2011/12/12"), Date.parse("2017/02/26") ],
-                animatedZooms: true,
+                showRangeSelector: true,
+                rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                 plotter: barChartPlotter,
                 axes: {
                   x: {
@@ -305,8 +309,9 @@ $(document).ready(function() {
                 legend: 'always',
                 title: 'Number of Industrial Consumers',
                 includeZero: false,
-                dateWindow: [ Date.parse("2011/12/12"), Date.parse("2017/02/26") ],
-                animatedZooms: true,
+                showRangeSelector: true,
+                rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                 plotter: barChartPlotter,
                 axes: {
                   x: {
@@ -370,8 +375,9 @@ $(document).ready(function() {
                 legend: 'always',
                 title: 'Industrial Sales',
                 includeZero: false,
-                dateWindow: [ Date.parse("2011/12/12"), Date.parse("2017/02/26") ],
-                animatedZooms: true,
+                showRangeSelector: true,
+                rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                 plotter: barChartPlotter,
                 axes: {
                   x: {
@@ -435,8 +441,9 @@ $(document).ready(function() {
                 legend: 'always',
                 title: 'Industrial Revenue ($1000)',
                 includeZero: false,
-                dateWindow: [ Date.parse("2011/12/12"), Date.parse("2017/02/26") ],
-                animatedZooms: true,
+                showRangeSelector: true,
+                rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                 plotter: barChartPlotter,
                 axes: {
                   x: {
@@ -500,8 +507,9 @@ $(document).ready(function() {
                 legend: 'always',
                 title: 'Number of Residental Consumers',
                 includeZero: false,
-                dateWindow: [ Date.parse("2011/12/12"), Date.parse("2017/02/26") ],
-                animatedZooms: true,
+                showRangeSelector: true,
+                rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                 plotter: barChartPlotter,
                 axes: {
                   x: {
@@ -565,8 +573,9 @@ $(document).ready(function() {
                 legend: 'always',
                 title: 'Residental Sales',
                 includeZero: false,
-                dateWindow: [ Date.parse("2011/12/12"), Date.parse("2017/02/26") ],
-                animatedZooms: true,
+                showRangeSelector: true,
+                rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                 plotter: barChartPlotter,
                 axes: {
                   x: {
@@ -630,8 +639,9 @@ $(document).ready(function() {
                 legend: 'always',
                 title: 'Residental Revenue ($1000)',
                 includeZero: false,
-                dateWindow: [ Date.parse("2011/12/12"), Date.parse("2017/02/26") ],
-                animatedZooms: true,
+                showRangeSelector: true,
+                rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                 plotter: barChartPlotter,
                 axes: {
                   x: {
@@ -705,8 +715,9 @@ $(document).ready(function() {
                 legend: 'always',
                 title: 'Hydroeectric Plant - Generated Power/ Month',
                 includeZero: false,
-                dateWindow: [ Date.parse("2011/12/12"), Date.parse("2016/12/26") ],
-                animatedZooms: true,
+                showRangeSelector: true,
+                rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                 plotter: barChartPlotter,
                 axes: {
                   x: {
@@ -770,8 +781,9 @@ $(document).ready(function() {
                 legend: 'always',
                 title: 'Wind Farm - Generated Power/ Month',
                 includeZero: false,
-                dateWindow: [ Date.parse("2011/12/12"), Date.parse("2016/12/26") ],
-                animatedZooms: true,
+                showRangeSelector: true,
+                rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                 plotter: barChartPlotter,
                 axes: {
                   x: {
@@ -835,8 +847,9 @@ $(document).ready(function() {
                 legend: 'always',
                 title: 'System Gross Generation',
                 includeZero: false,
-                dateWindow: [ Date.parse("2005/12/12"), Date.parse("2012/12/26") ],
-                animatedZooms: true,
+                showRangeSelector: true,
+                rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                 plotter: barChartPlotter,
                 axes: {
                   x: {
@@ -900,8 +913,9 @@ $(document).ready(function() {
                 legend: 'always',
                 title: 'System Peak Demand',
                 includeZero: false,
-                dateWindow: [ Date.parse("2005/12/12"), Date.parse("2012/12/26") ],
-                animatedZooms: true,
+                showRangeSelector: true,
+                rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                 plotter: barChartPlotter,
                 axes: {
                   x: {
