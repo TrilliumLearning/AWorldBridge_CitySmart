@@ -9,7 +9,15 @@
  */
 
 
+function contains(Array_Name, Variable) {
 
+    if (Array_Name.indexOf(Variable) === -1) {
+        return false
+    }
+    else {
+        return true
+    }
+}
 
 
 
@@ -115,11 +123,10 @@ function Placemark_Creation(Layer_Name,RGB) {
     console.log("Finished importing " +  Layer_Name);
 
     latitude_longitude = [];
-    k++;
-    if (k < Point_Layers.length){First_Function()}
-    //else {Geo()}
-    else {
 
+
+
+    if (l === (name_Array.length - 1)){
 
         document.getElementById("myListCountry").selectedIndex = 1;
         interfaceCityCreation();
@@ -132,7 +139,7 @@ function Placemark_Creation(Layer_Name,RGB) {
         Ortho1()
 
     }
-
+    //else {Geo()}
 
 }
 
@@ -146,37 +153,57 @@ function Placemark_Creation(Layer_Name,RGB) {
 function parseArray() {
 //    for (l = 0; l < myArray.length; l++) {
 
-    var New_Array = myArray;
 
-    for (q = 0; q < New_Array.length; q++) {
 
-        var latitude_longitude1 = New_Array[q]['Latitude and Longitude(Decimal)'];
-        latitude_longitude.push(latitude_longitude1.replace(/\s+/g, '').split(','));
-        //latitude1 = latitude_longitude[i][0];
-        //longitude1 = latitude_longitude[i][1];
 
-        //latitude.push(latitude1);
-        //longitude.push(longitude1)
+    for(i = 0; i < myArray.length; i++){
+
+
+
+        if(contains(name_Array,myArray[i]['Layer Name']) === false){
+            name_Array.push(myArray[i]['Layer Name']);
+            window[myArray[i]['Layer Name']] = [];
+            window[myArray[i]['Layer Name']].push(myArray[i])
+        }
+        else{
+            window[myArray[i]['Layer Name']].push(myArray[i])
+        }
+
+
+
 
     }
 
 
-    //for (p = 0; p < New_Array.length; p++) {
 
-    var RGB = Point_Layers[k][2];
-    var Layer_Name = Point_Layers[k][0];
-    Placemark_Creation(Layer_Name,RGB);
+    for (l = 0; l < name_Array.length; l++) {
 
-    //}
+        Layer_Name = name_Array[l];
+        RGBT = window[name_Array[l]][0]['Color'];
+        RGB = RGBT.split(" ");
+        New_Array = window[name_Array[l]];
 
-//    }
+        for (q = 0; q < New_Array.length; q++) {
+
+            var latitude_longitude1 = New_Array[q]['Latitude and Longitude(Decimal)'];
+            latitude_longitude.push(latitude_longitude1.replace(/\s+/g, '').split(','));
+            //latitude1 = latitude_longitude[i][0];
+            //longitude1 = latitude_longitude[i][1];
+
+            //latitude.push(latitude1);
+            //longitude.push(longitude1)
+
+        }
+        Placemark_Creation(Layer_Name,RGB);
+    }
+
 }
 
 
 
 
 
-function ParseCSV(url, ReferenceArray) {
+function ParseCSV(url) {
 
     Papa.parse(url, {
 
@@ -193,15 +220,7 @@ function ParseCSV(url, ReferenceArray) {
             myArray = (results.data);
 
             parseArray();
-            /*
-             if (myArray.length === Point_Layers.length) {
-             parseArray()
-             }
-             else {
-             }
-             */
-            //showMe();
-            //console.log(myArray);
+
         }
 
     });
@@ -215,30 +234,17 @@ function ParseCSV(url, ReferenceArray) {
 
 function First_Function () {
 
-    CSV_NAME = Point_Layers[k][1];
+    //CSV_NAME = Point_Layers[k][1];
 
-    ReferenceArray = Point_Layers[k];
+    //ReferenceArray = Point_Layers[k];
 
-    var url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+    var url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/MasterDTEST.csv";
     //url = "http://localhost:63342/AWorldBridge_CitySmart/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
     //var url = "http://localhost:40002/file:///Users/kshin/Desktop/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
     //url = "http://10.194.40.100/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
 
 
-
-
-    /*
-     for(i = 0; i < myArray.length; i++)
-     {
-     for(key in options[i])
-     {
-     alert(options[i][key])
-     }
-
-     }
-     */
-
-    ParseCSV(url, ReferenceArray);
+    ParseCSV(url);
 
 }
 
@@ -250,6 +256,8 @@ function First_Function () {
 //RGB Blue 'rgb(0,0,255)'
 //Light Purple 'rgb(204, 204, 255)'
 
+
+/*
 var Point_Layers = [
     ["US A World Bridge Sites","World_Bridge_Sites.csv",['rgb(187,0,255)','rgb(0,255,0)','rgb(187,0,255)']],
     ["KIBSD Turbine","KHS_Wind_Turbine.csv",['rgb(255,192,203)','rgb(255,0,0)','rgb(255,192,203)']],
@@ -258,15 +266,16 @@ var Point_Layers = [
 
 
 ];
-
+*/
+var name_Array = [];
 var new_list = [];
 
 var latitude = [];
 var longitude = [];
 var latitude_longitude = [];
 
-var CSV_NAME;
-var ReferenceArray;
+//var CSV_NAME;
+//var ReferenceArray;
 
 var index_num = 0;
 
