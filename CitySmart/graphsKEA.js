@@ -713,7 +713,7 @@ $(document).ready(function() {
               "KEAcsv/GrossTL.csv",
               {
                 legend: 'always',
-                title: 'Hydroeectric Plant - Generated Power/ Month',
+                title: 'Hydroectric Plant - Generated Power/ Month',
                 includeZero: false,
                 showRangeSelector: true,
                 rangeSelectorPlotFillColor: 'MediumSlateBlue',
