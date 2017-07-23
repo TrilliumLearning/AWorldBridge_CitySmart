@@ -420,29 +420,51 @@
         </script>
         <style type="text/css">
             #PopupBoxPosition{
-            top: 0; left: 0; position: fixed; width: 100%; height: 120%;
-            background-color: rgba(0,0,0,0.7); display: none;
+                top: 0; left: 0; position: fixed; width: 100%; height: 120%;
+                background-color: rgba(46, 46, 46, 0.63); display: none;
             }
             .popupBoxWrapper{
-            width: 550px; margin: 50px auto; text-align: left; max-height: calc(100vh - 210px); overflow-y: auto;
+                width: 550px; margin: 50px auto; text-align: left; max-height: calc(100vh - 110px); overflow-y: auto;
             }
             .popupBoxContent{
-            background-color: #FFF; padding: 15px;
+                background-color: #FFF; padding: 25px;
             }
-</style>
+            .popup-Header {
+                padding: 10px 16px;
+                background-color: #84c77d;
+                color: white;
+            }
+            .close {
+                color: rgba(173, 236, 141, 0.64);
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: rgba(173, 236, 141, 0.71);
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        </style>
         <div id="PopupBoxPosition">
             <div class="popupBoxWrapper">
                 <div class="popupBoxContent">
+                    <div class="popup-Header">
+                        <span class="close" id="closeIt">&times;</span>
+                    </div>
                     <h3>Bryggen (1979)</h3>
-                    <img src="Pics/KEA_Turbine.jpg" />
-                    <p>
-                        Copyright</p>
+                    <img src="Pics/" />
+                    <p>Copyright</p>
                     <p>Site Description</p>
                     <p>Click <a href="javascript:void(0)" onclick="toggle_visibility('PopupBoxPosition');">here</a> to close popup box.</p>
                 </div>
+                <div class="conticlear"></div>
             </div>
         </div>
-        <div id="wrapper">
+        <div id="wrapper"></div>
 </div>
         <!-- wrapper end -->
         <footer class="row">
