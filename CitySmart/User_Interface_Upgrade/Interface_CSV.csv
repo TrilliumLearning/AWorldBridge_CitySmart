@@ -4,8 +4,8 @@ Country,City,Category,Sub Category,Name,Button Reference
 
 
 
-Italy,Florence,Energy,Renewable Energy,(TBD),TBD
-Finland,Helsinki,Energy,Renewable Energy,(TBD),TBD
+Italy,Florence,Energy,Energy Conferences,(TBD),TBD
+Finland,Helsinki,Energy,Energy Conferences,(TBD),TBD
 
 
 
@@ -35,10 +35,15 @@ United States of America,Kodiak,Energy,Wind Energy,KEA Wind Turbine,KEA_Wind_Tur
 United States of America,Kodiak,Energy,Energy Distribution,KEA Grid Map,KEA_Grid_Map
 
 
-United States of America,Cuddebackville,Water,Water Testing,Fei Tian Water Tests (TBD),Fei_Tian_Academy_Water_Tests
+
+United States of America,Cuddebackville,Water,FTAA Water Tests,Ammonium Test,FTAA_Ammonium_Test
+United States of America,Cuddebackville,Water,FTAA Water Tests,Potassium Test,FTAA_Potassium_Test
+United States of America,Cuddebackville,Water,FTAA Water Tests,Chloride Test,FTAA_Chloride_Test
+United States of America,Cuddebackville,Water,FTAA Water Tests,Colorimeter Test,FTAA_Colorimeter_Test
+United States of America,Cuddebackville,Water,FTAA Water Tests,Turbidity Test,FTAA_Turbidity_Test
+United States of America,Cuddebackville,Water,FTAA Water Tests,pH Test,FTAA_pH_Test
+United States of America,Cuddebackville,Water,FTAA Water Tests,Temperature Test,FTAA_Temperature_Test
 United States of America,Kodiak,Water,Containment,Terror Dam (TBD),Terror_Dam
-
-
 
 
 United States of America,Kodiak,Agriculture,Soil Testing,Bear Valley Golf Course,Bear_Valley_Golf_Course
