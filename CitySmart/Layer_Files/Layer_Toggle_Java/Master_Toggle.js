@@ -243,3 +243,40 @@ $(document).ready(function(){
 
 
     })});
+
+
+
+$(document).ready(function(){
+
+    //If there are multiple layers being activated, put the zoom function in the first layer activation marked below
+
+
+    //Put the name of the switch's id in the "on" function
+    $(document).on("click","#Main_KEA_Building", function(){
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("BaseRoad_Layer");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75,-152.50, 2500));}
+
+
+
+
+    })});
+
+
+
+
+
+
+
+
+
