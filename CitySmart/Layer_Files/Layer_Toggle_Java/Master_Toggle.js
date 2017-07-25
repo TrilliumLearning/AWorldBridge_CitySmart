@@ -283,7 +283,7 @@ $(document).ready(function(){
     $(document).on("click","#Kodiak_International_Seafoods_of_Alaska", function(){
 
         //Put the name of the layer in the "find" function
-        Layer_Number = Find("Kodiak_International_Saefoods_of_Alaska");
+        Layer_Number = Find("Kodiak_International_Seafoods_of_Alaska");
 
 
 
