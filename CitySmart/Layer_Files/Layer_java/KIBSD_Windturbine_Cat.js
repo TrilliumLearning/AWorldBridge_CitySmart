@@ -118,6 +118,8 @@ function Placemark_Creation(Layer_Name,RGB) {
     k++;
     if (k < Point_Layers.length){First_Function()}
     //else {Geo()}
+<<<<<<< HEAD
+=======
     else {
 
 
@@ -133,6 +135,7 @@ function Placemark_Creation(Layer_Name,RGB) {
 
         Geo()
     }
+>>>>>>> master
 
 
 }
