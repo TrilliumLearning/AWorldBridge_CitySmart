@@ -164,7 +164,7 @@
 
                 //alert(graphdata[2][5]);
 
-                new Dygraph(document.getElementById("graphdiv"),
+                new Dygraph(document.getElementById("Graphs"),
                     graphdata,
                     {
                         title: selectedValue + " (Benchmark: " + ajaxReturn[0].Remark + ")",
@@ -178,6 +178,7 @@
                         showRangeSelector: false,
                     }
                 );
+
             }
         };
 
