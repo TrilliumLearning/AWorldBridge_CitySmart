@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .dygraph-title { text-align: center; font-weight: bold;}
+        .dygraph-xlabel { text-align: center;}
+    </style>
+</head>
+<body>
+<div>
+    <h4>Test drop down list</h4><select id = "dropDown">
+    <option value = "null">Select</option>
+    <option value = "Calcium">Calcium Ion-Selective Electrode</option>
+    <option value = "Ammonium">Ammonium Ion-Selective Electrode</option>
+    <option value = "Potassium">Potassium_ion-Selective_Electrode</option>
+    <option value = "Chloride">Chloride Probe</option>
+    <option value = "Colorimeter">Colorimeter</option>
+    <option value = "Turbidity">Turbidity Sensor</option>
+    <option value = "pH">PH Sensor</option>
+    <option value = "Temperature">Temperature Probe (C)</option>
+</select><br><br>
+    <input type="button" onclick='ajaxFunction()' value = "click here">
+</div><br>
+<div style="width:1000px; height:500px;" id="graphdiv"></div>
+</body>
+<script src="expsvr/node_modules/dygraphs/dist/dygraph.js"></script>
+<script>
+    function ajaxFunction(){
+        var ajaxRequest;  // The variable that makes Ajax possible!
+        try{
+
+            // Opera 8.0+, Firefox, Safari
+            ajaxRequest = new XMLHttpRequest();
+        }catch (e){
+
+            // Internet Explorer Browsers
+            try{
+                ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+            }catch (e) {
+
+                try{
+                    ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                }catch (e){
+
+                    // Something went wrong
+                    alert("Your browser broke!");
+                    return false;
+                }
+            }
+        }
+
+        // Create a function that will receive data
+        // sent from the server and will update
+        // div section in the same page.
+
+        ajaxRequest.onreadystatechange = function(){
+            //alert("a");
+            //alert("xhr status: " + ajaxRequest.readyState);
+
+            if (ajaxRequest.readyState == 4 || ajaxRequest.status == 200) {
+                var ajaxReturn = JSON.parse(ajaxRequest.responseText);
+                var graphdata = [];
+                //alert(ajaxReturn);
+
+                for (var i = 0; i < ajaxReturn.length - 1; i++) {
+                    if (!graphdata[i]) {
+                        graphdata[i] = [];
+                    }
+                    graphdata[i][0] = i+1;
+                    graphdata[i][1] = ajaxReturn[i].Building_1_Drinking_Water;
+                    graphdata[i][2] = ajaxReturn[i].Building_2_Drinking_Water;
+                    graphdata[i][3] = ajaxReturn[4].Building_1_Drinking_Water;
+                    graphdata[i][4] = ajaxReturn[4].Building_2_Drinking_Water;
+                    graphdata[i][5] = parseFloat(ajaxReturn[i].Benchmark);
+                }
+
+                //alert(graphdata[2][5]);
+
+                new Dygraph(document.getElementById("graphdiv"),
+                    graphdata,
+                    {
+                        title: selectedValue + " (Benchmark: " + ajaxReturn[0].Remark + ")",
+                        //legend: 'always',
+                        includeZero: false,
+                        drawPoints: true,
+                        labels: ["Week", "Building_1_Drinking_Water", "Building_2_Drinking_Water", "Average_Building_1", "Average_Building_2", "Benchmark"],
+                        xlabel: "Week",
+                        ylabel: ajaxReturn[0].Unit,
+                        showRoller: true,
+                        showRangeSelector: false,
+                    }
+                );
+            }
+        };
+
+        var option = document.getElementById("dropDown");
+        var selectedValue = option.options[option.selectedIndex].value;
+        var queryString = "?keywords=" + selectedValue;
+
+        alert("QueryString: " + queryString);
+
+        ajaxRequest.open("GET", "//aworldbridgelabs.com:9084/graph" + queryString, true);
+        ajaxRequest.send(queryString);
+    }
+    //-->
+</script>
+</html>

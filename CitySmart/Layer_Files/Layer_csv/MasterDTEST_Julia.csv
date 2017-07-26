@@ -1,0 +1,120 @@
+Location,Site Name,Site Description,Latitude and Longitude(Deg Min Sec),Latitude and Longitude(Decimal),Link to site location,Picture Location,Copyright,Layer Name,Color
+
+
+
+
+A World Bridge,A World Bridge Headquarters,"Real-time, Real-world Project Based Learning","N40 59 39.3,     W74 16 44.6838","40.994250, -74.279079",www.aworldbridge.com,AWB.png,TrilliumLearning,A_World_Bridge,"rgb(187,0,255) rgb(0,255,0) rgb(187,0,255)"
+"Alaska, USA","Kodiak, Alaska",A World Bridge Project Site: Kodiak Island Borough School District,"N 57 47 36.0636,    W 152 23 40.4736","57.793351, -152.394576",http://aworldbridge.com/global-school-network/usa/alaska/kodiak-island-borough-schoo/kodiak-high-school/,Kodiak_High_School.jpg,Free to Use,A_World_Bridge
+"Alaska, USA","Akiachak, Alaska",A World Bridge Project Site: Yupiit School District,"N 60 54 31.0422,     W 161 25 55.473","60.908623, -161.432076",http://aworldbridge.com/,AWB.png,TrilliumLearning,A_World_Bridge
+"Alaska, USA","Akiak, Alaska",A World Bridge Project Site: Yupiit School District,"N 60 54 32.5434,      W 161 13 22.7712","60.90904, -161.222992",http://aworldbridge.com/,AWB.png,TrilliumLearning,A_World_Bridge
+"Alaska, USA","Tuluksak, Alaska",A World Bridge Project Site: Yupiit School District,"N 61 5 53.9412,       W 160 57 34.1712","61.098317, -160.959492",http://aworldbridge.com/,AWB.png,TrilliumLearning,A_World_Bridge
+"Alaska, USA","Copper River, Alaska",A World Bridge Project Site: Copper River School District,"N 62 6 46.731,         W  145 31 35.8284","62.112981, -145.526619",http://aworldbridge.com/global-school-network/usa/alaska/copper-river-school-distric/,MINISAT.jpeg,TrilliumLearning,A_World_Bridge
+"Alaska, USA","Ketchikan, Alaska",A World Bridge Project Site: Ketchikan Gateway Borough School District,"N 55 21 12.4266,     W 131 40 40.5222","55.353452, -131.677923",http://aworldbridge.com/global-school-network/usa/alaska/ketchikan-gateway-borough/america-bridge-projects/,AWB.png,TrilliumLearning,A_World_Bridge
+"New York, USA","Middletown, New York",A World Bridge Project Site: Fei Tian Academy of the Arts,"N 41 27 7.3506,        W 74 26 18.4812","41.452042, -74.438467",http://aworldbridge.com/global-school-network/usa/new-york-2/fei-tian-academy-of-the.html,FEITIAN.jpeg,TrilliumLearning,A_World_Bridge
+
+
+
+"Alaska, USA",KEA Wind Farm,"This wind farm was estimated to be $24,000,000 and is run by Kodiak Electrical Association (KEA). It provides 18% of Kodiak's 100% renewable energy grid with its counterpart being the hydro power supplied by Terror Lake.  ",N/A,"57.785,-152.45",http://www.kodiakelectric.com/,KEA_Turbine.jpg,@KEA (Taken by Matson),KEA_Turbine,"rgb(255,192,203) rgb(255,0,0) rgb(255,192,203)"
+"Alaska, USA",Kodiak High School Wind Turbine,"The Kodiak High School wind turbine is located next to the City Borough building across from the high school and produces about 120 kilowatts per month. This Skystream wind turbine costs $3,000 and includes monitoring software so that data can be monitored and recorded remotely. Kodiak's - A World Bridge students have connected to the wind turbine's data stream via radio transmitter, then relay this data through a CPU in the World Bridge lab that parses the output to send finalized data to a host server.",,"57.793083,-152.397157",http://24.237.235.227/wwdev/CitySmart/GraphPage.html,KHS_Turbine.jpg,TrilliumLearning,KHS_Turbine,"rgb(204,204,255) rgb(0,0,255) rgb(204,204,255)"
+"Alaska, USA",Kodiak Electrical Association Office,This is the public office for the Kodiak Electrical Association.,N/A,"57.789378, -152.397236",http://www.kodiakelectric.com/,Kodiak_KEA_Office.jpg,Free to Use,Kodiak_KEA_Office,"rgb(255,192,203) rgb(255,0,0) rgb(255,192,203)"
+
+
+"Alaska, USA",Bear Valley Golf Course,"This golf course is an A World Bridge Test Site for their Nano Agriculture. The Nano-Ag treatment is a high energy, all organic nutrient source that furnishes immediate energy to microbial life so they can go about their jobs of cleaning up waste, creating compost and producing topsoil. This treatment provides a quick energy source as well as a sustainable energy source for indigenous, beneficial soil microbial life. It is a biologically active, water soluble, low pH, and low-molecular-weight component of the humic material in the organic matter of soil, peat, leonardite & coal containing colloidal trace minerals. It is a natural electrolyte as well as a plant growth regulator. ",N/A,"57.7855,-152.56",http://aworldbridge.com/global-school-network/usa/alaska/kodiak-island-borough-schoo/kodiak-high-school/nanotechnology-in-agricultu/kodiak-nanoagriculture.html,BVGC.jpeg,TrilliumLearning,Bear_Valley_Golf_Course,"rgb(0,0,255) rgb(255,192,203) rgb(0,0,255)"
+
+
+"Alaska, USA",Alaska Pacific Seafoods,This is one of the many canneries that is key to Kodiak's economy.,N/A,"57.7847,-152.4228",http://northpacificseafoods.com/content/view/50/361/,Kodiak_North_Pacific_Seafoods.jpg,Free To Use,Kodiak_Alaska_Pacific_Seafoods,"rgb(204,204,255) rgb(0,255,0) rgb(204,204,255)"
+"Alaska, USA",International Seafoods of Alaska,This is one of the many canneries that is key to Kodiak's economy.,N/A,"57.786268, -152.415958",http://isa-ak.com/,Kodiak_ISA.jpg,Free to Use,Kodiak_International_Seafoods_of_Alaska,"rgb(204,204,255) rgb(0,255,0) rgb(204,204,255)"
+"Alaska, USA",Ocean Beauty Seafoods,This is one of the many canneries that is key to Kodiak's economy.,N/A,"57.785057,-152.420816",http://www.oceanbeauty.com/,Kodiak_Ocean_Beauty_Seafoods.jpg,Free To Use,Kodiak_Ocean_Beauty_Seafoods,"rgb(204,204,255) rgb(0,255,0) rgb(204,204,255)"
+"Alaska, USA",Kodiak Terror Lake Dam,"This provides Kodiak with 80% of its renewable energy, its counterpart being wind energy.",N/A,"57.627801, -153.026252",http://www.kodiakelectric.com/,Kodiak_Terror_Lake.jpeg,Free to Use,Kodiak_Terror_Lake,"rgb(204,204,255) rgb(0,255,0) rgb(204,204,255)"
+
+
+
+
+
+
+"Alaska, USA",Kodiak Municipal Airport,"Kodiak Municipal Airport has one runway designated 2/20 with a 2,475 by 40 ft (754 x 12 m) asphalt and gravel surface. For the 12-month period ending December 31, 2006, the airport had 300 aircraft operations, an average of 25 per month, all of which were general aviation.",N/A,"57.806425, -152.373362",N/A,Kodiak_Municipal_Airport.jpg,Free to Use,Kodiak_Municipal_Airport,"rgb(0,192,203) rgb(0,255,0) rgb(0,192,203)"
+"Alaska, USA",Kodiak Benny Benson State Airport,This is one of the main options of transportation to and from Kodiak. Ravn Alaska and Alaska Airlines are the two main airliners providing transportation at this airport.,N/A,"57.754298, -152.514823",https://www.alaskaair.com/content/airports/alaska/kodiak/kodiak.aspx,Kodiak_Benny_Benson_State_Airport.jpg,Free to Use,Kodiak_Benny_Benson_State_Airport,"rgb(0,192,203) rgb(0,255,0) rgb(0,192,203)"
+"Alaska, USA",Kodiak Budget Rent-a-Car,"Budget Rent-a-Car has an office located right inside the airport for easy accessibility to people coming in from out of town, and a lot nearby to pickup cars.",N/A,"57.755658, -152.514098",https://www.budget.com/en/locations/us/ak/kodiak/adq,Kodiak_Budget_Rent_A_Car.jpg,Free to Use,Kodiak_Budget_Rent_A_Car,"rgb(0,192,203) rgb(0,255,0) rgb(0,192,203)"
+
+
+"Alaska, USA",Bayside Volunteer Fire Department,The Bayside Fire Station is governed by an elected adivisory board and is funded by and serves the residents of Fire Protection Area No. 1. It has a paid fire chief and a staff of volunteers that respond from their homes when needed.,N/A,"57.825524, -152.354888",http://www.kodiakak.us/111/Bayside-Fire-Department,Bayside_Volunteer_Fire_Department.jpg,Free to Use,Kodiak_Bayside_Volunteer_Fire_Department,"rgb(187,0,255) rgb(0,255,0) rgb(187,0,255)"
+"Alaska, USA",Bayside Volunteer Fire Department,The Bayside Fire Station uses this area to practice fighting fires.,N/A,"57.826072, -152.355006",http://www.kodiakak.us/111/Bayside-Fire-Department,Bayside_Volunteer_Fire_Department_Testing_Area.jpg,Free to Use,Kodiak_Bayside_Volunteer_Fire_Department,"rgb(187,0,255) rgb(0,255,0) rgb(187,0,255)"
+"Alaska, USA",Kodiak City Fire Department,"The Kodiak Fire Department provides fire and emergency medical services to the residents of the City, as well as medical services to Fire Protection District 1, U.S. Coast Guard Base Kodiak, Womans Bay Fire Service Area, and non-covered road system areas.  The department provides several other services, which include but are not limited to fire prevention, fire investigation, public education, specialized rescue that includes: confined space, trench rescue, high angle, hazardous materials, water and ice rescue, and building collapse. We have established and exercised Mutual Aid Agreements with Bayside, Womans Bay and Coast Guard Fire Departments.",N/A,"57.791584, -152.405380",http://www.city.kodiak.ak.us/fire,Kodiak_City_Fire_Department.jpg,Free To Use,Kodiak_City_Fire_Department,"rgb(187,0,255) rgb(0,255,0) rgb(187,0,255)"
+"Alaska, USA",Kodiak Base Fire Department,This is the main fire station for the Coast Guard Base located away from town.,N/A,"57.748890, -152.495890",N/A,Kodiak_Base_Fire_Department.jpg,Free To Use,Kodiak_Base_Fire_Department,"rgb(187,0,255) rgb(0,255,0) rgb(187,0,255)"
+
+
+"Alaska, USA",Kodiak City Police Department,"The Kodiak Police Department (KPD) is the principal law enforcement agency and provides twenty-four patrol, criminal investigation support, animal control and parking enforcement services.",N/A,"57.805178, -152.372623",http://www.city.kodiak.ak.us/police,Kodiak_Police_Department.jpg,Free to Use,Kodiak_Police_Department,"rgb(100,40,255) rgb(0,255,0) rgb(100,40,255)"
+
+"Alaska, USA",Kodiak Public Library, This is Kodiak's only community library and is located next to Kodiak High School.,N/A,"57.792240, -152.397467",http://www.city.kodiak.ak.us/library,Kodiak_Public_Library.jpg,Free to Use,Kodiak_Public_Library,"rgb(255,192,203) rgb(0,255,0) rgb(255,192,203)"
+
+"Alaska, USA",Kodiak Baranov Museum,"This museum exhibits interpret Kodiak’s Russian era (1741-1867), the early American era (1867-1912) and the modern era (1912-present). The Kodiak Historical Society was formed by volunteers in 1954 to preserve and share Kodiak’s history. In 1967, the Baranov Museum opened in the Russian American Magazin, the oldest building in Alaska. The Kodiak Historical Society, a 501(c)3 nonprofit organization, operates the Baranov Museum in partnership with the City of Kodiak.",N/A,"57.787681, -152.403432",http://baranovmuseum.org/,Kodiak_Baranov_Museum.jpg,Free to Use,Kodiak_Baranov_Museum,"rgb(255,192,203) rgb(0,255,0) rgb(255,192,203)"
+"Alaska, USA",Kodiak Alutiq Museum,"The Alutiiq Museum grew from the Kodiak Area Native Association's Culture and Heritage Division (KANA). In 1987, the KANA board of directors resolved that the exploration and celebration of Native culture was essential to the well-being of Alutiiq communities. To support and share cultural learning, KANA established island-wide programs to teach Alutiiq arts, study the Alutiiq language, and investigate Alutiiq history, with the vision of one day developing a museum for the Alutiiq people.",N/A,"57.788894, -152.402316",https://alutiiqmuseum.org/,Kodiak_Alutiq_Museum.jpg,Free to Use,Kodiak_Alutiq_Museum,"rgb(255,192,203) rgb(0,255,0) rgb(255,192,203)"
+
+"Alaska, USA",East Elementary,This is one of the four elementary schools on the island of Kodiak.,N/A,"57.804687, -152.367064",https://www.kibsd.org/East,East_Elementary.jpg,Free to Use,Kodiak_East_Elementary,"rgb(255,192,203) rgb(0,255,0) rgb(255,192,203)"
+"Alaska, USA",North Star Elementary,This is one of the four elementary schools on the island of Kodiak.,N/A,"57.821627, -152.365525",https://www.kibsd.org/Domain/17,Kodiak_North_Star_Elementary.jpg,Free to Use,Kodiak_North_Star_Elementary,"rgb(255,192,203) rgb(0,255,0) rgb(255,192,203)"
+"Alaska, USA",Peterson Elementary,This is one of the four elementary schools on the island of Kodiak.,N/A,"57.747176, -152.496252",https://www.kibsd.org/Peterson,Kodiak_Peterson_Elementary.jpg,Free to Use,Kodiak_Peterson_Elementary,"rgb(255,192,203) rgb(0,255,0) rgb(255,192,203)"
+"Alaska, USA",Main Elementary,This is one of the four elementary schools on the island of Kodiak.,N/A,"57.795413, -152.391249",https://www.kibsd.org/Domain/16,Kodiak_Main_Elementary.jpg,Free to Use,Kodiak_Main_Elementary,"rgb(255,192,203) rgb(0,255,0) rgb(255,192,203)"
+
+
+"Alaska, USA",Kodiak Middle School,This is Kodiak's only public middle school and it is also connected to the high school. This provides a great transition for middle schoolers into high school by having the knowledge and resources of the high school easily accessible.,N/A,"57.793691, -152.391200",https://www.kibsd.org/Domain/14,Kodiak_Middle_School.jpg,Free to Use,Kodiak_Middle_School,"rgb(255,192,203) rgb(0,255,0) rgb(255,192,203)"
+
+"Alaska, USA",Kodiak High School,"This is Kodiak's only high school. It provides college preparatory classes, after school clubs, and many after school sports.",N/A,"57.794451, -152.394476",https://www.kibsd.org/Page/19,Kodiak_High_School.jpg,Free to Use,Kodiak_High_School,"rgb(255,192,203) rgb(0,255,0) rgb(255,192,203)"
+
+
+"Alaska, USA",Kodiak Community College Campus Center,The Campus Center houses the office for students to visit and also a computer lab for them to work in.,N/A,"57.807426, -152.363391",http://koc.alaska.edu,Kodiak_College_Campus_Center.jpg,Free to Use,Kodiak_Community_College,"rgb(255,192,203) rgb(0,255,0) rgb(255,192,203)"
+"Alaska, USA",Kodiak Community College Benny Benson Building,This is a building uses for Kodiak Community College classes and community events.,N/A,"57.807105, -152.363035",http://koc.alaska.edu,Kodiak_College_Benny_Benson_Building.jpg,Free to Use,Kodiak_Community_College
+"Alaska, USA",Kodiak Community College Technology Center,This tech center houses and stores important technology for the campus.,N/A,"57.807228, -152.362432",http://koc.alaska.edu,Kodiak_College_Technology_Center.jpg,Free to Use,Kodiak_Community_College
+
+
+"Alaska, USA",Kodiak St.Paul Harbor,"Located downtown, this harbor is one of the two main harbors of Kodiak, the other being St.Herman Harbor.",N/A,"57.786944, -152.410215",N/A,Kodiak_St_Paul_Harbor.jpg,Free to Use,Kodiak_St_Paul_Harbor,"rgb(0,192,203) rgb(0,255,0) rgb(0,192,203)"
+"Alaska, USA",Kodiak St.Herman Harbor,"Located on Near Island across from Kodiak, this is one of the two main harbors of Kodiak, the other being St.Paul Harbor.",N/A,"57.782760, -152.406014",N/A,Kodiak_St_Herman_Harbor.jpg,Free to Use,Kodiak_St_Herman_Harbor,"rgb(0,192,203) rgb(0,255,0) rgb(0,192,203)"
+
+"Alaska, USA",Pier One,This is one of the two piers used for ferry transportation to and from Kodiak.,N/A,"57.787113, -152.402898",https://www.ferrytravel.com/kodiak.htm,Kodiak_Pier_One.jpg,Free to Use,Kodiak_Pier_One,"rgb(0,192,203) rgb(0,255,0) rgb(0,192,203)"
+"Alaska, USA",Pier Two,This is one fo the two piers used for ferry transportation to and from Kodiak.,N/A,"57.783946, -152.427082",https://www.ferrytravel.com/kodiak.htm,Kodiak_Pier_Two.jpg,Free to Use,Kodiak_Pier_Two,"rgb(0,192,203) rgb(0,255,0) rgb(0,192,203)"
+
+
+
+
+"Alaska, USA",Kodiak Wells Fargo,This is one of the four banks on the island of Kodiak. Wells Fargo has two banking locations on island.,N/A,"57.787323, -152.406335",https://www.wellsfargo.com/locator/bank/202__MARINE__WAY_KODIAK_AK_99615/,Kodiak_Wells_Fargo.png,Free tp Use,Kodiak_Wells_Fargo,"rgb(0,255,255) rgb(50,100,50) rgb(0,255,255)"
+"Alaska, USA",Kodiak Wells Fargo,This is one of the four banks on the island of Kodiak. Wells Fargo has two banking locations on island.,N/A,"57.809496, -152.366067",https://www.wellsfargo.com/locator/bank/202__MARINE__WAY_KODIAK_AK_99615/,Kodiak_Wells_Fargo.png,Free to Use,Kodiak_Wells_Fargo
+"Alaska, USA",Kodiak First National Bank,This is one of the four banks on the island of Kodiak.,N/A,"57.788570, -152.406096",https://www.fnbalaska.com/,Kodiak_First_National.jpg,Free to Use,Kodiak_First_National,"rgb(0,255,255) rgb(50,100,50) rgb(0,255,255)"
+"Alaska, USA",Kodiak Key Bank,This is one of the four banks on the island of Kodiak.,N/A,"57.788551, -152.407104",https://locations.key.com/ak/kodiak/422-w-marine-way.html,Kodiak_Key_Bank.jpg,Free to Use,Kodiak_Key_Bank,"rgb(0,255,255) rgb(50,100,50) rgb(0,255,255)"
+"Alaska, USA",Kodiak Credit Union,This is one of the four banks on the island of Kodiak.,N/A,"57.790122, -152.407557",https://www.cu1.org/,Kodiak_Credit_Union.jpg,Free to Use,Kodiak_Credit_Union,"rgb(0,255,255) rgb(50,100,50) rgb(0,255,255)"
+
+"Alaska, USA",Kodiak Post Office, This is Kodiak's government post office and is located in downtown Kodiak.,N/A,"57.792517, -152.404054",https://www.usps.com/,Kodiak_Post_Office.jpg,(Unavailable),Kodiak_Post_Office,"rgb(255,255,255) rgb(50,100,50) rgb(255,255,255)"
+
+
+
+"Alaska, USA",Kodiak Island Medical Associates,This is a primary care clinic located across from the local hospital.,N/A,"57.799633, -152.375797",N/A,Kodiak_KIMA.jpg,Free to Use,Kodiak_KIMA,"rgb(175,100,175) rgb(0,255,0) rgb(175,100,175)"
+"Alaska, USA",Kodiak Care Clinic,This is a local clinic that is very accessible from the downtown area.,N/A,"57.788872, -152.406055",N/A,Kodiak_Care_Clinic.jpg,Free to Use,Kodiak_Care_Clinic,"rgb(175,100,175) rgb(0,255,0) rgb(175,100,175)"
+"Alaska, USA",Kodiak Area Native Association Hospital,This is a medical facility dedicated to serving the natives living on Kodiak Island.,N/A,"57.811924, -152.356087",http://kodiakhealthcare.org/,Kodiak_KANA_Hospital.jpg,Free to Use,Kodiak_KANA_Hospital,"rgb(175,100,175) rgb(0,255,0) rgb(175,100,175)"
+"Alaska, USA",Mill Bay Health Center,"This is a health center located next to one of the main roads of Kodiak, making it very accessible to residents.",N/A,"57.807424, -152.368293",http://kodiakhealthcare.org/,Kodiak_Mill_Bay_Health_Center.jpg,Free to Use,Kodiak_Mill_Bay_Health_Center,"rgb(175,100,175) rgb(0,255,0) rgb(175,100,175)"
+"Alaska, USA",Kodiak Island Providence Medical Center,"This is the main hospital on the island of Kodiak and also houses emergency services, a community health center, as well as a long term care facility above the main building.",N/A,"57.800901, -152.375615",http://alaska.providence.org/?utm_campaign=WP+%7C+G+%7C+S+%7C+Brand+%7C+Providence+%7C+General&utm_term=providence+hospital&utm_source=google&utm_medium=cpc&gclid=CjwKCAjwtdbLBRALEiwAm8pA5X-7g3u3YfhTR8_GXVeWt6-yQQzKXEO8dDdnTcaqWFl2_sVTXqGQ0BoCzKYQAvD_BwE&gclsrc=aw.ds&dclid=CO7-mb7PodUCFQyQfgodVFYGvQ,Kodiak_Island_Providence_Medical_Center.jpg,Free to Use,Kodiak_Island_Providence_Medical_Center,"rgb(175,100,175) rgb(0,255,0) rgb(175,100,175)"
+"Alaska, USA",Kodiak Island Providence Chiniak Elder House,The Chiniak Elder House is located above the local Hosptial.,N/A,"57.800129, -152.375278",http://alaska.providence.org/?utm_campaign=WP+%7C+G+%7C+S+%7C+Brand+%7C+Providence+%7C+General&utm_term=providence+hospital&utm_source=google&utm_medium=cpc&gclid=CjwKCAjwtdbLBRALEiwAm8pA5X-7g3u3YfhTR8_GXVeWt6-yQQzKXEO8dDdnTcaqWFl2_sVTXqGQ0BoCzKYQAvD_BwE&gclsrc=aw.ds&dclid=CO7-mb7PodUCFQyQfgodVFYGvQ,Kodiak_Providence_Chiniak_Elder_House.jpg,Free to Use,Kodiak_Island_Providence_Medical_Center
+"Alaska, USA",Kodiak Island Providence Emergency Services,"Kodiak Island Providence Medical Center houses an entrance for ambulances, and an emergency room; this is the only emergency medical care on island.",N/A,"57.801477, -152.374357",http://alaska.providence.org/?utm_campaign=WP+%7C+G+%7C+S+%7C+Brand+%7C+Providence+%7C+General&utm_term=providence+hospital&utm_source=google&utm_medium=cpc&gclid=CjwKCAjwtdbLBRALEiwAm8pA5X-7g3u3YfhTR8_GXVeWt6-yQQzKXEO8dDdnTcaqWFl2_sVTXqGQ0BoCzKYQAvD_BwE&gclsrc=aw.ds&dclid=CO7-mb7PodUCFQyQfgodVFYGvQ,Kodiak_Island_Providence_Medical_Center.jpg,Free to Use,Kodiak_Island_Providence_Medical_Center
+"Alaska, USA",Kodiak Public Health Center,"This is located in the downtown area and provides many services to the community of Kodiak including: immunization, Family Planning, School Screenings, STI and HIV screening, Tuberculosis screening and treatment, Infectious Disease investigation, Health Education, Community Assessment, and Emergency Preparedness.",N/A,"57.788750, -152.400490",http://dhss.alaska.gov/dph/Nursing/Pages/South%20Central%20Public%20Health%20Center%20Pages/Kodiak-Public-Health-Center.aspx,Kodiak_Public_Health_Center.jpg,Free to Use,Kodiak_Public_Health_Center,"rgb(175,100,175) rgb(0,255,0) rgb(175,100,175)"
+"Alaska, USA",Kodiak Veterinary Clinic,"This is the only vet service on island, but there is also an animal shelter where you can give your pets shots and register them for their tags.",N/A,"57.802591, -152.377762",http://www.kodiakvet.com/,Kodiak_Veterinary_Clinic.jpg,Free to Use,Kodiak_Veterinary_Clinic,"rgb(0,255,50) rgb(0,255,0) rgb(0,255,50)"
+"Alaska, USA",Kodiak Vision Source Eye-Care Excellence,This is one of the few eye-care facilities on Kodiak Island.,N/A,"57.812503, -152.354037",http://visionsource-eyecareexcellence.com/,Kodiak_Vision_Source_Eyecare_Excellence.jpg,Free to Use,Kodiak_Vision_Source_Eyecare_Excellence,"rgb(0,255,50) rgb(0,255,0) rgb(0,255,50)"
+"Alaska, USA",Kodiak Vision Clinic,This is one of the few eye-care facilities on Kodiak Island.,N/A,"57.788957, -152.409432",http://www.kodiakvisionclinicak.com/,Kodiak_Vision_Clinic.jpg,Free to Use,Kodiak_Vision_Clinic,"rgb(0,255,50) rgb(0,255,0) rgb(0,255,50)"
+
+
+"New York, USA",Fei Tian Academy of the Arts,Building 1,N/A,"41.453134,  -74.436965", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Energy_Tests,"rgb(255,255,0)','rgb(255,150,0)','rgb(255,100,0)"
+"New York, USA","Fei Tian Academy of the Arts",Building 2: Performing Arts building,"","41.452354,  -74.438258", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Energy_Tests,"rgb(255,255,0)','rgb(255,150,0)','rgb(255,100,0)"
+"New York, USA","Fei Tian Academy of the Arts",Building 3: Administration and Curriculum,"","41.451832,  -74.438505", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Energy_Tests,"rgb(255,255,0)','rgb(255,150,0)','rgb(255,100,0)"
+"New York, USA","Fei Tian Academy of the Arts",Building 4,"","41.451603,  -74.439197", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Energy_Tests,"rgb(255,255,0)','rgb(255,150,0)','rgb(255,100,0)"
+"New York, USA","Fei Tian Academy of the Arts",Building 5,"","41.452403,  -74.439250", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Energy_Tests,"rgb(255,255,0)','rgb(255,150,0)','rgb(255,100,0)"
+
+
+"New York, USA","Fei Tian Academy of the Arts",Building 1,"","41.453026,  -74.437078", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Water_Tests,"rgb(0,200,255)','rgb(0,150,255)','rgb(0,100,255)"
+"New York, USA","Fei Tian Academy of the Arts",Building 2: Performing Arts building,"","41.452282,  -74.438370", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Water_Tests,"rgb(0,200,255)','rgb(0,150,255)','rgb(0,100,255)"
+"New York, USA","Fei Tian Academy of the Arts",Building 3: Administration and Curriculum,"","41.451767,  -74.438537", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Water_Tests,"rgb(0,200,255)','rgb(0,150,255)','rgb(0,100,255)"
+"New York, USA","Fei Tian Academy of the Arts",Building 4,"","41.451526,  -74.439336", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Water_Tests,"rgb(0,200,255)','rgb(0,150,255)','rgb(0,100,255)"
+"New York, USA","Fei Tian Academy of the Arts",Building 5,"","41.452338,  -74.439384", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Water_Tests,"rgb(0,200,255)','rgb(0,150,255)','rgb(0,100,255)"
+
+
+
+
+
+
+
+
