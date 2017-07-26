@@ -136,10 +136,10 @@ function Placemark_Creation(Layer_Name,RGB) {
         document.getElementById("Layer Menu").setAttribute("style", "display: block;");
         document.getElementById('Layer Menu').setAttribute('aria-hidden','false');
 
-        Ortho1()
-
+        Ortho1();
+        Geo()
     }
-    //else {Geo()}
+
 
 }
 
