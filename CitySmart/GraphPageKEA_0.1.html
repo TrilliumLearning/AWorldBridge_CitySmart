@@ -1,0 +1,139 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <script src="dygraph-combined.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="gauge.min.js"></script>
+    <script src="graphsKEA.js"></script>
+    <link rel="stylesheet" href="http://dygraphs.com/dist/dygraph.css">
+    <script type="text/javascript" src="http://dygraphs.com/dist/dygraph.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CitySmart-WorldWise</title>
+        <link rel="stylesheet" href="css/foundation.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="js/vendor/modernizr.js"></script>
+        <style type="text/css">
+            div.chart {
+            width: 640px;
+            height: 320px;
+            }
+</style>
+    </head>
+    <div data-sticky-container>
+        <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%">
+            <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="menu-text">CitySmart-WorldWise</li>
+                    <li>
+                        <a style="color:white;" href="CitySmart-WorldWise_0.1.html">Home</a>
+                    </li>
+                    <li>
+                        <a style="color:white;" href="#">About us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+</div>
+        </div>
+    </div>
+    <div class="large-12 columns" style="height:10px;">
+</div>
+    <div class="row">
+        <div style="width:1000px height:100px ; " class="float-center">
+            <br />
+            <h3 style="color:black;" class="float-center">Kodiak Electric Association Data Visualization </h3>
+            <hr>
+        </div>
+    </div>
+    <body>
+        <div class="row">
+</div>
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="row">
+                    <!-- Thumbnails -->
+                    <img style="height:50px" src="Placeholder-White.png" class="float-left" />
+                    <div class="columns large-5 medium-5 small-5 float-left">
+                        <div>
+                            <p><H6>Generation& Demand Graph</H6><label>description </label><br><select id="myListGEN">
+                                    <option value="null">select</option>
+                                    <option value="grossTL">Hydroelectric Plant Power Production (2012-2016)</option>
+                                    <option value="grossWTF">Wind Farm Power Production (2012-2016)</option>
+                                    <option value="systemGROSS">System Gross Generation (2006-2012)</option>
+                                    <option value="systemPEAK">System Peak Demand (2006-2012)</option>
+                                </select><input type="button" onclick="fun2()" value="click here"></p>
+                        </div>
+                    </div>
+                    <img style="height:90px" src="Placeholder-White.png" class="float-left" />
+                    <div class="columns large-5 medium-5 small-5 float-left">
+                        <div>
+                            <p><H6>Sales Revenue Graph (2012-2017)</H6><label>description </label><br><select id="myListTREND">
+                                    <option value="null">select</option>
+                                    <option value="consumersC">Commercial- Number of Consumers</option>
+                                    <option value="salesC">Commercial- Sales</option>
+                                    <option value="revenueC">Commercial- Revenue</option>
+                                    <option value="consumersI">Industrial- Number of Consumers</option>
+                                    <option value="salesI">Industrial- Sales</option>
+                                    <option value="revenueI">Industrial- Revenue</option>
+                                    <option value="consumersR">Residental- Number of Consumers</option>
+                                    <option value="salesR">Residental- Sales</option>
+                                    <option value="revenueR">Residental- Revenue</option>
+                                </select><input type="button" onclick="fun()" value="click here"></p>
+                        </div>
+                    </div>
+                    <!-- End Thumbnails -->
+                </div>
+            </div>
+        </div>
+        <div id="Graphs" class="row">
+            <center class="large-12 columns medium-12 small-12">
+                <br>
+                <div id="Graph" class="chart" style="width:1000px">
+</div>
+                <!-- Desktop Slider -->
+                <div style="width:1000px; ">
+                    <br>
+                    <h6 style="color:#C70039;">Zoom-in: click, hold and drag graph area either horizontally or vertically&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear zoom-in: double click graph area</h6>
+                </div>
+                <!-- End Desktop Slider -->
+                <!-- Mobile Header -->
+                <div class="row">
+</div>
+                <!-- End Mobile Header -->
+            </center>
+        </div>
+        <br>
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="row">
+                    <!-- Content -->
+                    <div class="large-8- columns">
+                        <div class="callout">
+                            <div class="row">
+                                <div class="small-6 columns large-12">
+                                    <h4>KEA Energy Generation</h4>
+                                    <h5>Description.&nbsp;<br></h5>
+                                    <hr />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Content -->
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="row">
+            <div class="large-12 columns">
+                <hr>
+            </div>
+        </footer>
+        <script src="js/vendor/jquery.min.js"></script>
+        <script src="js/foundation.min.js"></script>
+        <script>
+          $(document).foundation();
+        </script>
+    </body>
+</html>

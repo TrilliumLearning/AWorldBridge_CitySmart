@@ -209,10 +209,65 @@ sub
 /**
    * Remove border when inside `a` element in IE 8/9/10.
    */
+#Logo
+{
+    height: 20px;
+    white-space: nowrap;
+    width: 100%;
+    display: inline-table;
+}
+
+.logo-image
+{
+    vertical-align: middle;
+    padding: 5px;
+    display: table-cell;
+}
+
+.logo-image img
+{
+    max-width: 100%;
+    min-width: 10%;
+}
+
+#NAV
+{
+    height: 100px;
+    background-color: white;
+    white-space: nowrap;
+    width: 100%;
+    display: table;
+}
+
+
+.img-circle {
+    border-radius: 50%;
+}
 
 img
 {
     border: 0;
+}
+
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+h2 { 
+   position: absolute; 
+   top: 175px; 
+   left: 0; 
+   width: 100%; 
+}
+
+h2 span { 
+   color: white; 
+   font: bold 24px/45px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
 }
 
 /**
@@ -5482,86 +5537,40 @@ table.hover tr:nth-of-type(even):hover
     cursor: help;
 }
 
-.tooltip
-{
-    background-color: #0a0a0a;
-    color: #fefefe;
-    font-size: 80%;
-    padding: 0.75rem;
-    position: absolute;
-    z-index: 10;
-    top: calc(100% + 0.6495rem);
-    max-width: 10rem !important;
-    border-radius: 0;
+.tooltip {
+    position: relative;
+    display: inline-block;
+   
 }
 
-.tooltip::before
-{
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border: inset 0.75rem;
-    border-color: transparent transparent #0a0a0a;
-    border-bottom-style: solid;
-    border-top-width: 0;
-    bottom: 100%;
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
     position: absolute;
+    z-index: 1;
+    top: 75%;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    margin-left: -60px;
 }
 
-.tooltip.top::before
-{
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border: inset 0.75rem;
-    border-color: #0a0a0a transparent transparent;
-    border-top-style: solid;
-    border-bottom-width: 0;
-    top: 100%;
-    bottom: auto;
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
 }
 
-.tooltip.left::before
-{
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border: inset 0.75rem;
-    border-color: transparent transparent transparent #0a0a0a;
-    border-left-style: solid;
-    border-right-width: 0;
-    bottom: auto;
-    left: 100%;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.tooltip.right::before
-{
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border: inset 0.75rem;
-    border-color: transparent #0a0a0a transparent transparent;
-    border-right-style: solid;
-    border-left-width: 0;
-    bottom: auto;
-    left: auto;
-    right: 100%;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 
 .top-bar
@@ -5836,6 +5845,7 @@ table.hover tr:nth-of-type(even):hover
 {
     clear: both;
 }
+
 
 /*# sourceMappingURL=foundation.css.map */
 

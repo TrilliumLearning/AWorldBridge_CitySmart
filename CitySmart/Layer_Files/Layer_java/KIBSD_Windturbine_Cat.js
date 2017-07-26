@@ -118,6 +118,24 @@ function Placemark_Creation(Layer_Name,RGB) {
     k++;
     if (k < Point_Layers.length){First_Function()}
     //else {Geo()}
+<<<<<<< HEAD
+=======
+    else {
+
+
+        document.getElementById("myListCountry").selectedIndex = 1;
+        interfaceCityCreation();
+        document.getElementById("ACToggle").classList.toggle('is-active');
+        $("#ACToggle").attr("aria-expanded","true");
+        $("#ACToggle").attr("aria-selected","true");
+        document.getElementById("Layer Menu").setAttribute("style", "display: block;");
+        document.getElementById('Layer Menu').setAttribute('aria-hidden','false');
+
+        Ortho1();
+
+        Geo()
+    }
+>>>>>>> master
 
 
 }
@@ -204,9 +222,9 @@ function First_Function () {
     CSV_NAME = Point_Layers[k][1];
 
     ReferenceArray = Point_Layers[k];
-    //var url = "http://localhost:63342/AWorldBridge_CitySmart/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
-    //var url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
-    var url = "http://localhost:63342/AWorldBridge_CitySmart2/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+
+    var url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
+    //url = "http://localhost:63342/AWorldBridge_CitySmart/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
     //var url = "http://localhost:40002/file:///Users/kshin/Desktop/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
     //url = "http://10.194.40.100/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
 
@@ -237,7 +255,7 @@ function First_Function () {
 //Light Purple 'rgb(204, 204, 255)'
 
 var Point_Layers = [
-    ["World Bridge","World_Bridge_Sites.csv",['rgb(187,0,255)','rgb(0,255,0)','rgb(187,0,255)']],
+    ["US A World Bridge Sites","World_Bridge_Sites.csv",['rgb(187,0,255)','rgb(0,255,0)','rgb(187,0,255)']],
     ["KIBSD Turbine","KHS_Wind_Turbine.csv",['rgb(255,192,203)','rgb(255,0,0)','rgb(255,192,203)']],
     ["KEA Turbine","KEA_Wind_Turbine.csv",['rgb(204, 204, 255)','rgb(0,0,255)','rgb(204, 204, 255)']],
     ["Bear Valley Golf Course","BVGC.csv",['rgb(0,0,255)','rgb(255,192,203)','rgb(0,0,255)']]
