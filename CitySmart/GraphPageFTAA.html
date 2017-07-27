@@ -3,7 +3,6 @@
     <script src="dygraph-combined.js"></script>
     <script src="jquery.min.js"></script>
     <script src="gauge.min.js"></script>
-    <script src="graphsFTAAdata.js"></script>
     <link rel="stylesheet" href="http://dygraphs.com/dist/dygraph.css">
     <script type="text/javascript" src="http://dygraphs.com/dist/dygraph.js"></script>
     <head>
@@ -164,7 +163,7 @@
 
                 //alert(graphdata[2][5]);
 
-                new Dygraph(document.getElementById("graphdiv"),
+                new Dygraph(document.getElementById("Graphs"),
                     graphdata,
                     {
                         title: selectedValue + " (Benchmark: " + ajaxReturn[0].Remark + ")",
@@ -178,6 +177,7 @@
                         showRangeSelector: false,
                     }
                 );
+
             }
         };
 
