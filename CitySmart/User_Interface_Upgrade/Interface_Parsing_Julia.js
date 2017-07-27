@@ -12,8 +12,8 @@ var nameAndButton = [];
 var interfaceArray = [];
 
 
-//var Interface_URL = "http://localhost:63342/AWorldBridge_CitySmart/CitySmart/User_Interface_Upgrade/Interface_CSV_Julia.csv";
-var Interface_URL = "http://cs.aworldbridgelabs.com/CitySmart/User_Interface_Upgrade/Interface_CSV_Julia.csv";
+var Interface_URL = "http://localhost:63342/AWorldBridge_CitySmart2/CitySmart/User_Interface_Upgrade/Interface_CSV_Julia.csv";
+//var Interface_URL = "http://cs.aworldbridgelabs.com/CitySmart/User_Interface_Upgrade/Interface_CSV_Julia.csv";
 
 
 var CCStringEnd = `
@@ -32,7 +32,7 @@ var largeDropDownStringEnd = `
     </div>
 `;
 
-function interfaceParse (Interface_CSV_Julia_URL) {
+function interfaceParse (Interface_CSV_URL) {
 
     function contains(Array_Name, Variable) {
 
@@ -41,7 +41,7 @@ function interfaceParse (Interface_CSV_Julia_URL) {
     }
 
 
-    Papa.parse(Interface_CSV_Julia_URL, {
+    Papa.parse(Interface_CSV_URL, {
 
         header: true,
 

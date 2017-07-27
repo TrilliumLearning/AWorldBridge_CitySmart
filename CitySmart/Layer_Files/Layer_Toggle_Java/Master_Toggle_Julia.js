@@ -1990,7 +1990,7 @@ $(document).ready(function(){
 
 
     //Put the name of the switch's id in the "on" function
-    $(document).on("click","#Fei_Tian_Energy_Placemarks", function(){
+    $(document).on("click","#Fei_Tian_Energy_Tests", function(){
 
         //Put the name of the layer in the "find" function
         Layer_Number = Find("Fei_Tian_Energy_Tests");
@@ -2016,7 +2016,7 @@ $(document).ready(function(){
 
 
     //Put the name of the switch's id in the "on" function
-    $(document).on("click","#Fei_Tian_Water_Placemarks", function(){
+    $(document).on("click","#Fei_Tian_Water_Tests", function(){
 
         //Put the name of the layer in the "find" function
         Layer_Number = Find("Fei_Tian_Water_Tests");

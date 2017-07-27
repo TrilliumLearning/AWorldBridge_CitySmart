@@ -18,7 +18,8 @@ function changeHTML(id) {
         <p style="color: rgb(89,89,89)">` + Globe_siteDescription[Globe_index_num] + `\</p>
 		<br>
 		<img src=".\\Pics\\` + Globe_pictureLocation[Globe_index_num] + `"/>
-        \<p style="color: rgb(89,89,89)">Copyright: ` + Globe_copyright[Globe_index_num] + `\</p>
+		<br>
+        <p style="color: rgb(89,89,89)">Copyright: ` + Globe_copyright[Globe_index_num] + `</p>
 		<br>
         <p style="color: rgb(89,89,89)">Latitude and Longitude: ` + Globe_latitude_longitude[Globe_index_num] + `\</p>
 		<br>
