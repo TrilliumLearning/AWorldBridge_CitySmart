@@ -30,6 +30,9 @@ function interfaceCityCreation() {
 
     if (Number($('#myListCountry').val()) === -1){
 
+        console.log(Number($('#myListCountry').val()))
+
+
         var e = document.getElementById("myListCity");
 
         e.innerHTML = `
@@ -44,6 +47,9 @@ function interfaceCityCreation() {
     }
     else if (Number($('#myListCountry').val()) === -2){
 
+        console.log(Number($('#myListCountry').val()))
+
+
         var e = document.getElementById("myListCity");
 
         e.innerHTML = `
@@ -53,11 +59,14 @@ function interfaceCityCreation() {
         interfaceCreation();
 
     }
-    else if (Number($('#myListCountry').val()) === temporaryCountryValue){}
-    else if (typeof Number($('#myListCountry').val()) === 'undefined'){}
+    else if (Number($('#myListCountry').val()) === temporaryCountryValue){console.log(Number($('#myListCountry').val()))}
+    else if (typeof Number($('#myListCountry').val()) === 'undefined'){console.log(Number($('#myListCountry').val()))}
     else{
 
         var q = document.getElementById('Layer Menu');
+
+
+        console.log(Number($('#myListCountry').val()))
 
 
         q.innerHTML = ``;
@@ -95,6 +104,9 @@ function interfaceCityCreation() {
 
 }
 
+
+
+$('#myListCountry').change(function(){interfaceCityCreation()});
 
 
 
@@ -210,8 +222,11 @@ function interfaceCreation() {
 
 
     else if (typeof Number($('#myListCity').val()) === 'undefined') {
+        console.log(Number($('#myListCity').val()))
     }
     else {
+
+        console.log(Number($('#myListCity').val()))
 
 
         CountryN = Number($('#myListCountry').val());
@@ -339,6 +354,9 @@ function interfaceCreation() {
 
 }
 
+
+
+$('#myListCity').change(function(){interfaceCreation()});
 /*
 var accordianStart = `
 <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">

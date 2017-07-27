@@ -205,6 +205,181 @@ $(document).ready(function(){
 
 
 
+
+//KEA Overhead Cables and Poles
+$(document).ready(function(){
+
+    //If there are multiple layers being activated, put the zoom function in the first layer activation marked below
+
+
+    //Put the name of the switch's id in the "on" function
+    $(document).on("click","#Overhead_Cables_and_Poles", function(){
+
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("Utility");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
+
+
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("OHC_M");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75, -152.50, 40000));}
+
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("OHC_1");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
+
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("OHC_2");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
+
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("OHC_3");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
+
+    })});
+
+
+
+
+//KEA Underground Cables and Transformers
+$(document).ready(function(){
+
+    //If there are multiple layers being activated, put the zoom function in the first layer activation marked below
+
+
+    //Put the name of the switch's id in the "on" function
+    $(document).on("click","#Underground_Cables_and_Transformers", function(){
+
+
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("UGTFP_polygon");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75, -152.50, 40000));}
+
+
+
+
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("UGC_1");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
+
+
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("UGC_2");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
+
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("UGC_3");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
+
+
+    })});
+
+
+
+
+
+
+
+
 //Main KEA Building
 $(document).ready(function(){
 
