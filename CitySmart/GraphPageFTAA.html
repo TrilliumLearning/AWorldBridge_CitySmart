@@ -154,10 +154,10 @@
                         graphdata[i] = [];
                     }
                     graphdata[i][0] = i+1;
-                    graphdata[i][1] = ajaxReturn[i].Building_1_Drinking_Water;
-                    graphdata[i][2] = ajaxReturn[i].Building_2_Drinking_Water;
-                    graphdata[i][3] = ajaxReturn[4].Building_1_Drinking_Water;
-                    graphdata[i][4] = ajaxReturn[4].Building_2_Drinking_Water;
+                    graphdata[i][1] = ajaxReturn[i].Building_2_Drinking_Water;
+                    graphdata[i][2] = ajaxReturn[i].Building_3_Drinking_Water;
+                    graphdata[i][3] = ajaxReturn[4].Building_2_Drinking_Water;
+                    graphdata[i][4] = ajaxReturn[4].Building_3_Drinking_Water;
                     graphdata[i][5] = parseFloat(ajaxReturn[i].Benchmark);
                 }
 
@@ -170,7 +170,7 @@
                         //legend: 'always',
                         includeZero: false,
                         drawPoints: true,
-                        labels: ["Week", "Building_1_Drinking_Water", "Building_2_Drinking_Water", "Average_Building_1", "Average_Building_2", "Benchmark"],
+                        labels: ["Week", "Building_2_Drinking_Water", "Building_3_Drinking_Water", "Average_Building_2", "Average_Building_3", "Benchmark"],
                         xlabel: "Week",
                         ylabel: ajaxReturn[0].Unit,
                         showRoller: true,
