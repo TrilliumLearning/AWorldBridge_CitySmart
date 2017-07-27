@@ -105,6 +105,7 @@
                 var graphdata = [];
                 var machineName = [];
                 var machineUsage = [];
+                var rgbaColor = [];
 
                 if (graphName === "budget") {
                     for (var i = 0; i < ajaxReturn.length; i++) {
@@ -212,7 +213,9 @@
                     for (var i = 0; i < ajaxReturn.length; i++) {
                         machineName[i] = ajaxReturn[i].Machine_Name;
                         machineUsage[i] = ajaxReturn[i].Electricity_Usage;
+                        rgbaColor[i] = "rgba(" + [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), 0.2] + ")";
                     }
+
 
                     new Chart(document.getElementById("graphcanvas"), {
                         // The type of chart we want to create
@@ -223,6 +226,7 @@
                             labels: machineName,
                             datasets: [{
                                 data: machineUsage,
+                                backgroundColor: rgbaColor,
                             }]
                         },
 
