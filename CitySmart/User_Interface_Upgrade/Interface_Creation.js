@@ -30,8 +30,6 @@ function interfaceCityCreation() {
 
     if (Number($('#myListCountry').val()) === -1){
 
-        console.log(Number($('#myListCountry').val()))
-
 
         var e = document.getElementById("myListCity");
 
@@ -39,15 +37,12 @@ function interfaceCityCreation() {
         <option value="-1">-Select a City-</option>
         `
 
-
         var b = document.getElementById("Layer Menu");
 
         b.innerHTML = ``
 
     }
     else if (Number($('#myListCountry').val()) === -2){
-
-        console.log(Number($('#myListCountry').val()))
 
 
         var e = document.getElementById("myListCity");
@@ -59,15 +54,11 @@ function interfaceCityCreation() {
         interfaceCreation();
 
     }
-    else if (Number($('#myListCountry').val()) === temporaryCountryValue){console.log(Number($('#myListCountry').val()))}
-    else if (typeof Number($('#myListCountry').val()) === 'undefined'){console.log(Number($('#myListCountry').val()))}
+    else if (Number($('#myListCountry').val()) === temporaryCountryValue){}
+    else if (typeof Number($('#myListCountry').val()) === 'undefined'){}
     else{
 
         var q = document.getElementById('Layer Menu');
-
-
-        console.log(Number($('#myListCountry').val()))
-
 
         q.innerHTML = ``;
         //console.log(typeof Number($('#myListCountry').val()));
@@ -222,11 +213,9 @@ function interfaceCreation() {
 
 
     else if (typeof Number($('#myListCity').val()) === 'undefined') {
-        console.log(Number($('#myListCity').val()))
     }
     else {
 
-        console.log(Number($('#myListCity').val()))
 
 
         CountryN = Number($('#myListCountry').val());
