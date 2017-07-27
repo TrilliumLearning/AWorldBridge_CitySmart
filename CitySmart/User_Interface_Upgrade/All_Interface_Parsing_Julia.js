@@ -9,8 +9,8 @@ var ALLsubCategory = [];
 var ALLnameAndButton = [];
 
 var ALLinterfaceArray = [];
-var ALLInterface_URL = "http://localhost:63342/AworldBridge_CitySmart2/CitySmart/User_Interface_Upgrade/Interface_CSV_Julia.csv";
-//var ALLInterface_URL = "http://cs.aworldbridgelabs.com/CitySmart/User_Interface_Upgrade/Interface_CSV_Julia.csv";
+//var ALLInterface_URL = "http://localhost:63342/AworldBridge_CitySmart2/CitySmart/User_Interface_Upgrade/Interface_CSV_Julia.csv";
+var ALLInterface_URL = "http://cs.aworldbridgelabs.com/CitySmart/User_Interface_Upgrade/Interface_CSV_Julia.csv";
 
 
 

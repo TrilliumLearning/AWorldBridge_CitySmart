@@ -12,8 +12,8 @@ var nameAndButton = [];
 var interfaceArray = [];
 
 
-var Interface_URL = "http://localhost:63342/AWorldBridge_CitySmart2/CitySmart/User_Interface_Upgrade/Interface_CSV_Julia.csv";
-//var Interface_URL = "http://cs.aworldbridgelabs.com/CitySmart/User_Interface_Upgrade/Interface_CSV_Julia.csv";
+//var Interface_URL = "http://localhost:63342/AWorldBridge_CitySmart2/CitySmart/User_Interface_Upgrade/Interface_CSV_Julia.csv";
+var Interface_URL = "http://cs.aworldbridgelabs.com/CitySmart/User_Interface_Upgrade/Interface_CSV_Julia.csv";
 
 
 var CCStringEnd = `

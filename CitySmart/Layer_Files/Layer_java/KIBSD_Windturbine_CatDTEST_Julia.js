@@ -238,8 +238,8 @@ function First_Function () {
 
     //ReferenceArray = Point_Layers[k];
 
-    //var url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/MasterDTEST_Julia.csv";
-    var url = "http://localhost:63342/AWorldBridge_CitySmart2/CitySmart/Layer_Files/Layer_csv/MasterDTEST_Julia.csv";
+    var url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/MasterDTEST_Julia.csv";
+    //var url = "http://localhost:63342/AWorldBridge_CitySmart2/CitySmart/Layer_Files/Layer_csv/MasterDTEST_Julia.csv";
     //var url = "http://localhost:40002/file:///Users/kshin/Desktop/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
     //url = "http://10.194.40.100/wwdev/CitySmart/Layer_Files/Layer_csv/" + CSV_NAME;
 

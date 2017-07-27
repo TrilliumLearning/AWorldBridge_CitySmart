@@ -48,10 +48,10 @@ var i = 0;
 var Globe_myArray1 = [];
 
 
-var Globe_url = "http://localhost:63342/AWorldBridge_CitySmart2/CitySmart/Layer_Files/Layer_csv/MasterDTEST_Julia.csv";
+//var Globe_url = "http://localhost:63342/AWorldBridge_CitySmart2/CitySmart/Layer_Files/Layer_csv/MasterDTEST_Julia.csv";
 //var Globe_url = "http://10.194.40.100/wwdev/CitySmart/Layer_Files/Layer_csv/Master.csv";
 
-//var Globe_url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/MasterDTEST_Julia.csv";
+var Globe_url = "http://cs.aworldbridgelabs.com/CitySmart/Layer_Files/Layer_csv/MasterDTEST_Julia.csv";
 
 
 var Globe_new_list = [];
