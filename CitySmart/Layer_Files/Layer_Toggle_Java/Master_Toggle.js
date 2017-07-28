@@ -196,7 +196,7 @@ $(document).ready(function(){
 
         //Put the zoom function in the first enabling layer
 
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75, -152.50, 400000));}
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75, -152.50, 40000));}
 
 
 
@@ -400,7 +400,7 @@ $(document).ready(function(){
 
         //Put the zoom function in the first enabling layer
 
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.789378, -152.397236, 2500));}
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.798113, -152.388234, 2500));}
 
 
 
@@ -741,10 +741,10 @@ $(document).ready(function(){
 
 
 //Put the name of the switch's id in the "on" function
-    $(document).on("click","#Kodiak_Terror_Dam", function(){
+    $(document).on("click","#Kodiak_Terror_Lake", function(){
 
         //Put the name of the layer in the "find" function
-        Layer_Number = Find("Kodiak_Terror_Dam");
+        Layer_Number = Find("Kodiak_Terror_Lake");
 
 
 
