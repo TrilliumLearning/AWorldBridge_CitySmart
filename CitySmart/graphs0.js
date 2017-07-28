@@ -34,7 +34,7 @@ if(elem && elem.tagName == 'IFRAME#g3'){
     var oReq = new XMLHttpRequest({cache: false});
     var result = [];
     var data = [];
-    var title = "WindSpeed and RPM";
+    var title = "Wind Speed and RPM";
 
 
     oReq.addEventListener("load", reqListener);
@@ -312,7 +312,7 @@ $("#g2").click(function () {
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
-        var title = "Windspeed";
+        var title = "Wind Speed";
 
 
         oReq.addEventListener("load", reqListener);
@@ -330,7 +330,7 @@ $("#g2").click(function () {
                 drawPoints: true,
                 showRoller: true,
                 title: title,
-                labels: ['TimeStamp', 'Windspeed'],
+                labels: ['TimeStamp', 'Wind Speed'],
                 showRangeSelector: true,
                 //rangeSelectorHeight: 100,
                 //valueRange: [xmin, xmax],
@@ -413,7 +413,7 @@ $("#g2").click(function () {
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
-        var title = "Windspeed";
+        var title = "Wind Speed";
 
 
         oReq.addEventListener("load", reqListener);
@@ -431,7 +431,7 @@ $("#g2").click(function () {
                 drawPoints: true,
                 showRoller: true,
                 title: title,
-                labels: ['TimeStamp', 'Windspeed'],
+                labels: ['TimeStamp', 'Wind Speed'],
                 showRangeSelector: true,
                 //rangeSelectorHeight: 100,
                 //valueRange: [xmin, xmax],
@@ -725,7 +725,7 @@ $("#g4").click(function () {
     var oReq = new XMLHttpRequest({cache: false});
     var result = [];
     var data = [];
-    var title = "WindSpeed and RPM";
+    var title = "Wind Speed and RPM";
 
 
     oReq.addEventListener("load", reqListener);
@@ -844,7 +844,7 @@ $("#g4").click(function () {
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
-        var title = "WindSpeed and RPM";
+        var title = "Wind Speed and RPM";
 
 
         oReq.addEventListener("load", reqListener);

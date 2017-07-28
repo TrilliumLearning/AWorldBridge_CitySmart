@@ -19,6 +19,7 @@
             height: 320px;
             }
 </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     </head>
     <div data-sticky-container>
         <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%">
@@ -54,7 +55,7 @@
                     <img style="height:50px" src="Placeholder-White.png" class="float-left" />
                     <div class="columns large-5 medium-5 small-5 float-left">
                         <div>
-                            <p><H6>Generation& Demand Graph</H6><label>description </label><br><select id="myListGEN">
+                            <p><H6>Generation & Demand Graph</H6><br><select id="myListGEN">
                                     <option value="null">select</option>
                                     <option value="grossTL">Hydroelectric Plant Power Production (2012-2016)</option>
                                     <option value="grossWTF">Wind Farm Power Production (2012-2016)</option>
@@ -66,7 +67,7 @@
                     <img style="height:90px" src="Placeholder-White.png" class="float-left" />
                     <div class="columns large-5 medium-5 small-5 float-left">
                         <div>
-                            <p><H6>Sales Revenue Graph (2012-2017)</H6><label>description </label><br><select id="myListTREND">
+                            <p><H6>Sales Revenue Graph (2012-2017)</H6><br><select id="myListTREND">
                                     <option value="null">select</option>
                                     <option value="consumersC">Commercial- Number of Consumers</option>
                                     <option value="salesC">Commercial- Sales</option>
@@ -89,6 +90,7 @@
                 <br>
                 <div id="Graph" class="chart" style="width:1000px">
 </div>
+                <br>
                 <!-- Desktop Slider -->
                 <!-- End Desktop Slider -->
                 <!-- Mobile Header -->
@@ -105,10 +107,19 @@
                     <div class="large-8- columns">
                         <div class="callout">
                             <div class="row">
-                                <div class="small-6 columns large-12">
-                                    <h4>KEA Energy Generation</h4>
-                                    <h5>Description.&nbsp;<br></h5>
+                                <div class="columns large-12 medium-12 small-12">
+                                    <h4>Information / How to use</h4>
                                     <hr />
+                                </div>
+                                <div class="columns large-6 medium-12 small-12">
+                                    <h5>The Kodiak Electric Association planned and implemented a 100% Renewable Energy system for the Kodiak Island Borough, and provided A World Bridge students with significant energy data, along with Operations &amp; Maintenance information to share with the global community. This open sharing allows city and community administrators to understand the status of their assets, including strengths and weaknesses.&nbsp;<br><br>How to Use: Select either a Generation &amp; Demand Graph, or Sales Revenue Graph, then click on the “click here” button. The resulting charts are interactive, and you may select the “handles” on either side of the graph to expand or compress the data with respect to time.</h5>
+                                </div>
+                                <div class="columns large-6 medium-12 small-12">
+                                    <h5>
+Options to choose under Generation &amp; Demand Graph :<br><i class="fa fa-check">&nbsp;</i>Hydroelectric Plant Power <br><i class="fa fa-check">&nbsp;</i>Production
+Wind Farm Power<br><i class="fa fa-check">&nbsp;</i>Production
+System Gross<br><i class="fa fa-check">&nbsp;</i>Production
+System Peak Demand<br><br>Options to choose under Sales Revenue Graph (2012-2017) :<br><i class="fa fa-check">&nbsp;</i>Commercial - Number of Consumers<br><i class="fa fa-check">&nbsp;</i>Commercial Sales<br><i class="fa fa-check">&nbsp;</i>Commercial - Revenue<br><i class="fa fa-check">&nbsp;</i>Industrial - Number of Consumers<br><i class="fa fa-check">&nbsp;</i>Industrial Sales<br><i class="fa fa-check">&nbsp;</i>Industrial Revenue<br><i class="fa fa-check">&nbsp;</i>Residential - Number of Consumers<br><i class="fa fa-check">&nbsp;</i>Residential Sales<br><i class="fa fa-check">&nbsp;</i>Residential Revenue<br></h5>
                                 </div>
                             </div>
                         </div>
