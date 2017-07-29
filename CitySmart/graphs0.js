@@ -50,7 +50,7 @@ if(elem && elem.tagName == 'IFRAME#g3'){
     var windSpeed_and_RPM = new Dygraph(document.getElementById("GRAPH"), data,
         {
             drawPoints: true,
-            showRoller: true,
+            showRoller: false,
             title: title,
             labels: ['TimeStamp', 'Wind Speed', 'RPM' ],
 
@@ -124,7 +124,7 @@ $("#g1").click(function () {
         KilowattHours = new Dygraph(document.getElementById("GRAPH"), data,
             {
                 drawPoints: true,
-                showRoller: true,
+                showRoller: false,
                 title: title,
                 labels: ['TimeStamp', 'Kilowatt Hours'],
                 showRangeSelector: true,
@@ -225,7 +225,7 @@ $("#g1").click(function () {
         KilowattHours = new Dygraph(document.getElementById("GRAPH"), data,
             {
                 drawPoints: true,
-                showRoller: true,
+                showRoller: false,
                 title: title,
                 labels: ['TimeStamp', 'Kilowatt Hours'],
                 showRangeSelector: true,
@@ -328,7 +328,7 @@ $("#g2").click(function () {
         var windSpeed = new Dygraph(document.getElementById("GRAPH"), data,
             {
                 drawPoints: true,
-                showRoller: true,
+                showRoller: false,
                 title: title,
                 labels: ['TimeStamp', 'Wind Speed'],
                 showRangeSelector: true,
@@ -429,7 +429,7 @@ $("#g2").click(function () {
         var windSpeed = new Dygraph(document.getElementById("GRAPH"), data,
             {
                 drawPoints: true,
-                showRoller: true,
+                showRoller: false,
                 title: title,
                 labels: ['TimeStamp', 'Wind Speed'],
                 showRangeSelector: true,
@@ -533,7 +533,7 @@ $("#g3").click(function () {
         var rpm = new Dygraph(document.getElementById("GRAPH"), data,
             {
                 drawPoints: true,
-                showRoller: true,
+                showRoller: false,
                 title: title,
                 labels: ['TimeStamp', 'RPM'],
                 showRangeSelector: true,
@@ -634,7 +634,7 @@ $("#g3").click(function () {
         var rpm = new Dygraph(document.getElementById("GRAPH"), data,
             {
                 drawPoints: true,
-                showRoller: true,
+                showRoller: false,
                 title: title,
                 labels: ['TimeStamp', 'RPM'],
                 showRangeSelector: true,
@@ -741,7 +741,7 @@ $("#g4").click(function () {
     var windSpeed_and_RPM = new Dygraph(document.getElementById("GRAPH"), data,
         {
             drawPoints: true,
-            showRoller: true,
+            showRoller: false,
             title: title,
             labels: ['TimeStamp', 'Wind Speed', 'RPM' ],
 
@@ -860,7 +860,7 @@ $("#g4").click(function () {
         var windSpeed_and_RPM = new Dygraph(document.getElementById("GRAPH"), data,
             {
                 drawPoints: true,
-                showRoller: true,
+                showRoller: false,
                 title: title,
                 labels: ['TimeStamp', 'Wind Speed', 'RPM' ],
 
