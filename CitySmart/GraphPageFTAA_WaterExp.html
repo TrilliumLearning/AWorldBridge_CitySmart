@@ -9,7 +9,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>CitySmart-WorldWise</title>
-        <link rel="stylesheet" href="css/foundation.css" />
+        <link rel="stylesheet" href="css/foundationFRAME2.css" />
         <link rel="stylesheet" href="style.css" />
         <script src="js/vendor/modernizr.js"></script>
         <style type="text/css">
@@ -59,29 +59,34 @@
             <div class="large-12 columns">
                 <div class="row">
                     <!-- Thumbnails -->
-                    <img style="height:50px" src="Placeholder-White.png" class="float-left" />
+                    <div class="columns medium-3 small-3 large-4">
+                        <h3>&nbsp;</h3> 
+                    </div>
                     <div class="columns large-5 medium-5 small-5 float-left">
                         <div>
-                            <p><H6>Water Quality Graph</H6><br><select id="dropDown">
-                                    <option value="null">Select</option>
-                                    <option value="Calcium">Calcium Ion-Selective Electrode</option>
-                                    <option value="Ammonium">Ammonium Ion-Selective Electrode</option>
-                                    <option value="Potassium">Potassium_ion-Selective_Electrode</option>
-                                    <option value="Chloride">Chloride Probe</option>
-                                    <option value="Colorimeter">Colorimeter</option>
-                                    <option value="Turbidity">Turbidity Sensor</option>
-                                    <option value="pH">PH Sensor</option>
-                                    <option value="Temperature">Temperature Probe (C)</option>
-                                </select><input type="button" onclick='ajaxFunction()' value="click here"></p>
+                            <h4 class="text-center"><p class="underline">Water Quality Graph</p></h4>
+                            <br>
+                            <select id="dropDown">
+                                <option value="null">Select</option>
+                                <option value="Calcium">Calcium Ion-Selective Electrode</option>
+                                <option value="Ammonium">Ammonium Ion-Selective Electrode</option>
+                                <option value="Potassium">Potassium_ion-Selective_Electrode</option>
+                                <option value="Chloride">Chloride Probe</option>
+                                <option value="Colorimeter">Colorimeter</option>
+                                <option value="Turbidity">Turbidity Sensor</option>
+                                <option value="pH">PH Sensor</option>
+                                <option value="Temperature">Temperature Probe (C)</option>
+                            </select>
+                            <input type="button" onclick='ajaxFunction()' value="click here">
                         </div>
                     </div>
                     <!-- End Thumbnails -->
                 </div>
             </div>
         </div>
+        <br>
         <div id="Graphs" class="row">
             <center class="large-12 columns medium-12 small-12">
-                <br>
                 <div id="Graph" class="chart" style="width:1000px">
 </div>
                 <!-- Desktop Slider -->
@@ -92,8 +97,9 @@
                 <!-- End Mobile Header -->
             </center>
         </div>
-        <br>
         <div class="row">
+            <br>
+            <br>
             <div class="large-12 columns">
                 <div class="row">
                     <!-- Content -->
@@ -182,7 +188,7 @@
                         labels: ["Week", "Building_1_Drinking_Water", "Building_2_Drinking_Water", "Average_Building_1", "Average_Building_2", "Benchmark"],
                         xlabel: "Week",
                         ylabel: ajaxReturn[0].Unit,
-                        showRoller: true,
+                        showRoller: false,
                         showRangeSelector: false,
                     }
                 );

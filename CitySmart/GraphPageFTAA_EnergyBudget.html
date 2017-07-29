@@ -9,7 +9,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>CitySmart-WorldWise</title>
-        <link rel="stylesheet" href="css/foundation.css" />
+        <link rel="stylesheet" href="css/foundationFRAME2.css" />
         <link rel="stylesheet" href="style.css" />
         <script src="js/vendor/modernizr.js"></script>
         <style type="text/css">
@@ -62,19 +62,22 @@
                     <img style="height:50px" src="Placeholder-White.png" class="float-left" />
                     <div class="columns large-5 medium-5 small-5 float-left">
                         <div>
-                            <h5>Energy Budget</h5>
+                            <br>
+                            <h4><p>
+                                Energy Budget</p></h4>
                             <br>
                             <select id="dropDown">
                                 <option value="null">Select</option>
                                 <option value="budget">Energy Budget</option>
                                 <option value="actual">Actual vs Prediction</option>
-                                <option value="percentage"> </option>
+                                <option value="percentage">Budget Analysis</option>
                             </select>
                             <br>
                             <br>
                         </div>
                     </div>
                     <div class="columns large-5 medium-5 small-5 float-left">
+                        <br>
                         <div id="more">
                             <br>
                             <h6>Select Date: <input type="date" id="date"></h6>
@@ -106,8 +109,6 @@
                                 <option value="T22:00:00Z">22:00 - 23:00</option>
                                 <option value="T23:00:00Z">23:00 - 24:00</option>
                             </select>
-                            <br>
-                            <br>
                         </div>
                         <input type="button" onclick='ajaxFunction()' value="click here">
                     </div>
@@ -117,8 +118,10 @@
         </div>
     </body>
     <center class="large-12 columns medium-12 small-12">
-        <div id="graphdiv"></div>
-        <canvas id="graphcanvas"></canvas>
+        <br>
+        <div id="graphdiv" class="chart" style="width:1000px">
+            <canvas id="graphcanvas"></canvas>
+        </div>
         <!-- Desktop Slider -->
         <!-- End Desktop Slider -->
         <!-- Mobile Header -->
@@ -208,7 +211,7 @@
                             title: "Energy_Budget",
                             drawPoints: true,
                             labels: ["Dates", "Electricity_Usage"],
-                            showRoller: true,
+                            showRoller: false,
                             showRangeSelector: false,
                         }
                     );
@@ -287,7 +290,7 @@
                             labels: ["Month", "Actual_Electricity_Usage", "Predict_Electricity_Usage"],
                             xlabel: "Month",
                             ylabel: "kWh",
-                            showRoller: true,
+                            showRoller: false,
                             showRangeSelector: false,
                             dateWindow: [ Date.parse("2016/08/01"), Date.parse("2017/09/01") ],
                             plotter: multiColumnBarPlotter
