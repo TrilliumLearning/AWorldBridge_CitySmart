@@ -30,12 +30,12 @@ function interfaceCityCreation() {
 
     if (Number($('#myListCountry').val()) === -1){
 
+
         var e = document.getElementById("myListCity");
 
         e.innerHTML = `
         <option value="-1">-Select a City-</option>
         `
-
 
         var b = document.getElementById("Layer Menu");
 
@@ -43,6 +43,7 @@ function interfaceCityCreation() {
 
     }
     else if (Number($('#myListCountry').val()) === -2){
+
 
         var e = document.getElementById("myListCity");
 
@@ -58,7 +59,6 @@ function interfaceCityCreation() {
     else{
 
         var q = document.getElementById('Layer Menu');
-
 
         q.innerHTML = ``;
         //console.log(typeof Number($('#myListCountry').val()));
@@ -95,6 +95,9 @@ function interfaceCityCreation() {
 
 }
 
+
+
+$('#myListCountry').change(function(){interfaceCityCreation()});
 
 
 
@@ -214,6 +217,7 @@ function interfaceCreation() {
     else {
 
 
+
         CountryN = Number($('#myListCountry').val());
         CityN = Number($('#myListCity').val());
 
@@ -227,14 +231,7 @@ function interfaceCreation() {
             Sb2 = Sb1[CityN];
             Sb3 = Sb2[b];
 
-/*
-            categoryAccordianStart = `
-        <ul class="accordion" data-accordion="mw6gud-accordion" role="tablist" data-allow-all-closed="true">
-                <li class="accordion-item">
-                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Ca2[b] + `</h5></a>
-            <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading" aria-hidden="true" style="display:none;">
-            `;
-*/
+
 
             categoryAccordianStart =`
 
@@ -255,15 +252,9 @@ function interfaceCreation() {
                 NR2 = NR1[CityN];
                 NR3 = NR2[b];
                 NR4 = NR3[c];
-/*
-                subCategoryAccordianStart = `
-        <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
-                <li class="accordion-item">
-                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Sb3[c] + `</h5></a>
-            <div id="` + Sb3[c] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading" aria-hidden="true" style="display:none;">
 
-            `;
-*/
+
+
                 subCategoryAccordianStart =`
 
         <ul id="` + Sb3[c] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
@@ -339,6 +330,9 @@ function interfaceCreation() {
 
 }
 
+
+
+$('#myListCity').change(function(){interfaceCreation()});
 /*
 var accordianStart = `
 <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
