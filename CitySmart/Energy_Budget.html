@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        #more {
+        #selectDateTime {
             display: none;
         }
         #graphdiv {
             display: none;
         }
-
         .dygraph-title { text-align: center; font-weight: bold;}
         .dygraph-xlabel { text-align: center;}
     </style>
@@ -22,40 +21,13 @@
             <option value = "null">Select</option>
             <option value = "budget">Energy Budget</option>
             <option value = "actual">Actual vs Prediction</option>
-            <option value = "percentage"> </option>
+            <option value = "Analysis">Budget Analysis</option>
         </select><br><br>
 
-        <div id = "more">
-            <h4>Select Date: <input type="date" id="date"></h4>
-
-            <h4>Select Time</h4>
-            <select id = "time">
-                <option value = "null">Select</option>
-                <option value = "T00:00:00Z">0:00 - 1:00</option>
-                <option value = "T01:00:00Z">1:00 - 2:00</option>
-                <option value = "T02:00:00Z">2:00 - 3:00</option>
-                <option value = "T03:00:00Z">3:00 - 4:00</option>
-                <option value = "T04:00:00Z">4:00 - 5:00</option>
-                <option value = "T05:00:00Z">5:00 - 6:00</option>
-                <option value = "T06:00:00Z">6:00 - 7:00</option>
-                <option value = "T07:00:00Z">7:00 - 8:00</option>
-                <option value = "T08:00:00Z">8:00 - 9:00</option>
-                <option value = "T09:00:00Z">9:00 - 10:00</option>
-                <option value = "T10:00:00Z">10:00 - 11:00</option>
-                <option value = "T11:00:00Z">11:00 - 12:00</option>
-                <option value = "T12:00:00Z">12:00 - 13:00</option>
-                <option value = "T13:00:00Z">13:00 - 14:00</option>
-                <option value = "T14:00:00Z">14:00 - 15:00</option>
-                <option value = "T15:00:00Z">15:00 - 16:00</option>
-                <option value = "T16:00:00Z">16:00 - 17:00</option>
-                <option value = "T17:00:00Z">17:00 - 18:00</option>
-                <option value = "T18:00:00Z">18:00 - 19:00</option>
-                <option value = "T19:00:00Z">19:00 - 20:00</option>
-                <option value = "T20:00:00Z">20:00 - 21:00</option>
-                <option value = "T21:00:00Z">21:00 - 22:00</option>
-                <option value = "T22:00:00Z">22:00 - 23:00</option>
-                <option value = "T23:00:00Z">23:00 - 24:00</option>
-            </select><br><br>
+        <div id = "selectDateTime">
+            <h4>Select Start Date Time: <input id="startDateTime"></h4>
+            <br>
+            <h4>Select End Date Time: <input id="endDateTime"></h4>
         </div>
 
         <input type="button" onclick='ajaxFunction()' value = "click here">
@@ -65,9 +37,32 @@
     <canvas id="graphcanvas"></canvas>
 
 </body>
-<script src="node_modules/dygraphs/dist/dygraph.js"></script>
-<script src="node_modules/chart.js/dist/Chart.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+<script src="https://unpkg.com/flatpickr"></script>
+<link rel="stylesheet" href="http://dygraphs.com/dist/dygraph.css">
+<script type="text/javascript" src="http://dygraphs.com/dist/dygraph.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
+
+    flatpickr("#startDateTime", {
+        enableTime: true,
+        dateFormat: "Z",
+        minuteIncrement: 0,
+        time_24hr: true,
+        minDate: "2016-09-06",
+        maxDate: "2017-09-05"
+    });
+
+    flatpickr("#endDateTime", {
+        enableTime: true,
+        dateFormat: "Z",
+        minuteIncrement: 0,
+        time_24hr: true,
+        minDate: "2016-09-06",
+        maxDate: "2017-09-05"
+    });
+
     function ajaxFunction(){
         var ajaxRequest;  // The variable that makes Ajax possible!
         try{
@@ -209,11 +204,30 @@
                     );
                 }
 
-                if (graphName === "percentage") {
-                    for (var i = 0; i < ajaxReturn.length; i++) {
-                        machineName[i] = ajaxReturn[i].Machine_Name;
-                        machineUsage[i] = ajaxReturn[i].Electricity_Usage;
-                        rgbaColor[i] = "rgba(" + [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), 0.2] + ")";
+                if (graphName === "Analysis") {
+                    //var groupedObjects = [];
+                    $.each(ajaxReturn, function (ix, obj) {
+                        if ($.inArray(obj.Machine_Name, machineName) >= 0) {
+                            // Get index of existing object width date == obj.Date
+                            /*
+                            var index = groupedObjects.map(function(o, i) {
+                                if(o.Machine_Name == obj.Machine_Name)return i;
+                            }).filter(isFinite);
+                            */
+
+                            //alert("before: " + machineUsage[$.inArray(obj.Machine_Name, machineName)]);
+                            machineUsage[$.inArray(obj.Machine_Name, machineName)] += obj.Electricity_Usage;
+                            //alert("after: " + machineUsage[$.inArray(obj.Machine_Name, machineName)]);
+
+                        } else {
+                            machineUsage.push(obj.Electricity_Usage);
+                            machineName.push(obj.Machine_Name);
+                            rgbaColor.push("rgba(" + [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), 0.2] + ")");
+                        }
+                    });
+
+                    for (var i = 0; i < machineUsage.length; i++) {
+                        machineUsage[i] = Math.round(machineUsage[i] * 1000) / 1000;
                     }
 
 
@@ -243,11 +257,11 @@
         var graphName = graphSelect.options[graphSelect.selectedIndex].value;
         var queryString1 = "?keywords=" + graphName;
 
-        var x = document.getElementById('more');
+        var x = document.getElementById('selectDateTime');
         var y = document.getElementById('graphdiv');
         var z = document.getElementById('graphcanvas');
 
-        alert("QueryString: " + queryString1);
+        //alert("QueryString: " + queryString1);
 
         if (graphName === "budget" || graphName === "actual") {
             x.style.display = 'none';
@@ -257,19 +271,18 @@
             ajaxRequest.open("GET", "//aworldbridgelabs.com:9085/graph" + queryString1, true);
             ajaxRequest.send(queryString1);
 
-        } else if (graphName === "percentage") {
+        } else if (graphName === "Analysis") {
             x.style.display = 'block';
             y.style.display = 'none';
             z.style.display = 'block';
 
-            var date = document.getElementById("date").value;
+            var startDateTime = document.getElementById("startDateTime").value;
+            var endDateTime = document.getElementById("endDateTime").value;
 
-            var time = document.getElementById("time").value;
+            var queryString2 = "?startDateTime=" + startDateTime + "&endDateTime=" + endDateTime;
+            //alert("QueryString: " + queryString2);
 
-            var queryString2 = "?keywords=" + date + time;
-            alert("QueryString: " + queryString2);
-
-            if (queryString2 !== "?keywords=null") {
+            if (startDateTime !== "" && endDateTime !== "") {
                 ajaxRequest.open("GET", "//aworldbridgelabs.com:9085/graph" + queryString2, true);
                 ajaxRequest.send(queryString2);
             }
