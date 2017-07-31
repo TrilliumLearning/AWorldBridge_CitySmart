@@ -213,7 +213,9 @@
                             drawPoints: true,
                             labels: ["Dates", "Electricity_Usage"],
                             showRoller: false,
-                            showRangeSelector: false,
+                            showRangeSelector: true,
+                			rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                			rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                         }
                     );
                 }
@@ -292,7 +294,9 @@
                             xlabel: "Month",
                             ylabel: "kWh",
                             showRoller: false,
-                            showRangeSelector: false,
+                            showRangeSelector: true,
+                			rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                			rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                             dateWindow: [ Date.parse("2016/08/01"), Date.parse("2017/09/01") ],
                             plotter: multiColumnBarPlotter
                         }
