@@ -14,18 +14,17 @@ function Find(Display_Name) {
 
 
 
-//Italy Placeholder
-/*
+//Fei Tian Energy Tests
 $(document).ready(function(){
 
     //If there are multiple layers being activated, put the zoom function in the first layer activation marked below
 
 
     //Put the name of the switch's id in the "on" function
-    $(document).on("click","#KHS_Turbine", function(){
+    $(document).on("click","#Fei_Tian_Energy_Tests", function(){
 
         //Put the name of the layer in the "find" function
-        Layer_Number = Find("KHS_Turbine");
+        Layer_Number = Find("Fei_Tian_Energy_Tests");
 
 
 
@@ -35,73 +34,13 @@ $(document).ready(function(){
 
         //Put the zoom function in the first enabling layer
 
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.793083,-152.397157, 2500));}
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(41.452035, -74.438758, 900));}
 
 
 
 
     })});
-*/
 
-
-//Finland Placeholder
-/*
-$(document).ready(function(){
-
-//If there are multiple layers being activated, put the zoom function in the first layer activation marked below
-
-
-//Put the name of the switch's id in the "on" function
-$(document).on("click","#KHS_Turbine", function(){
-
-   //Put the name of the layer in the "find" function
-   Layer_Number = Find("KHS_Turbine");
-
-
-
-
-   if (wwd.layers[Layer_Number].enabled === true) {
-       wwd.layers[Layer_Number].enabled = false}
-
-   //Put the zoom function in the first enabling layer
-
-   else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.793083,-152.397157, 2500));}
-
-
-
-
-})});
-*/
-
-
-//Fei Tian Energy Placeholder
-/*
-$(document).ready(function(){
-
-//If there are multiple layers being activated, put the zoom function in the first layer activation marked below
-
-
-//Put the name of the switch's id in the "on" function
-$(document).on("click","#KHS_Turbine", function(){
-
-   //Put the name of the layer in the "find" function
-   Layer_Number = Find("KHS_Turbine");
-
-
-
-
-   if (wwd.layers[Layer_Number].enabled === true) {
-       wwd.layers[Layer_Number].enabled = false}
-
-   //Put the zoom function in the first enabling layer
-
-   else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.793083,-152.397157, 2500));}
-
-
-
-
-})});
-*/
 
 
 
@@ -196,9 +135,21 @@ $(document).ready(function(){
 
         //Put the zoom function in the first enabling layer
 
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75, -152.50, 40000));}
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.71, -152.50, 40000));}
 
 
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("Circuit_Direction");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
 
 
     })});
@@ -213,7 +164,7 @@ $(document).ready(function(){
 
 
     //Put the name of the switch's id in the "on" function
-    $(document).on("click","#Overhead_Cables_and_Poles", function(){
+    $(document).on("click","#Kodiak_Overhead_Cables_and_Poles", function(){
 
 
 
@@ -244,7 +195,7 @@ $(document).ready(function(){
 
         //Put the zoom function in the first enabling layer
 
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75, -152.50, 40000));}
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.70, -152.43, 40000));}
 
 
 
@@ -296,30 +247,18 @@ $(document).ready(function(){
 
 
 
-//KEA Underground Cables and Transformers
+//KEA Underground Cables
 $(document).ready(function(){
 
     //If there are multiple layers being activated, put the zoom function in the first layer activation marked below
 
 
     //Put the name of the switch's id in the "on" function
-    $(document).on("click","#Underground_Cables_and_Transformers", function(){
+    $(document).on("click","#Kodiak_Underground_Cables", function(){
 
 
 
 
-        //Put the name of the layer in the "find" function
-        Layer_Number = Find("UGTFP_polygon");
-
-
-
-
-        if (wwd.layers[Layer_Number].enabled === true) {
-            wwd.layers[Layer_Number].enabled = false}
-
-        //Put the zoom function in the first enabling layer
-
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75, -152.50, 40000));}
 
 
 
@@ -337,7 +276,7 @@ $(document).ready(function(){
 
         //Put the zoom function in the first enabling layer
 
-        else {wwd.layers[Layer_Number].enabled = true;}
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75, -152.50, 37000));}
 
 
 
@@ -375,6 +314,182 @@ $(document).ready(function(){
 
 
 
+//Kodiak Terror Lake Powerhouse Transmission Lines
+$(document).ready(function(){
+
+    //If there are multiple layers being activated, put the zoom function in the first layer activation marked below
+
+
+    //Put the name of the switch's id in the "on" function
+    $(document).on("click","#Kodiak_Terror_Lake_Powerhouse_Transmission_Lines", function(){
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("Transmission_Lines");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.76, -152.62, 35000));}
+
+
+
+        Layer_Number = Find("Wire_Transmission_Kodiak");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
+
+
+    })});
+
+
+
+//Kodiak Transformers
+$(document).ready(function(){
+
+    //If there are multiple layers being activated, put the zoom function in the first layer activation marked below
+
+
+    //Put the name of the switch's id in the "on" function
+    $(document).on("click","#Kodiak_Transformers", function(){
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("UGTFP_polygon");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75, -152.50, 27000));}
+
+
+
+
+    })});
+
+
+
+
+
+//Kodiak Substations
+$(document).ready(function(){
+
+    //If there are multiple layers being activated, put the zoom function in the first layer activation marked below
+
+
+    //Put the name of the switch's id in the "on" function
+    $(document).on("click","#Kodiak_Substations", function(){
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("Kodiak_Substations");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75, -152.50, 25000));}
+
+
+
+
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("Airport_Substation");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true}
+
+    })});
+
+
+
+
+
+
+//Kodiak Fuses
+$(document).ready(function(){
+
+    //If there are multiple layers being activated, put the zoom function in the first layer activation marked below
+
+
+    //Put the name of the switch's id in the "on" function
+    $(document).on("click","#Kodiak_Fuses", function(){
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("FUSE_line_Kodiak");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75, -152.50, 25000));}
+
+
+
+/*
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("FUSE_2points_Kodiak");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
+
+
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("FUSE_3points_Kodiak");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
+*/
+
+    })});
+
 
 
 
@@ -411,8 +526,32 @@ $(document).ready(function(){
 
 
 
+//Kodiak Terror Dam
+$(document).ready(function(){
+
+//If there are multiple layers being activated, put the zoom function in the first layer activation marked below
 
 
+//Put the name of the switch's id in the "on" function
+    $(document).on("click","#Kodiak_Terror_Lake", function(){
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("Kodiak_Terror_Lake_Powerhouse");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.6861,-152.895, 2500));}
+
+
+
+
+    })});
 
 
 
@@ -508,18 +647,18 @@ $(document).ready(function(){
 
 
 
-//FTAA Water Test: Ammonium
-/*
+
+//Kodiak Base and Airport Drainage System
 $(document).ready(function(){
 
 //If there are multiple layers being activated, put the zoom function in the first layer activation marked below
 
 
 //Put the name of the switch's id in the "on" function
-    $(document).on("click","#Kodiak_Ocean_Beauty_Seafoods", function(){
+    $(document).on("click","#Kodiak_Base_and_Airport_Drainage_System", function(){
 
         //Put the name of the layer in the "find" function
-        Layer_Number = Find("Kodiak_Ocean_Beauty_Seafoods");
+        Layer_Number = Find("MANHOLE_line");
 
 
 
@@ -529,28 +668,45 @@ $(document).ready(function(){
 
         //Put the zoom function in the first enabling layer
 
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.793083,-152.397157, 2500));}
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75,-152.50, 15000));}
 
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("MANHOLE_polygon");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
 
 
 
     })});
-*/
 
 
 
-//FTAA Water Test: Potassium
-/*
+
+
+
+
+//FTAA Water Tests
+
 $(document).ready(function(){
 
 //If there are multiple layers being activated, put the zoom function in the first layer activation marked below
 
 
 //Put the name of the switch's id in the "on" function
-    $(document).on("click","#Kodiak_Ocean_Beauty_Seafoods", function(){
+    $(document).on("click","#Fei_Tian_Water_Tests", function(){
 
         //Put the name of the layer in the "find" function
-        Layer_Number = Find("Kodiak_Ocean_Beauty_Seafoods");
+        Layer_Number = Find("Fei_Tian_Water_Tests");
 
 
 
@@ -560,201 +716,7 @@ $(document).ready(function(){
 
         //Put the zoom function in the first enabling layer
 
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.793083,-152.397157, 2500));}
-
-
-
-
-    })});
-*/
-
-
-
-
-//FTAA Water Test: Chloride
-/*
-$(document).ready(function(){
-
-//If there are multiple layers being activated, put the zoom function in the first layer activation marked below
-
-
-//Put the name of the switch's id in the "on" function
-    $(document).on("click","#Kodiak_Ocean_Beauty_Seafoods", function(){
-
-        //Put the name of the layer in the "find" function
-        Layer_Number = Find("Kodiak_Ocean_Beauty_Seafoods");
-
-
-
-
-        if (wwd.layers[Layer_Number].enabled === true) {
-            wwd.layers[Layer_Number].enabled = false}
-
-        //Put the zoom function in the first enabling layer
-
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.793083,-152.397157, 2500));}
-
-
-
-
-    })});
-*/
-
-
-
-
-//FTAA Water Test: Colorimeter
-/*
-$(document).ready(function(){
-
-//If there are multiple layers being activated, put the zoom function in the first layer activation marked below
-
-
-//Put the name of the switch's id in the "on" function
-    $(document).on("click","#Kodiak_Ocean_Beauty_Seafoods", function(){
-
-        //Put the name of the layer in the "find" function
-        Layer_Number = Find("Kodiak_Ocean_Beauty_Seafoods");
-
-
-
-
-        if (wwd.layers[Layer_Number].enabled === true) {
-            wwd.layers[Layer_Number].enabled = false}
-
-        //Put the zoom function in the first enabling layer
-
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.793083,-152.397157, 2500));}
-
-
-
-
-    })});
-*/
-
-
-
-
-//FTAA Water Test: Turbidity
-/*
-$(document).ready(function(){
-
-//If there are multiple layers being activated, put the zoom function in the first layer activation marked below
-
-
-//Put the name of the switch's id in the "on" function
-    $(document).on("click","#Kodiak_Ocean_Beauty_Seafoods", function(){
-
-        //Put the name of the layer in the "find" function
-        Layer_Number = Find("Kodiak_Ocean_Beauty_Seafoods");
-
-
-
-
-        if (wwd.layers[Layer_Number].enabled === true) {
-            wwd.layers[Layer_Number].enabled = false}
-
-        //Put the zoom function in the first enabling layer
-
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.793083,-152.397157, 2500));}
-
-
-
-
-    })});
-*/
-
-
-
-
-
-//FTAA Water Test: pH
-/*
-$(document).ready(function(){
-
-//If there are multiple layers being activated, put the zoom function in the first layer activation marked below
-
-
-//Put the name of the switch's id in the "on" function
-    $(document).on("click","#Kodiak_Ocean_Beauty_Seafoods", function(){
-
-        //Put the name of the layer in the "find" function
-        Layer_Number = Find("Kodiak_Ocean_Beauty_Seafoods");
-
-
-
-
-        if (wwd.layers[Layer_Number].enabled === true) {
-            wwd.layers[Layer_Number].enabled = false}
-
-        //Put the zoom function in the first enabling layer
-
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.793083,-152.397157, 2500));}
-
-
-
-
-    })});
-*/
-
-
-
-
-
-//FTAA Water Test: Temperature
-/*
-$(document).ready(function(){
-
-//If there are multiple layers being activated, put the zoom function in the first layer activation marked below
-
-
-//Put the name of the switch's id in the "on" function
-    $(document).on("click","#Kodiak_Ocean_Beauty_Seafoods", function(){
-
-        //Put the name of the layer in the "find" function
-        Layer_Number = Find("Kodiak_Ocean_Beauty_Seafoods");
-
-
-
-
-        if (wwd.layers[Layer_Number].enabled === true) {
-            wwd.layers[Layer_Number].enabled = false}
-
-        //Put the zoom function in the first enabling layer
-
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.793083,-152.397157, 2500));}
-
-
-
-
-    })});
-*/
-
-
-
-
-
-//Kodiak Terror Dam
-$(document).ready(function(){
-
-//If there are multiple layers being activated, put the zoom function in the first layer activation marked below
-
-
-//Put the name of the switch's id in the "on" function
-    $(document).on("click","#Kodiak_Terror_Lake", function(){
-
-        //Put the name of the layer in the "find" function
-        Layer_Number = Find("Kodiak_Terror_Lake");
-
-
-
-
-        if (wwd.layers[Layer_Number].enabled === true) {
-            wwd.layers[Layer_Number].enabled = false}
-
-        //Put the zoom function in the first enabling layer
-
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.627801, -153.026252, 2500));}
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(41.452035, -74.438758, 900));}
 
 
 
@@ -766,6 +728,111 @@ $(document).ready(function(){
 
 
 
+//FTAA Water Grid
+$(document).ready(function(){
+
+//If there are multiple layers being activated, put the zoom function in the first layer activation marked below
+
+
+//Put the name of the switch's id in the "on" function
+    $(document).on("click","#FTAA_Water_Grid", function(){
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("water1_FTAA");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(41.452035, -74.438758, 2000));}
+
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("water1c_FTAA");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("water2_FTAA");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
+
+
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("water2c_FTAA");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
+
+
+
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("water3_FTAA");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
+
+
+
+
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("water3c_FTAA");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true;}
+
+
+
+
+    })});
 
 
 
@@ -831,6 +898,35 @@ $(document).ready(function(){
 
 
 
+//Kodiak Benny Benson State Airport
+$(document).ready(function(){
+
+//If there are multiple layers being activated, put the zoom function in the first layer activation marked below
+
+
+//Put the name of the switch's id in the "on" function
+    $(document).on("click","#Kodiak_Benny_Benson_State_Airport", function(){
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("Kodiak_Benny_Benson_State_Airport");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.754298, -152.514823, 1250));}
+
+
+
+
+    })});
+
+
+
 
 
 //Kodiak Municipal Airport
@@ -854,37 +950,6 @@ $(document).ready(function(){
         //Put the zoom function in the first enabling layer
 
         else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.806425, -152.373362, 2500));}
-
-
-
-
-    })});
-
-
-
-
-
-//Kodiak Benny Benson State Airport
-$(document).ready(function(){
-
-//If there are multiple layers being activated, put the zoom function in the first layer activation marked below
-
-
-//Put the name of the switch's id in the "on" function
-    $(document).on("click","#Kodiak_Benny_Benson_State_Airport", function(){
-
-        //Put the name of the layer in the "find" function
-        Layer_Number = Find("Kodiak_Benny_Benson_State_Airport");
-
-
-
-
-        if (wwd.layers[Layer_Number].enabled === true) {
-            wwd.layers[Layer_Number].enabled = false}
-
-        //Put the zoom function in the first enabling layer
-
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.754298, -152.514823, 2500));}
 
 
 
@@ -1058,6 +1123,32 @@ $(document).ready(function(){
 
 
 
+//Kodiak Base Roads
+$(document).ready(function(){
+
+    //If there are multiple layers being activated, put the zoom function in the first layer activation marked below
+
+
+    //Put the name of the switch's id in the "on" function
+    $(document).on("click","#Base_Roads", function(){
+
+        //Put the name of the layer in the "find" function
+        Layer_Number = Find("BaseRoad_Layer");
+
+
+
+
+        if (wwd.layers[Layer_Number].enabled === true) {
+            wwd.layers[Layer_Number].enabled = false}
+
+        //Put the zoom function in the first enabling layer
+
+        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75,-152.50, 20000));}
+
+
+
+
+    })});
 
 
 
@@ -1104,39 +1195,6 @@ $(document).ready(function(){
 
 
     })});
-
-
-
-
-
-
-//Kodiak Base Roads
-$(document).ready(function(){
-
-    //If there are multiple layers being activated, put the zoom function in the first layer activation marked below
-
-
-    //Put the name of the switch's id in the "on" function
-    $(document).on("click","#Base_Roads", function(){
-
-        //Put the name of the layer in the "find" function
-        Layer_Number = Find("BaseRoad_Layer");
-
-
-
-
-        if (wwd.layers[Layer_Number].enabled === true) {
-            wwd.layers[Layer_Number].enabled = false}
-
-        //Put the zoom function in the first enabling layer
-
-        else {wwd.layers[Layer_Number].enabled = true; layerManager.goToAnimator.goTo(new WorldWind.Position(57.75,-152.50, 20000));}
-
-
-
-
-    })});
-
 
 
 
@@ -1524,35 +1582,6 @@ $(document).ready(function(){
 
 
 
-
-//Cuddebackville Fire Department
-/*
-$(document).ready(function(){
-
-    //If there are multiple layers being activated, put the zoom function in the first layer activation marked below
-
-
-    //Put the name of the switch's id in the "on" function
-    $(document).on("click",'#Kodiak_Vision_Source', function(){
-
-        //Put the name of the layer in the "find" function
-        Layer_Number = Find("Kodiak_Vision_Source");
-
-
-
-
-        if (wwd.layers[Layer_Number].enabled === true) {
-            wwd.layers[Layer_Number].enabled = false}
-
-        //Put the zoom function in the first enabling layer
-
-        else {wwd.layers[Layer_Number].enabled = true;}
-
-
-
-
-    })});
-*/
 
 
 

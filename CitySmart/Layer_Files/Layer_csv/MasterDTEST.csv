@@ -17,6 +17,7 @@ A World Bridge,A World Bridge Headquarters,"Real-time, Real-world Project Based 
 "Alaska, USA",KEA Wind Farm,"This wind farm was estimated to be $24,000,000 and is run by Kodiak Electrical Association (KEA). It provides 18% of Kodiak's 100% renewable energy grid with its counterpart being the hydro power supplied by Terror Lake.  ",N/A,"57.785,-152.45",http://www.kodiakelectric.com/,KEA_Turbine.jpg,@KEA (Taken by Matson),KEA_Turbine,"rgb(255,192,203) rgb(255,0,0) rgb(255,192,203)"
 "Alaska, USA",Kodiak High School Wind Turbine,"The Kodiak High School wind turbine is located next to the City Borough building across from the high school and produces about 120 kilowatts per month. This Skystream wind turbine costs $3,000 and includes monitoring software so that data can be monitored and recorded remotely. Kodiak's - A World Bridge students have connected to the wind turbine's data stream via radio transmitter, then relay this data through a CPU in the World Bridge lab that parses the output to send finalized data to a host server.",,"57.793083,-152.397157",http://24.237.235.227/wwdev/CitySmart/GraphPage.html,KHS_Turbine.jpg,TrilliumLearning,KHS_Turbine,"rgb(204,204,255) rgb(0,0,255) rgb(204,204,255)"
 "Alaska, USA",Kodiak Electrical Association Office,This is the public office for the Kodiak Electrical Association.,N/A,"57.798113, -152.388234",http://www.kodiakelectric.com/,Kodiak_KEA_Office.JPG,Free to Use,Kodiak_KEA_Office,"rgb(255,192,203) rgb(255,0,0) rgb(255,192,203)"
+"Alaska, USA",Kodiak Terror Lake Dam Powerhouse,"This provides Kodiak with 80% of its renewable energy, its counterpart being wind energy.",N/A,"57.6861,-152.895",http://www.kodiakelectric.com/,Kodiak_Terror_Lake.jpg,Free to Use,Kodiak_Terror_Lake_Powerhouse,"rgb(204,204,255) rgb(0,255,0) rgb(204,204,255)"
 
 
 "Alaska, USA",Bear Valley Golf Course,"This golf course is an A World Bridge Test Site for their Nano Agriculture. The Nano-Ag treatment is a high energy, all organic nutrient source that furnishes immediate energy to microbial life so they can go about their jobs of cleaning up waste, creating compost and producing topsoil. This treatment provides a quick energy source as well as a sustainable energy source for indigenous, beneficial soil microbial life. It is a biologically active, water soluble, low pH, and low-molecular-weight component of the humic material in the organic matter of soil, peat, leonardite & coal containing colloidal trace minerals. It is a natural electrolyte as well as a plant growth regulator. ",N/A,"57.7855,-152.56",http://aworldbridge.com/global-school-network/usa/alaska/kodiak-island-borough-schoo/kodiak-high-school/nanotechnology-in-agricultu/kodiak-nanoagriculture.html,BVGC.jpeg,TrilliumLearning,Bear_Valley_Golf_Course,"rgb(0,0,255) rgb(255,192,203) rgb(0,0,255)"
@@ -27,8 +28,6 @@ A World Bridge,A World Bridge Headquarters,"Real-time, Real-world Project Based 
 "Alaska, USA",Ocean Beauty Seafoods,This is one of the many canneries that is key to Kodiak's economy.,N/A,"57.785057,-152.420816",http://www.oceanbeauty.com/,Kodiak_Ocean_Beauty_Seafoods.jpg,Free To Use,Kodiak_Ocean_Beauty_Seafoods,"rgb(204,204,255) rgb(0,255,0) rgb(204,204,255)"
 
 
-
-"Alaska, USA",Kodiak Terror Lake Dam,"This provides Kodiak with 80% of its renewable energy, its counterpart being wind energy.",N/A,"57.627801, -153.026252",http://www.kodiakelectric.com/,Kodiak_Terror_Lake.jpg,Free to Use,Kodiak_Terror_Lake,"rgb(204,204,255) rgb(0,255,0) rgb(204,204,255)"
 
 
 
@@ -96,6 +95,36 @@ A World Bridge,A World Bridge Headquarters,"Real-time, Real-world Project Based 
 "Alaska, USA",Kodiak Veterinary Clinic,"This is the only vet service on island, but there is also an animal shelter where you can give your pets shots and register them for their tags.",N/A,"57.802591, -152.377762",http://www.kodiakvet.com/,Kodiak_Veterinary_Clinic.jpg,Free to Use,Kodiak_Veterinary_Clinic,"rgb(0,255,50) rgb(0,255,0) rgb(0,255,50)"
 "Alaska, USA",Kodiak Vision Source Eye-Care Excellence,This is one of the few eye-care facilities on Kodiak Island.,N/A,"57.812503, -152.354037",http://visionsource-eyecareexcellence.com/,Kodiak_Vision_Source_Eyecare_Excellence.jpg,Free to Use,Kodiak_Vision_Source_Eyecare_Excellence,"rgb(0,255,50) rgb(0,255,0) rgb(0,255,50)"
 "Alaska, USA",Kodiak Vision Clinic,This is one of the few eye-care facilities on Kodiak Island.,N/A,"57.788957, -152.409432",http://www.kodiakvisionclinicak.com/,Kodiak_Vision_Clinic.JPG,Free to Use,Kodiak_Vision_Clinic,"rgb(0,255,50) rgb(0,255,0) rgb(0,255,50)"
+
+
+
+
+
+
+
+
+
+
+
+"New York, USA",Fei Tian Academy of the Arts,Building 1,N/A,"41.453134,  -74.436965", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Energy_Tests,"rgb(255,255,0) rgb(255,150,0) rgb(255,100,0)"
+"New York, USA","Fei Tian Academy of the Arts",Building 2: Performing Arts building,N/A,"41.452354,  -74.438258", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Energy_Tests,"rgb(255,255,0) rgb(255,150,0) rgb(255,100,0)"
+"New York, USA","Fei Tian Academy of the Arts",Building 3: Administration and Curriculum,N/A,"41.451832,  -74.438505", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Energy_Tests,"rgb(255,255,0) rgb(255,150,0) rgb(255,100,0)"
+"New York, USA","Fei Tian Academy of the Arts",Building 4,N/A,"41.451603,  -74.439197", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Energy_Tests,"rgb(255,255,0) rgb(255,150,0) rgb(255,100,0)"
+"New York, USA","Fei Tian Academy of the Arts",Building 5,N/A,"41.452403,  -74.439250", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Energy_Tests,"rgb(255,255,0) rgb(255,150,0) rgb(255,100,0)"
+
+
+"New York, USA","Fei Tian Academy of the Arts",Building 1,N/A,"41.453026,  -74.437078", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Water_Tests,"rgb(0,200,255) rgb(0,150,255) rgb(0,100,255)"
+"New York, USA","Fei Tian Academy of the Arts","Abstract - We tested if the drinking water from Fei Tian Academy of the Arts contains any contaminants that is harmful and minerals that are good for the health of the body. We planned to compared the drinking water to the regulations of the National Primary Drinking Water in order to confirm that it is safe to drink by our students and staff. Method - In order to complete such a task, we first plan it out with data charts and schedule to collect the water we selected. The next step is to calibrate the probe then test the water. After completion, the data is organized and is confirmed if it is safe. A report is written based upon the data. Results - From conducting these tests, we have confirmed that it all the results are within the National Primary Drinking Water regulations. With satisfied experiment results, we are able to encourage other students and staff to drink and utilize the water in our campus without hesitation. This data will also be contributed to UNESCO.",N/A,"41.452282,  -74.438370", http://www.feitianacademy.org/,Building_Two_Water_Graphs.png,Free to Use,Fei_Tian_Water_Tests,"rgb(0,200,255) rgb(0,150,255) rgb(0,100,255)"
+
+"New York, USA","Fei Tian Academy of the Arts","Abstract - We tested if the drinking water from Fei Tian Academy of the Arts contains any contaminants that is harmful and minerals that are good for the health of the body. We planned to compared the drinking water to the regulations of the National Primary Drinking Water in order to confirm that it is safe to drink by our students and staff. Method - In order to complete such a task, we first plan it out with data charts and schedule to collect the water we selected. The next step is to calibrate the probe then test the water. After completion, the data is organized and is confirmed if it is safe. A report is written based upon the data. Results - From conducting these tests, we have confirmed that it all the results are within the National Primary Drinking Water regulations. With satisfied experiment results, we are able to encourage other students and staff to drink and utilize the water in our campus without hesitation. This data will also be contributed to UNESCO.",N/A,"41.451767,  -74.438537", http://www.feitianacademy.org/,Building_Three_Water_Graphs.png,Free to Use,Fei_Tian_Water_Tests,"rgb(0,200,255) rgb(0,150,255) rgb(0,100,255)"
+"New York, USA","Fei Tian Academy of the Arts",Building 4,N/A,"41.451526,  -74.439336", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Water_Tests,"rgb(0,200,255) rgb(0,150,255) rgb(0,100,255)"
+"New York, USA","Fei Tian Academy of the Arts",Building 5,N/A,"41.452338,  -74.439384", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Water_Tests,"rgb(0,200,255) rgb(0,150,255) rgb(0,100,255)"
+
+
+
+
+
+
 
 
 
