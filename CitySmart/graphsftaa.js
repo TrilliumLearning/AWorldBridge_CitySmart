@@ -60,12 +60,6 @@ $(document).ready(function() {
 
 	   img.src = 'water_experiment/chloroide.png';
    }
-      
-       if (selectedValue == "Colorimeter")
-   {
-       document.getElementById('textpic').innerHTML = "";
-       
-   }
           
       
       if (selectedValue == "Turbidity")

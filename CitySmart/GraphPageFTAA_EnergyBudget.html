@@ -31,7 +31,6 @@
             }
             .dygraph-title { text-align: center; font-weight: bold;}
             .dygraph-xlabel { text-align: center;}
-
 </style>
     </head>
     <div class="row">
@@ -91,19 +90,15 @@
                 <!-- End Thumbnails -->
             </div>
         </div>
-        <br>
-        <br>
-        <div id="graphdiv" style="width:1000px"></div>
-        <div class="columns small-3 medium-3 large-3">
+        <div id="graphdiv" style="width:1000px" class="float-center"></div>
+        <div class="columns small-3 medium-3 large-3 float-left">
             <h3>&nbsp;</h3> 
         </div>
-        <div class="columns small-6 medium-6 large-6"> 
-            <canvas id="graphcanvas"></canvas>             
+        <div class="row small-6 medium-6 large-6 float-center"> 
             <br>
-            <br>
+            <canvas id="graphcanvas" class="float-center"></canvas>             
         </div>
         <div class="row">
-            <br>
             <br>
             <div class="large-12 columns">
                 <div class="row">
@@ -114,7 +109,6 @@
                                 <div class="columns large-12 medium-12 small-12">
                                     <h4>FTAA Data Collection</h4>
                                     <hr />
-                                    <h5>The Fei Tian Academy of the Arts is fully engaged in NASA CitySmart-WorldWise model development with Kodiak students. FTAA students are in the process of generating experimental data for the design and development of a Sustainable Campus. Their current data includes energy, renewable energy solutions, water quality testing and purification processes. Additionally, students are building campus energy, water, food (greenhouse) and transportation grids for visualization on WebWorldWind. <br></h5>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +130,7 @@
     <script>
     flatpickr("#startDateTime", {
         enableTime: true,
-        dateFormat: "Z",
+        dateFormat: "Y-m-d H:i:S",
         minuteIncrement: 0,
         time_24hr: true,
         minDate: "2016-09-06",
@@ -144,7 +138,7 @@
     });
     flatpickr("#endDateTime", {
         enableTime: true,
-        dateFormat: "Z",
+        dateFormat: "Y-m-d H:i:S",
         minuteIncrement: 0,
         time_24hr: true,
         minDate: "2016-09-06",
@@ -194,8 +188,10 @@
                             title: "Energy_Budget",
                             drawPoints: true,
                             labels: ["Dates", "Electricity_Usage"],
-                            showRoller: true,
-                            showRangeSelector: false,
+                            showRoller: false,
+                            showRangeSelector: true,
+                			rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                			rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                         }
                     );
                 }
@@ -263,8 +259,10 @@
                             labels: ["Month", "Actual_Electricity_Usage", "Predict_Electricity_Usage"],
                             xlabel: "Month",
                             ylabel: "kWh",
-                            showRoller: true,
-                            showRangeSelector: false,
+                            showRoller: false,
+                            showRangeSelector: true,
+                			rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                			rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                             dateWindow: [ Date.parse("2016/08/01"), Date.parse("2017/09/01") ],
                             plotter: multiColumnBarPlotter
                         }
