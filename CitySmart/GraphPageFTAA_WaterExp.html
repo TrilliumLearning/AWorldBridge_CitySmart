@@ -2,6 +2,7 @@
 <html class="no-js" lang="en">
     <script src="dygraph-combined.js"></script>
     <script src="jquery.min.js"></script>
+    <script src="graphsftaa.js"></script>
     <script src="gauge.min.js"></script>
     <link rel="stylesheet" href="http://dygraphs.com/dist/dygraph.css">
     <script type="text/javascript" src="http://dygraphs.com/dist/dygraph.js"></script>
@@ -77,7 +78,7 @@
                                 <option value="pH">PH Sensor</option>
                                 <option value="Temperature">Temperature Probe (C)</option>
                             </select>
-                            <input type="button" onclick='ajaxFunction()' value="click here">
+                            <input type="button" onclick="ajaxFunction();fun();" value="click here">
                         </div>
                     </div>
                     <!-- End Thumbnails -->
@@ -106,10 +107,11 @@
                     <div class="large-8- columns">
                         <div class="callout">
                             <div class="row">
-                                <div class="small-6 columns large-12">
+                                <div class="columns large-12 small-12 medium-12">
                                     <h4>FTAA Data Collection</h4>
                                     <hr />
                                     <h5>The Fei Tian Academy of the Arts is fully engaged in NASA CitySmart-WorldWise model development with Kodiak students. FTAA students are in the process of generating experimental data for the design and development of a Sustainable Campus. Their current data includes energy, renewable energy solutions, water quality testing and purification processes. Additionally, students are building campus energy, water, food (greenhouse) and transportation grids for visualization on WebWorldWind. <br></h5>
+                                    <div id="textpic" class="float-center text-center small-text-center medium-text-center large-text-center"></div>
                                 </div>
                             </div>
                         </div>
@@ -169,10 +171,10 @@
                         graphdata[i] = [];
                     }
                     graphdata[i][0] = i+1;
-                    graphdata[i][1] = ajaxReturn[i].Building_1_Drinking_Water;
-                    graphdata[i][2] = ajaxReturn[i].Building_2_Drinking_Water;
-                    graphdata[i][3] = ajaxReturn[4].Building_1_Drinking_Water;
-                    graphdata[i][4] = ajaxReturn[4].Building_2_Drinking_Water;
+                    graphdata[i][1] = ajaxReturn[i].Building_2_Drinking_Water;
+                    graphdata[i][2] = ajaxReturn[i].Building_3_Drinking_Water;
+                    graphdata[i][3] = ajaxReturn[4].Building_2_Drinking_Water;
+                    graphdata[i][4] = ajaxReturn[4].Building_3_Drinking_Water;
                     graphdata[i][5] = parseFloat(ajaxReturn[i].Benchmark);
                 }
 
@@ -185,11 +187,13 @@
                         //legend: 'always',
                         includeZero: false,
                         drawPoints: true,
-                        labels: ["Week", "Building_1_Drinking_Water", "Building_2_Drinking_Water", "Average_Building_1", "Average_Building_2", "Benchmark"],
+                        labels: ["Week", "Building_2_Drinking_Water", "Building_3_Drinking_Water", "Average_Building_2", "Average_Building_3", "Benchmark"],
                         xlabel: "Week",
                         ylabel: ajaxReturn[0].Unit,
                         showRoller: false,
-                        showRangeSelector: false,
+                        showRangeSelector: true,
+                		rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                		rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
                     }
                 );
 
