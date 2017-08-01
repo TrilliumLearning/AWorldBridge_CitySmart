@@ -22,7 +22,9 @@ function changeHTML(id) {
 		<br>
         <p style="color: rgb(89,89,89)">Latitude and Longitude: ` + Globe_latitude_longitude[Globe_index_num] + `\</p>
 		<br>
-		<p style="color: rgb(89,89,89)">Site Link: <a style="color: rgb(0, 136, 234)" href="` + Globe_linkToSiteLocation[Globe_index_num] + `">` + Globe_linkToSiteLocation[Globe_index_num] + ` </a>\</p>
+		<p style="color: rgb(89,89,89)">Site Link: <a style="color: rgb(0, 136, 234)" href="` + Globe_linkToSiteLocation[Globe_index_num] + `">Click here to navigate to the site's website</a>\</p>
+		<br>
+		<h6 style="font-size:65%;" >Disclaimer: Some sites may not have a website and the link above will not work</h6>
         <div class="popup-Header">
             </div>`
 

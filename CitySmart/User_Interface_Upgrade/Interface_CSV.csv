@@ -11,23 +11,21 @@ Country,City,Category,Sub Category,Name,Button Reference
 
 
 
-United States of America,"Middletown, NY",Energy,Energy Testing,Fei Tian Energy Tests (TBD),Fei_Tian_Energy_Tests
+United States of America,"Middletown, NY",Energy,Energy Testing,Fei Tian Energy Tests,Fei_Tian_Energy_Tests
 United States of America,"Kodiak, AK",Energy,Wind Energy,KHS Wind Turbine,KHS_Turbine
 United States of America,"Kodiak, AK",Energy,Wind Energy,KEA Wind Turbine,KEA_Wind_Turbine
 United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Grid Map,KEA_Grid_Map
 United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Overhead Cables and Poles,Kodiak_Overhead_Cables_and_Poles
 United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Underground Cables,Kodiak_Underground_Cables
 United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Terror Lake Powerhouse Transmission Lines,Kodiak_Terror_Lake_Powerhouse_Transmission_Lines
-United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Transformers,Kodiak_Transformers
+United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Large Transformers,Kodiak_Large_Transformers
+United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Small Transformers,Kodiak_Small_Transformers
 United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Substations,Kodiak_Substations
 United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Fuses,Kodiak_Fuses
+United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Poles With Guy Cable Support,Kodiak_Poles_With_Guy_Cable_Support
+United States of America,"Kodiak, AK",Energy,Energy Budgets,Tuluksak Energy Budget,Tuluksak_Energy_Budget
 United States of America,"Kodiak, AK",Energy,Energy Offices,Main KEA Building,Main_KEA_Building
 United States of America,"Kodiak, AK",Energy,Hydroelectric Energy,Terror Lake Dam,Kodiak_Terror_Lake
-
-
-
-
-
 
 
 
@@ -76,6 +74,7 @@ United States of America,"Kodiak, AK",Economics,Property,Kodiak Parcel Map,Kodia
 United States of America,"Kodiak, AK",Economics,Banks,Kodiak Wells Fargo,Kodiak_Wells_Fargo
 United States of America,"Kodiak, AK",Economics,Banks,Kodiak First National,Kodiak_First_National
 United States of America,"Kodiak, AK",Economics,Banks,Kodiak Key Bank,Kodiak_Key_Bank
+United States of America,"Kodiak, AK",Economics,Banks,Kodiak Credit Union,Kodiak_Credit_Union
 United States of America,"Kodiak, AK",Economics,Postal Services,Kodiak Post Office,Kodiak_Post_Office
 
 
@@ -91,7 +90,7 @@ United States of America,"Kodiak, AK",Health Services,Health Centers,Kodiak Publ
 United States of America,"Kodiak, AK",Health Services,Health Centers,Mill Bay Health Center,Kodiak_Mill_Bay_Health_Center
 United States of America,"Kodiak, AK",Health Services,Veterinary Services,Kodiak Veterinary Clinic,Kodiak_Veterinary_Clinic
 United States of America,"Kodiak, AK",Health Services,Eye Care,Kodiak Vision Clinic,Kodiak_Vision_Clinic
-United States of America,"Kodiak, AK",Health Services,Eye Care,Kodiak Vision Source,Kodiak_Vision_Source
+United States of America,"Kodiak, AK",Health Services,Eye Care,Kodiak Vision Source,Kodiak_Vision_Source_Eyecare_Excellence
 
 
 
@@ -102,7 +101,7 @@ United States of America,"Kodiak, AK",Risk Management,Fire Stations,Kodiak City 
 United States of America,"Kodiak, AK",Risk Management,Fire Stations,Bayside Volunteer Fire Department,Kodiak_Bayside_Volunteer_Fire_Department
 United States of America,"Kodiak, AK",Risk Management,Fire Stations,Base Fire Department,Kodiak_Base_Fire_Department
 United States of America,"Kodiak, AK",Risk Management,Police Stations,Kodiak Police Department,Kodiak_Police_Department
-United States of America,"Kodiak, AK",Risk Management,ESP System (TBD),Kodiak ESP Sensors,Kodiak_ESP_Sensors
+United States of America,"Kodiak, AK",Risk Management,ESP System,ESP Sensors,ESP_Sensors
 
 
 
@@ -115,13 +114,15 @@ United States of America,"Kodiak, AK",Risk Management,ESP System (TBD),Kodiak ES
 
 
 United States of America,"Middletown, NY",Education,A World Bridge Sites,USA A World Bridge,US_A_World_Bridge_Sites
-United States of America,"Middletown, NY",Education, UNESCO WHS,Fei Tian UNESCO Prototype (TBD),Fei_Tian_UNESCO_Prototype
-United States of America,"Middletown, NY",Education,Academies,Fei Tian Academy of the Arts (TBD),Fei_Tian_Academy_of_the_Arts
-United States of America,"Middletown, NY",Education,Higher Education,Fei Tian College (TBD),Fei_Tian_College
+United States of America,"Middletown, NY",Education,UNESCO WHS,Fei Tian UNESCO Prototype,FTAA_UNESCO_Prototype
+United States of America,"Middletown, NY",Education,Academies,Fei Tian Academy of the Arts,Fei_Tian_Academy_of_the_Arts
+United States of America,"Middletown, NY",Education,Higher Education,Fei Tian College,Fei_Tian_College
+
+
 
 United States of America,"Kodiak, AK",Education,Museums,Alutiq Museum,Kodiak_Alutiq_Museum
 United States of America,"Kodiak, AK",Education,Museums,Baranov Museum,Kodiak_Baranov_Museum
-United States of America,"Kodiak, AK",Education,Libraries,Kodiak Community Libraries,Kodiak_Community_Library
+United States of America,"Kodiak, AK",Education,Libraries,Kodiak Community Library,Kodiak_Public_Library
 United States of America,"Kodiak, AK",Education,Elementary School,North Star Elementary,Kodiak_North_Star_Elementary
 United States of America,"Kodiak, AK",Education,Elementary School,Main Elementary,Kodiak_Main_Elementary
 United States of America,"Kodiak, AK",Education,Elementary School,East Elementary,Kodiak_East_Elementary
