@@ -11,12 +11,20 @@
         <title>CitySmart-WorldWise</title>
         <link rel="stylesheet" href="css/foundationFRAME2.css" />
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+        <script src="https://unpkg.com/flatpickr"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="js/vendor/modernizr.js"></script>
-        <style type="text/css">
-            div.chart {
-            width: 640px;
-            height: 320px;
+        <style>
+            #selectDateTime {
+            display: none;
             }
+            #graphdiv {
+            display: none;
+            }
+            .dygraph-title { text-align: center; font-weight: bold;}
+            .dygraph-xlabel { text-align: center;}
 </style>
     </head>
     <div data-sticky-container>
@@ -70,7 +78,7 @@
                                 <option value="null">Select</option>
                                 <option value="budget">Energy Budget</option>
                                 <option value="actual">Actual vs Prediction</option>
-                                <option value="percentage">Budget Analysis</option>
+                                <option value="Analysis">Budget Analysis</option>
                             </select>
                             <br>
                             <br>
@@ -78,37 +86,10 @@
                     </div>
                     <div class="columns large-5 medium-5 small-5 float-left">
                         <br>
-                        <div id="more">
+                        <div id="selectDateTime">
+                            <h4>Select Start Date Time: <input id="startDateTime"></h4>
                             <br>
-                            <h6>Select Date: <input type="date" id="date"></h6>
-                            <h6>Select Time</h6>
-                            <select id="time">
-                                <option value="null">Select</option>
-                                <option value="T00:00:00Z">0:00 - 1:00</option>
-                                <option value="T01:00:00Z">1:00 - 2:00</option>
-                                <option value="T02:00:00Z">2:00 - 3:00</option>
-                                <option value="T03:00:00Z">3:00 - 4:00</option>
-                                <option value="T04:00:00Z">4:00 - 5:00</option>
-                                <option value="T05:00:00Z">5:00 - 6:00</option>
-                                <option value="T06:00:00Z">6:00 - 7:00</option>
-                                <option value="T07:00:00Z">7:00 - 8:00</option>
-                                <option value="T08:00:00Z">8:00 - 9:00</option>
-                                <option value="T09:00:00Z">9:00 - 10:00</option>
-                                <option value="T10:00:00Z">10:00 - 11:00</option>
-                                <option value="T11:00:00Z">11:00 - 12:00</option>
-                                <option value="T12:00:00Z">12:00 - 13:00</option>
-                                <option value="T13:00:00Z">13:00 - 14:00</option>
-                                <option value="T14:00:00Z">14:00 - 15:00</option>
-                                <option value="T15:00:00Z">15:00 - 16:00</option>
-                                <option value="T16:00:00Z">16:00 - 17:00</option>
-                                <option value="T17:00:00Z">17:00 - 18:00</option>
-                                <option value="T18:00:00Z">18:00 - 19:00</option>
-                                <option value="T19:00:00Z">19:00 - 20:00</option>
-                                <option value="T20:00:00Z">20:00 - 21:00</option>
-                                <option value="T21:00:00Z">21:00 - 22:00</option>
-                                <option value="T22:00:00Z">22:00 - 23:00</option>
-                                <option value="T23:00:00Z">23:00 - 24:00</option>
-                            </select>
+                            <h4>Select End Date Time: <input id="endDateTime"></h4>
                         </div>
                         <input type="button" onclick='ajaxFunction()' value="click here">
                     </div>
@@ -158,45 +139,52 @@
     <script src="node_modules/dygraphs/dist/dygraph.js"></script>
     <script src="node_modules/chart.js/dist/Chart.js"></script>
     <script>
+        flatpickr("#startDateTime", {
+        enableTime: true,
+        dateFormat: "Z",
+        minuteIncrement: 0,
+        time_24hr: true,
+        minDate: "2016-09-06",
+        maxDate: "2017-09-05"
+    });
+    flatpickr("#endDateTime", {
+        enableTime: true,
+        dateFormat: "Z",
+        minuteIncrement: 0,
+        time_24hr: true,
+        minDate: "2016-09-06",
+        maxDate: "2017-09-05"
+    });
     function ajaxFunction(){
         var ajaxRequest;  // The variable that makes Ajax possible!
         try{
-
             // Opera 8.0+, Firefox, Safari
             ajaxRequest = new XMLHttpRequest();
         }catch (e){
-
             // Internet Explorer Browsers
             try{
                 ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
             }catch (e) {
-
                 try{
                     ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
                 }catch (e){
-
                     // Something went wrong
                     alert("Your browser broke!");
                     return false;
                 }
             }
         }
-
         // Create a function that will receive data
         // sent from the server and will update
         // div section in the same page.
-
         ajaxRequest.onreadystatechange = function(){
-
             //alert("xhr status: " + ajaxRequest.readyState);
-
             if (ajaxRequest.readyState == 4 || ajaxRequest.status == 200) {
                 var ajaxReturn = JSON.parse(ajaxRequest.responseText);
                 var graphdata = [];
                 var machineName = [];
                 var machineUsage = [];
                 var rgbaColor = [];
-
                 if (graphName === "budget") {
                     for (var i = 0; i < ajaxReturn.length; i++) {
                         if (!graphdata[i]) {
@@ -205,21 +193,17 @@
                         graphdata[i][0] = new Date(ajaxReturn[i].time);
                         graphdata[i][1] = ajaxReturn[i].Electricity_Usage;
                     }
-
                     new Dygraph(document.getElementById("graphdiv"),
                         graphdata,
                         {
                             title: "Energy_Budget",
                             drawPoints: true,
                             labels: ["Dates", "Electricity_Usage"],
-                            showRoller: false,
-                            showRangeSelector: true,
-                			rangeSelectorPlotFillColor: 'MediumSlateBlue',
-                			rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
+                            showRoller: true,
+                            showRangeSelector: false,
                         }
                     );
                 }
-
                 if (graphName === "actual") {
                     for (var i = 0; i < ajaxReturn.length; i++) {
                         if (!graphdata[i]) {
@@ -229,7 +213,6 @@
                         graphdata[i][1] = ajaxReturn[i].Actual_Electricity_Usage;
                         graphdata[i][2] = ajaxReturn[i].Predict_Electricity_Usage;
                     }
-
                     //http://dygraphs.com/tests/plotters.html
                     function darkenColor(colorStr) {
                         // Defined in dygraph-utils.js
@@ -239,17 +222,14 @@
                         color.b = Math.floor((255 + color.b) / 2);
                         return 'rgb(' + color.r + ',' + color.g + ',' + color.b + ')';
                     }
-
                     //http://dygraphs.com/tests/plotters.html
                     function multiColumnBarPlotter(e) {
                         // We need to handle all the series simultaneously.
                         if (e.seriesIndex !== 0) return;
-
                         var g = e.dygraph;
                         var ctx = e.drawingContext;
                         var sets = e.allSeriesPoints;
                         var y_bottom = e.dygraph.toDomYCoord(0);
-
                         // Find the minimum separation between x-values.
                         // This determines the bar width.
                         var min_sep = Infinity;
@@ -261,13 +241,11 @@
                             }
                         }
                         var bar_width = Math.floor(2.0 / 3 * min_sep);
-
                         var fillColors = [];
                         var strokeColors = g.getColors();
                         for (var i = 0; i < strokeColors.length; i++) {
                             fillColors.push(darkenColor(strokeColors[i]));
                         }
-
                         for (var j = 0; j < sets.length; j++) {
                             ctx.fillStyle = fillColors[j];
                             ctx.strokeStyle = strokeColors[j];
@@ -275,16 +253,13 @@
                                 var p = sets[j][i];
                                 var center_x = p.canvasx;
                                 var x_left = center_x - (bar_width / 2) * (1 - j/(sets.length-1));
-
                                 ctx.fillRect(x_left, p.canvasy,
                                     bar_width/sets.length, y_bottom - p.canvasy);
-
                                 ctx.strokeRect(x_left, p.canvasy,
                                     bar_width/sets.length, y_bottom - p.canvasy);
                             }
                         }
                     }
-
                     new Dygraph(document.getElementById("graphdiv"),
                         graphdata,
                         {
@@ -293,28 +268,38 @@
                             labels: ["Month", "Actual_Electricity_Usage", "Predict_Electricity_Usage"],
                             xlabel: "Month",
                             ylabel: "kWh",
-                            showRoller: false,
-                            showRangeSelector: true,
-                			rangeSelectorPlotFillColor: 'MediumSlateBlue',
-                			rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
+                            showRoller: true,
+                            showRangeSelector: false,
                             dateWindow: [ Date.parse("2016/08/01"), Date.parse("2017/09/01") ],
                             plotter: multiColumnBarPlotter
                         }
                     );
                 }
-
-                if (graphName === "percentage") {
-                    for (var i = 0; i < ajaxReturn.length; i++) {
-                        machineName[i] = ajaxReturn[i].Machine_Name;
-                        machineUsage[i] = ajaxReturn[i].Electricity_Usage;
-                        rgbaColor[i] = "rgba(" + [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), 0.2] + ")";
+                if (graphName === "Analysis") {
+                    //var groupedObjects = [];
+                    $.each(ajaxReturn, function (ix, obj) {
+                        if ($.inArray(obj.Machine_Name, machineName) >= 0) {
+                            // Get index of existing object width date == obj.Date
+                            /*
+                            var index = groupedObjects.map(function(o, i) {
+                                if(o.Machine_Name == obj.Machine_Name)return i;
+                            }).filter(isFinite);
+                            */
+                            //alert("before: " + machineUsage[$.inArray(obj.Machine_Name, machineName)]);
+                            machineUsage[$.inArray(obj.Machine_Name, machineName)] += obj.Electricity_Usage;
+                            //alert("after: " + machineUsage[$.inArray(obj.Machine_Name, machineName)]);
+                        } else {
+                            machineUsage.push(obj.Electricity_Usage);
+                            machineName.push(obj.Machine_Name);
+                            rgbaColor.push("rgba(" + [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), 0.2] + ")");
+                        }
+                    });
+                    for (var i = 0; i < machineUsage.length; i++) {
+                        machineUsage[i] = Math.round(machineUsage[i] * 1000) / 1000;
                     }
-
-
                     new Chart(document.getElementById("graphcanvas"), {
                         // The type of chart we want to create
                         type: 'polarArea',
-
                         // The data for our dataset
                         data: {
                             labels: machineName,
@@ -323,47 +308,35 @@
                                 backgroundColor: rgbaColor,
                             }]
                         },
-
                         // Configuration options go here
                         options: {
-
                         }
                     });
                 }
             }
         };
-
         var graphSelect = document.getElementById("dropDown");
         var graphName = graphSelect.options[graphSelect.selectedIndex].value;
         var queryString1 = "?keywords=" + graphName;
-
-        var x = document.getElementById('more');
+        var x = document.getElementById('selectDateTime');
         var y = document.getElementById('graphdiv');
         var z = document.getElementById('graphcanvas');
-
-        alert("QueryString: " + queryString1);
-
+        //alert("QueryString: " + queryString1);
         if (graphName === "budget" || graphName === "actual") {
             x.style.display = 'none';
             y.style.display = 'block';
             z.style.display = 'none';
-
             ajaxRequest.open("GET", "//aworldbridgelabs.com:9085/graph" + queryString1, true);
             ajaxRequest.send(queryString1);
-
-        } else if (graphName === "percentage") {
+        } else if (graphName === "Analysis") {
             x.style.display = 'block';
             y.style.display = 'none';
             z.style.display = 'block';
-
-            var date = document.getElementById("date").value;
-
-            var time = document.getElementById("time").value;
-
-            var queryString2 = "?keywords=" + date + time;
-            alert("QueryString: " + queryString2);
-
-            if (queryString2 !== "?keywords=null") {
+            var startDateTime = document.getElementById("startDateTime").value;
+            var endDateTime = document.getElementById("endDateTime").value;
+            var queryString2 = "?startDateTime=" + startDateTime + "&endDateTime=" + endDateTime;
+            //alert("QueryString: " + queryString2);
+            if (startDateTime !== "" && endDateTime !== "") {
                 ajaxRequest.open("GET", "//aworldbridgelabs.com:9085/graph" + queryString2, true);
                 ajaxRequest.send(queryString2);
             }
