@@ -75,7 +75,7 @@ function interfaceParse (Interface_CSV_URL) {
         }
         //console.log(interfaceArray);
         //console.log(a);
-        console.log('Country', country);
+        //console.log('Country', country);
         cityParse()
 
     }
@@ -109,7 +109,7 @@ function interfaceParse (Interface_CSV_URL) {
 
 
         }
-        console.log('City', city);
+        //console.log('City', city);
         categoryParse();
     }
 
@@ -157,7 +157,7 @@ function interfaceParse (Interface_CSV_URL) {
                 return window[country[x]]
             }
         }
-        console.log('Category', category);
+        //console.log('Category', category);
         subCategoryParse()
     }
 
@@ -222,7 +222,7 @@ function interfaceParse (Interface_CSV_URL) {
                 return window[country[x]]
             }
         }
-        console.log('Sub Category', subCategory);
+        //console.log('Sub Category', subCategory);
         nrParse();
 
     }
@@ -304,7 +304,7 @@ function interfaceParse (Interface_CSV_URL) {
             }
         }
         //console.log(category);
-        console.log("Name and Button Reference", nameAndButton);
+        //console.log("Name and Button Reference", nameAndButton);
         countryStringCreation('myListCountry')
         //CountryCreation()
     }
