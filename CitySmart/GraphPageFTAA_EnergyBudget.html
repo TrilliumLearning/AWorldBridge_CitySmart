@@ -1,21 +1,27 @@
-<!doctype html>
-<html class="no-js" lang="en">
-    <script src="dygraph-combined.js"></script>
-    <script src="jquery.min.js"></script>
-    <script src="gauge.min.js"></script>
-    <link rel="stylesheet" href="http://dygraphs.com/dist/dygraph.css">
-    <script type="text/javascript" src="http://dygraphs.com/dist/dygraph.js"></script>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <meta charset="utf-8" />
+        <div data-sticky-container>
+            <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%">
+                <div class="top-bar-left">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                        <li class="menu-text">CitySmart-WorldWise</li>
+                        <li>
+                            <a style="color:white;" href="CitySmartFrameTestRe-Framed.html">Home</a>
+                        </li>
+                        <li>
+                            <a style="color:white;" href="#">About us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-bar-right">
+</div>
+            </div>
+        </div>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>CitySmart-WorldWise</title>
         <link rel="stylesheet" href="css/foundationFRAME2.css" />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
-        <script src="https://unpkg.com/flatpickr"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="js/vendor/modernizr.js"></script>
         <style>
             #selectDateTime {
             display: none;
@@ -27,23 +33,6 @@
             .dygraph-xlabel { text-align: center;}
 </style>
     </head>
-    <div data-sticky-container>
-        <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%">
-            <div class="top-bar-left">
-                <ul class="dropdown menu" data-dropdown-menu>
-                    <li class="menu-text">CitySmart-WorldWise</li>
-                    <li>
-                        <a style="color:white;" href="CitySmartFrameTestRe-Framed.html">Home</a>
-                    </li>
-                    <li>
-                        <a style="color:white;" href="#">About us</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="top-bar-right">
-</div>
-        </div>
-    </div>
     <div class="row">
         <div style="width:1000px height:100px ; " class="float-center">
             <br />
@@ -60,15 +49,17 @@
             <hr>
         </div>
     </div>
-    <body>
-        <div class="row">
+    <div class="row">
 </div>
+    <body>
         <div class="row">
             <div class="large-12 columns">
                 <div class="row">
                     <!-- Thumbnails -->
-                    <img style="height:50px" src="Placeholder-White.png" class="float-left" />
-                    <div class="columns large-5 medium-5 small-5 float-left">
+                    <div class="columns small-1 medium-1 large-1">
+                        <h3>&nbsp;</h3> 
+                    </div>
+                    <div class="columns float-left small-5 medium-5 large-5">
                         <div>
                             <br>
                             <h4><p>
@@ -84,7 +75,9 @@
                             <br>
                         </div>
                     </div>
-                    <div class="columns large-5 medium-5 small-5 float-left">
+                    <div class="columns float-left small-5 medium-5 large-5">
+                        <br>
+                        <br>
                         <br>
                         <div id="selectDateTime">
                             <h4>Select Start Date Time: <input id="startDateTime"></h4>
@@ -97,49 +90,50 @@
                 <!-- End Thumbnails -->
             </div>
         </div>
-    </body>
-    <center class="large-12 columns medium-12 small-12">
-        <div id="graphdiv" class="chart" style="width:1000px">
-            <canvas id="graphcanvas"></canvas>
+        <br>
+        <br>
+        <div id="graphdiv" style="width:1000px"></div>
+        <div class="columns medium-2 large-2 small-2">
+            <h3>&nbsp;</h3> 
         </div>
-        <br>
-        <!-- Desktop Slider -->
-        <!-- End Desktop Slider -->
-        <!-- Mobile Header -->
-        <!-- End Mobile Header -->
-    </center>
-    <br>
-    <div class="row">
-        <br>
-        <br>
-        <div class="large-12 columns">
-            <div class="row">
-                <!-- Content -->
-                <div class="large-8- columns">
-                    <div class="callout">
-                        <div class="row">
-                            <div class="columns large-12 medium-12 small-12">
-                                <h4>FTAA Data Collection</h4>
-                                <hr />
-                                <h5>The Fei Tian Academy of the Arts is fully engaged in NASA CitySmart-WorldWise model development with Kodiak students. FTAA students are in the process of generating experimental data for the design and development of a Sustainable Campus. Their current data includes energy, renewable energy solutions, water quality testing and purification processes. Additionally, students are building campus energy, water, food (greenhouse) and transportation grids for visualization on WebWorldWind. <br></h5>
+        <div class="columns medium-8 large-8 small-8"> 
+            <canvas id="graphcanvas"></canvas>             
+            <br>
+            <br>
+        </div>
+        <div class="row">
+            <br>
+            <br>
+            <div class="large-12 columns">
+                <div class="row">
+                    <!-- Content -->
+                    <div class="large-8- columns">
+                        <div class="callout">
+                            <div class="row">
+                                <div class="columns large-12 medium-12 small-12">
+                                    <h4>FTAA Data Collection</h4>
+                                    <hr />
+                                    <h5>The Fei Tian Academy of the Arts is fully engaged in NASA CitySmart-WorldWise model development with Kodiak students. FTAA students are in the process of generating experimental data for the design and development of a Sustainable Campus. Their current data includes energy, renewable energy solutions, water quality testing and purification processes. Additionally, students are building campus energy, water, food (greenhouse) and transportation grids for visualization on WebWorldWind. <br></h5>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!-- End Content -->
                 </div>
-                <!-- End Content -->
             </div>
         </div>
-    </div>
-    <!-- Footer -->
-    <footer class="row">
         <div class="large-12 columns">
             <hr>
         </div>
-    </footer>
-    <script src="node_modules/dygraphs/dist/dygraph.js"></script>
-    <script src="node_modules/chart.js/dist/Chart.js"></script>
+    </body>
+    <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+    <script src="https://unpkg.com/flatpickr"></script>
+    <link rel="stylesheet" href="http://dygraphs.com/dist/dygraph.css">
+    <script type="text/javascript" src="http://dygraphs.com/dist/dygraph.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
-        flatpickr("#startDateTime", {
+    flatpickr("#startDateTime", {
         enableTime: true,
         dateFormat: "Z",
         minuteIncrement: 0,
