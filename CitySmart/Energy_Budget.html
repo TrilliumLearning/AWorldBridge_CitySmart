@@ -10,6 +10,9 @@
         #graphdiv {
             display: none;
         }
+        #graphcanvas {
+            display: block;
+        }
         .dygraph-title { text-align: center; font-weight: bold;}
         .dygraph-xlabel { text-align: center;}
     </style>
@@ -34,7 +37,9 @@
     </div>
 
     <div id="graphdiv"></div>
-    <canvas id="graphcanvas"></canvas>
+    <div id="renewCanvas">
+        <canvas id="graphcanvas"></canvas>
+    </div>
 
 </body>
 <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
@@ -215,9 +220,7 @@
                             }).filter(isFinite);
                             */
 
-                            //alert("before: " + machineUsage[$.inArray(obj.Machine_Name, machineName)]);
                             machineUsage[$.inArray(obj.Machine_Name, machineName)] += obj.Electricity_Usage;
-                            //alert("after: " + machineUsage[$.inArray(obj.Machine_Name, machineName)]);
 
                         } else {
                             machineUsage.push(obj.Electricity_Usage);
@@ -231,7 +234,7 @@
                     }
 
 
-                    new Chart(document.getElementById("graphcanvas"), {
+                    new Chart(document.getElementById("graphcanvas").getContext('2d'), {
                         // The type of chart we want to create
                         type: 'polarArea',
 
@@ -243,10 +246,12 @@
                                 backgroundColor: rgbaColor,
                             }]
                         },
-
                         // Configuration options go here
                         options: {
-
+                            title: {
+                                display: true,
+                                text: "Budget Analysis (" + startDateTime + " to " + endDateTime + ")"
+                            }
                         }
                     });
                 }
@@ -257,24 +262,34 @@
         var graphName = graphSelect.options[graphSelect.selectedIndex].value;
         var queryString1 = "?keywords=" + graphName;
 
-        var x = document.getElementById('selectDateTime');
-        var y = document.getElementById('graphdiv');
-        var z = document.getElementById('graphcanvas');
+        var selectDateTime = document.getElementById('selectDateTime');
+        var graphdiv = document.getElementById('graphdiv');
+        var graphcanvas = document.getElementById('graphcanvas');
+        var renewCanvas = document.getElementById('renewCanvas');
 
         //alert("QueryString: " + queryString1);
 
         if (graphName === "budget" || graphName === "actual") {
-            x.style.display = 'none';
-            y.style.display = 'block';
-            z.style.display = 'none';
+            selectDateTime.style.display = 'none';
+            graphdiv.style.display = 'block';
+            graphcanvas.style.display = 'none';
+            document.getElementById("startDateTime").value = "";
+            document.getElementById("endDateTime").value = "";
 
             ajaxRequest.open("GET", "//aworldbridgelabs.com:9085/graph" + queryString1, true);
             ajaxRequest.send(queryString1);
 
         } else if (graphName === "Analysis") {
-            x.style.display = 'block';
-            y.style.display = 'none';
-            z.style.display = 'block';
+            selectDateTime.style.display = 'block';
+            graphdiv.style.display = 'none';
+            graphcanvas.style.display = 'block';
+
+            if (graphcanvas) {
+                graphcanvas.remove();
+                var newCanvas = document.createElement("Canvas");
+                newCanvas.setAttribute("id", "graphcanvas");
+                renewCanvas.appendChild(newCanvas);
+            }
 
             var startDateTime = document.getElementById("startDateTime").value;
             var endDateTime = document.getElementById("endDateTime").value;
