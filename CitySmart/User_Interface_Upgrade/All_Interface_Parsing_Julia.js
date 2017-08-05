@@ -75,7 +75,7 @@ function AllinterfaceParse (Interface_CSV_URL) {
         }
         //console.log(interfaceArray);
         //console.log(a);
-        console.log('All Function Category', ALLcategory);
+        //console.log('All Function Category', ALLcategory);
         ALLSubCategoryParse()
 
     }
@@ -108,7 +108,7 @@ function AllinterfaceParse (Interface_CSV_URL) {
 
 
         }
-        console.log('All Function Sub Category', ALLsubCategory);
+        //console.log('All Function Sub Category', ALLsubCategory);
         ALLnrParse();
     }
 
@@ -153,7 +153,7 @@ function AllinterfaceParse (Interface_CSV_URL) {
                 return window[ALLcategory[x]]
             }
         }
-        console.log('ALL Function Name and Button', ALLnameAndButton);
+        //console.log('ALL Function Name and Button', ALLnameAndButton);
     }
 
 }
