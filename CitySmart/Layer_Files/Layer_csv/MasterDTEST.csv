@@ -128,7 +128,6 @@ A World Bridge,A World Bridge Headquarters,"Real-time, Real-world Project Based 
 
 
 
-<<<<<<< HEAD
 "New York, USA",Fei Tian Academy of the Arts,"This is an energy grid for Fei Tian Academy of the Arts. If you would like to see this layer along with a WMS Layer of the academy, go under education --> Academies --> Fei Tian Academy of the Arts.",N/A,"41.453134,  -74.436965", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Energy_Tests,"rgb(255,255,0) rgb(255,150,0) rgb(255,100,0)"
 
 
@@ -153,18 +152,6 @@ A World Bridge,A World Bridge Headquarters,"Real-time, Real-world Project Based 
 "New York, USA",Fei Tian College,"This location currently houses a college preparatory academy, Fei Tian Academy if the Arts, and has a college under construction. Its facilities will house various science programs and there will also be a medical school.",N/A,"41.452384, -74.439307",http://www.feitianacademy.org/,FEITIAN.jpeg,Free to Use,Fei_Tian_College,"rgb(255,200,255) rgb(200,0,255) rgb(255,100,255)"
 
 "Tuluksak, Alaska",Tuluksak Energy Budget, This is village in Alaska and you can download their energy budget below.,N/A,"61.098667, -160.956686",https://www.dropbox.com/s/jt1j57rp4tzd5lo/Tuluksak%20Energy%20Use%20World%20Bridge%20.pdf?dl=0,AWB.png,Trillium Learning,Tuluksak_Energy_Budget,"rgb(255,192,203) rgb(255,0,0) rgb(255,192,203)"
-=======
-"New York, USA","Fei Tian Academy of the Arts",Building 2: Performing Arts building,N/A,"41.452354,  -74.438258", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Energy_Tests,"rgb(255,255,0) rgb(255,150,0) rgb(255,100,0)"
-"New York, USA","Fei Tian Academy of the Arts",Building 3: Administration and Curriculum,N/A,"41.451832,  -74.438505", http://www.feitianacademy.org/,FEITIAN.jpeg,TrilliumLearning,Fei_Tian_Energy_Tests,"rgb(255,255,0) rgb(255,150,0) rgb(255,100,0)"
-
-
-"New York, USA","Fei Tian Academy of the Arts","Abstract - We tested if the drinking water from Fei Tian Academy of the Arts contains any contaminants that is harmful and minerals that are good for the health of the body. We planned to compared the drinking water to the regulations of the National Primary Drinking Water in order to confirm that it is safe to drink by our students and staff. <br> &nbsp; <br> Method - In order to complete such a task, we first plan it out with data charts and schedule to collect the water we selected. The next step is to calibrate the probe then test the water. After completion, the data is organized and is confirmed if it is safe. A report is written based upon the data. <br> &nbsp; <br> Results - From conducting these tests, we have confirmed that it all the results are within the National Primary Drinking Water regulations. With satisfied experiment results, we are able to encourage other students and staff to drink and utilize the water in our campus without hesitation.",N/A,"41.452282,  -74.438370", http://cs.aworldbridgelabs.com/CitySmart/GraphPageFTAA.html,Building_Two_Water_Graphs.png,Free to Use,Fei_Tian_Water_Tests,"rgb(0,200,255) rgb(0,150,255) rgb(0,100,255)"
-
-"New York, USA","Fei Tian Academy of the Arts","Abstract - We tested if the drinking water from Fei Tian Academy of the Arts contains any contaminants that is harmful and minerals that are good for the health of the body. We planned to compared the drinking water to the regulations of the National Primary Drinking Water in order to confirm that it is safe to drink by our students and staff. <br> &nbsp; <br> Method - In order to complete such a task, we first plan it out with data charts and schedule to collect the water we selected. The next step is to calibrate the probe then test the water. After completion, the data is organized and is confirmed if it is safe. A report is written based upon the data. <br> &nbsp; <br> Results - From conducting these tests, we have confirmed that it all the results are within the National Primary Drinking Water regulations. With satisfied experiment results, we are able to encourage other students and staff to drink and utilize the water in our campus without hesitation.",N/A,"41.451767,  -74.438537", http://cs.aworldbridgelabs.com/CitySmart/GraphPageFTAA.html,Building_Three_Water_Graphs.png,Free to Use,Fei_Tian_Water_Tests,"rgb(0,200,255) rgb(0,150,255) rgb(0,100,255)"
-
-
-
->>>>>>> master
 
 
 
