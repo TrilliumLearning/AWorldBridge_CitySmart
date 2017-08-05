@@ -8,19 +8,19 @@ $(document).ready(function() {
     var elem = document.activeElement;
     if(elem && elem.tagName == 'IFRAME#g1'){
 	$("#kw_button").click();
-        console.log(elem.id + " Clicked");
+        //console.log(elem.id + " Clicked");
         clearInterval(monitor);
     }
 
     if(elem && elem.tagName == 'IFRAME#g2'){
 	$("#ws_button").click();
-        console.log(elem.id + " Clicked");
+        //console.log(elem.id + " Clicked");
         clearInterval(monitor);
     }
 
 if(elem && elem.tagName == 'IFRAME#g3'){
 	$("#rpm_button").click();
-        console.log(elem.id + " Clicked");
+        //console.log(elem.id + " Clicked");
         clearInterval(monitor);
     }
 }, 100);
@@ -29,8 +29,8 @@ if(elem && elem.tagName == 'IFRAME#g3'){
      var myJSON = 0;
 
     //var URL = './tsconfig.json'
-    var URL = '/wwdev/gaugetest/WindData/Windspeed_and_RPM.json';
-
+    //var URL = '/wwdev/gaugetest/WindData/Windspeed_and_RPM.json';
+    var URL = '../Json_Data/KEA_Json/windspeed_and_rpm.json';
     var oReq = new XMLHttpRequest({cache: false});
     var result = [];
     var data = [];
@@ -97,14 +97,15 @@ if(elem && elem.tagName == 'IFRAME#g3'){
 
     }
 
-    windSpeed_and_RPM.resize(1000, 400)
+    windSpeed_and_RPM.resize(1000, 400);
 
 
 $("#g1").click(function () {
 
 
         var myJSON = 0;
-        var URL = '/wwdev/gaugetest/WindData/kilowatthours.json';
+        //var URL = '/wwdev/gaugetest/WindData/kilowatthours.json';
+        var URL = '../Json_Data/KEA_Json/kilowatt_hours.json';
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
@@ -205,7 +206,8 @@ $("#g1").click(function () {
 
 
         var myJSON = 0;
-        var URL = '/wwdev/gaugetest/WindData/kilowatthours.json';
+        //var URL = '/wwdev/gaugetest/WindData/kilowatthours.json';
+        var URL = '../Json_Data/KEA_Json/kilowatt_hours.json';
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
@@ -308,7 +310,8 @@ $("#g2").click(function () {
 
 
         var myJSON = 0;
-        var URL = '/wwdev/gaugetest/WindData/windspeed.json';
+        //var URL = '/wwdev/gaugetest/WindData/windspeed.json';
+        var URL = '../Json_Data/KEA_Json/windspeed.json';
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
@@ -409,7 +412,8 @@ $("#g2").click(function () {
 
 
         var myJSON = 0;
-        var URL = '/wwdev/gaugetest/WindData/windspeed.json';
+        //var URL = '/wwdev/gaugetest/WindData/windspeed.json';
+        var URL = '../Json_Data/KEA_Json/windspeed.json';
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
@@ -513,7 +517,8 @@ $("#g3").click(function () {
 
 
         var myJSON = 0;
-        var URL = '/wwdev/gaugetest/WindData/rpm.json';
+        //var URL = '/wwdev/gaugetest/WindData/rpm.json';
+        var URL = '../Json_Data/KEA_Json/rpm.json';
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
@@ -614,7 +619,8 @@ $("#g3").click(function () {
 
 
         var myJSON = 0;
-        var URL = '/wwdev/gaugetest/WindData/rpm.json';
+        //var URL = '/wwdev/gaugetest/WindData/rpm.json';
+        var URL = '../Json_Data/KEA_Json/rpm.json';
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
@@ -720,7 +726,8 @@ $("#g4").click(function () {
     var myJSON = 0;
 
     //var URL = './tsconfig.json'
-    var URL = '/wwdev/gaugetest/WindData/Windspeed_and_RPM.json';
+    //var URL = '/wwdev/gaugetest/WindData/Windspeed_and_RPM.json';
+    var URL = '../Json_Data/KEA_Json/windspeed_and_rpm.json';
 
     var oReq = new XMLHttpRequest({cache: false});
     var result = [];
@@ -839,7 +846,8 @@ $("#g4").click(function () {
         var myJSON = 0;
 
         //var URL = './tsconfig.json'
-        var URL = '/wwdev/gaugetest/WindData/Windspeed_and_RPM.json';
+        //var URL = '/wwdev/gaugetest/WindData/Windspeed_and_RPM.json';
+        var URL = '../Json_Data/KEA_Json/windspeed_and_rpm.json';
 
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];

@@ -38,18 +38,39 @@ var accordianEnd = `
 function interfaceCityCreation() {
 
 
-    if (Number($('#myListCountry').val()) === -1){
+    if (Number($('#myListCountry').val()) === temporaryCountryValue){}
+    else if (typeof Number($('#myListCountry').val()) === 'undefined'){
+
+        var b = document.getElementById("Layer Menu");
+
+        b.innerHTML = ``;
+
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;
+        }
+
+    }
+
+
+    else if (Number($('#myListCountry').val()) === -1){
 
 
         var e = document.getElementById("myListCity");
 
         e.innerHTML = `
         <option value="-1">-Select a City-</option>
-        `
+        `;
 
         var b = document.getElementById("Layer Menu");
 
-        b.innerHTML = ``
+        b.innerHTML = ``;
+
+
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;
+        }
 
     }
     else if (Number($('#myListCountry').val()) === -2){
@@ -61,16 +82,24 @@ function interfaceCityCreation() {
         <option value="-2">All Layers</option>
         `;
 
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;
+        }
+
         interfaceCreation();
 
     }
-    else if (Number($('#myListCountry').val()) === temporaryCountryValue){}
-    else if (typeof Number($('#myListCountry').val()) === 'undefined'){}
     else{
 
         var q = document.getElementById('Layer Menu');
 
         q.innerHTML = ``;
+
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;
+        }
         //console.log(typeof Number($('#myListCountry').val()));
         //console.log($('#myListCountry').val());
 
@@ -101,6 +130,7 @@ function interfaceCityCreation() {
 
     }
 
+
     temporaryCountryValue = $('#myListCountry').val()
 
 }
@@ -113,13 +143,41 @@ $('#myListCountry').change(function(){interfaceCityCreation()});
 
 function interfaceCreation() {
 
+    if (Number($('#myListCity').val()) === temporaryCountryValue) {
+    }
+    else if (typeof Number($('#myListCity').val()) === 'undefined') {
 
-    if (Number($('#myListCity').val()) === -1) {
+
+
+        var b = document.getElementById("Layer Menu");
+
+        b.innerHTML = ``;
+
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;}
+
     }
-    else if (Number($('#myListCity').val()) === temporaryCountryValue) {
+
+    else if (Number($('#myListCity').val()) === -1) {
+
+        var q = document.getElementById('Layer Menu');
+
+        q.innerHTML = ``;
+
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;
+        }
     }
+
     else if (Number($('#myListCity').val()) === -2) {
 
+
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;
+        }
 
 
         stringStorage = [];
@@ -216,11 +274,14 @@ function interfaceCreation() {
 
 
 
-    else if (typeof Number($('#myListCity').val()) === 'undefined') {
-    }
+
     else {
 
 
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;
+        }
 
         CountryN = Number($('#myListCountry').val());
         CityN = Number($('#myListCity').val());

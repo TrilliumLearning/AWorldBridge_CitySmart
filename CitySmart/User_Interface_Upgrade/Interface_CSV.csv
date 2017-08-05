@@ -11,7 +11,7 @@ Country,City,Category,Sub Category,Name,Button Reference
 
 
 
-United States of America,"Middletown, NY",Energy,Energy Testing,Fei Tian Energy Tests,Fei_Tian_Energy_Tests
+
 United States of America,"Kodiak, AK",Energy,Wind Energy,KHS Wind Turbine,KHS_Turbine
 United States of America,"Kodiak, AK",Energy,Wind Energy,KEA Wind Turbine,KEA_Wind_Turbine
 United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Grid Map,KEA_Grid_Map
@@ -26,13 +26,19 @@ United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Poles Wi
 United States of America,"Kodiak, AK",Energy,Energy Budgets,Tuluksak Energy Budget,Tuluksak_Energy_Budget
 United States of America,"Kodiak, AK",Energy,Energy Offices,Main KEA Building,Main_KEA_Building
 United States of America,"Kodiak, AK",Energy,Hydroelectric Energy,Terror Lake Dam,Kodiak_Terror_Lake
+United States of America,"Middletown, NY",Energy,Energy Distribution,Fei Tian Academy Energy Grid,Fei_Tian_Energy_Grid
 
 
 
+
+United States of America,"Kodiak, AK",Water,Canneries,Kodiak's Trident Seafoods,Kodiak_Trident_Seafoods
 United States of America,"Kodiak, AK",Water,Canneries,Kodiak's Alaska Pacific Seafoods,Kodiak_Alaska_Pacific_Seafoods
 United States of America,"Kodiak, AK",Water,Canneries,Kodiak's International Seafoods of Alaska,Kodiak_International_Seafoods_of_Alaska
 United States of America,"Kodiak, AK",Water,Canneries,Kodiak's Ocean Beauty Seafoods,Kodiak_Ocean_Beauty_Seafoods
+
 United States of America,"Kodiak, AK",Water,Drainage Systems,Kodiak Base and Airport Drainage System,Kodiak_Base_and_Airport_Drainage_System
+
+
 
 
 United States of America,"Middletown, NY",Water,Water Quality Tests,FTAA Water Tests,Fei_Tian_Water_Tests
