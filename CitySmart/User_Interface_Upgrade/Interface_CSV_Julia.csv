@@ -1,0 +1,137 @@
+Country,City,Category,Sub Category,Name,Button Reference
+
+
+
+
+
+
+
+
+
+
+
+
+United States of America,"Middletown, NY",Energy,Energy Testing,Fei Tian Energy Tests (TBD),Fei_Tian_Energy_Tests
+United States of America,"Kodiak, AK",Energy,Wind Energy,KHS Wind Turbine,KHS_Turbine
+United States of America,"Kodiak, AK",Energy,Wind Energy,KEA Wind Turbine,KEA_Wind_Turbine
+United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Grid Map,KEA_Grid_Map
+United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Overhead Cables and Poles,Kodiak_Overhead_Cables_and_Poles
+United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Underground Cables,Kodiak_Underground_Cables
+United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Terror Lake Powerhouse Transmission Lines,Kodiak_Terror_Lake_Powerhouse_Transmission_Lines
+United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Transformers,Kodiak_Transformers
+United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Substations,Kodiak_Substations
+United States of America,"Kodiak, AK",Energy,Energy Distribution,Kodiak Fuses,Kodiak_Fuses
+United States of America,"Kodiak, AK",Energy,Energy Offices,Main KEA Building,Main_KEA_Building
+United States of America,"Kodiak, AK",Energy,Hydroelectric Energy,Terror Lake Dam,Kodiak_Terror_Lake
+
+
+
+
+
+
+
+
+United States of America,"Kodiak, AK",Water,Canneries,Kodiak's Alaska Pacific Seafoods,Kodiak_Alaska_Pacific_Seafoods
+United States of America,"Kodiak, AK",Water,Canneries,Kodiak's International Seafoods of Alaska,Kodiak_International_Seafoods_of_Alaska
+United States of America,"Kodiak, AK",Water,Canneries,Kodiak's Ocean Beauty Seafoods,Kodiak_Ocean_Beauty_Seafoods
+United States of America,"Kodiak, AK",Water,Drainage Systems,Kodiak Base and Airport Drainage System,Kodiak_Base_and_Airport_Drainage_System
+
+
+United States of America,"Middletown, NY",Water,Water Quality Tests,FTAA Water Tests,Fei_Tian_Water_Tests
+United States of America,"Middletown, NY",Water,Water Grids,FTAA Water Grid,FTAA_Water_Grid
+
+
+
+
+
+
+
+United States of America,"Kodiak, AK",Agriculture,Soil Testing,Bear Valley Golf Course,Bear_Valley_Golf_Course
+
+
+
+
+
+
+
+
+
+United States of America,"Kodiak, AK",Transportation,Airports,Kodiak Benny Benson State Airport,Kodiak_Benny_Benson_State_Airport
+United States of America,"Kodiak, AK",Transportation,Airports,Kodiak Municipal Airport,Kodiak_Municipal_Airport
+United States of America,"Kodiak, AK",Transportation,Rental Cars,Budget Rent-a-Car,Kodiak_Budget_Rent_A_Car
+United States of America,"Kodiak, AK",Transportation,Harbors,St.Paul Harbor,Kodiak_St_Paul_Harbor
+United States of America,"Kodiak, AK",Transportation,Harbors,St.Herman Harbor,Kodiak_St_Herman_Harbor
+United States of America,"Kodiak, AK",Transportation,Piers,Kodiak's Pier One,Kodiak_Pier_One
+United States of America,"Kodiak, AK",Transportation,Piers,Kodiak's Pier Two,Kodiak_Pier_Two
+United States of America,"Kodiak, AK",Transportation,Roads,Base and Airport Roads,Base_and_Airport_Roads
+
+
+
+
+
+
+
+United States of America,"Kodiak, AK",Economics,Property,Kodiak Parcel Map,Kodiak_Parcel_Map
+
+United States of America,"Kodiak, AK",Economics,Banks,Kodiak Wells Fargo,Kodiak_Wells_Fargo
+United States of America,"Kodiak, AK",Economics,Banks,Kodiak First National,Kodiak_First_National
+United States of America,"Kodiak, AK",Economics,Banks,Kodiak Key Bank,Kodiak_Key_Bank
+United States of America,"Kodiak, AK",Economics,Postal Services,Kodiak Post Office,Kodiak_Post_Office
+
+
+
+
+
+
+
+United States of America,"Kodiak, AK",Health Services,Hospitals and Clinics,Providence Kodiak Island Medical Center,Providence_Kodiak_Island_Medical_Center
+United States of America,"Kodiak, AK",Health Services,Hospitals and Clinics,KIMA,Kodiak_KIMA
+United States of America,"Kodiak, AK",Health Services,Hospitals and Clinics,Kodiak Care Clinic,Kodiak_Care_Clinic
+United States of America,"Kodiak, AK",Health Services,Health Centers,Kodiak Public Health Center,Kodiak_Public_Health_Center
+United States of America,"Kodiak, AK",Health Services,Health Centers,Mill Bay Health Center,Kodiak_Mill_Bay_Health_Center
+United States of America,"Kodiak, AK",Health Services,Veterinary Services,Kodiak Veterinary Clinic,Kodiak_Veterinary_Clinic
+United States of America,"Kodiak, AK",Health Services,Eye Care,Kodiak Vision Clinic,Kodiak_Vision_Clinic
+United States of America,"Kodiak, AK",Health Services,Eye Care,Kodiak Vision Source,Kodiak_Vision_Source
+
+
+
+
+
+
+United States of America,"Kodiak, AK",Risk Management,Fire Stations,Kodiak City Fire Department,Kodiak_City_Fire_Department
+United States of America,"Kodiak, AK",Risk Management,Fire Stations,Bayside Volunteer Fire Department,Kodiak_Bayside_Volunteer_Fire_Department
+United States of America,"Kodiak, AK",Risk Management,Fire Stations,Base Fire Department,Kodiak_Base_Fire_Department
+United States of America,"Kodiak, AK",Risk Management,Police Stations,Kodiak Police Department,Kodiak_Police_Department
+United States of America,"Kodiak, AK",Risk Management,ESP System (TBD),Kodiak ESP Sensors,Kodiak_ESP_Sensors
+
+
+
+
+
+
+
+
+
+
+
+United States of America,"Middletown, NY",Education,A World Bridge Sites,USA A World Bridge,US_A_World_Bridge_Sites
+United States of America,"Middletown, NY",Education, UNESCO WHS,Fei Tian UNESCO Prototype (TBD),Fei_Tian_UNESCO_Prototype
+United States of America,"Middletown, NY",Education,Academies,Fei Tian Academy of the Arts (TBD),Fei_Tian_Academy_of_the_Arts
+United States of America,"Middletown, NY",Education,Higher Education,Fei Tian College (TBD),Fei_Tian_College
+
+United States of America,"Kodiak, AK",Education,Museums,Alutiq Museum,Kodiak_Alutiq_Museum
+United States of America,"Kodiak, AK",Education,Museums,Baranov Museum,Kodiak_Baranov_Museum
+United States of America,"Kodiak, AK",Education,Libraries,Kodiak Community Libraries,Kodiak_Community_Library
+United States of America,"Kodiak, AK",Education,Elementary School,North Star Elementary,Kodiak_North_Star_Elementary
+United States of America,"Kodiak, AK",Education,Elementary School,Main Elementary,Kodiak_Main_Elementary
+United States of America,"Kodiak, AK",Education,Elementary School,East Elementary,Kodiak_East_Elementary
+United States of America,"Kodiak, AK",Education,Elementary School,Peterson Elementary,Kodiak_Peterson_Elementary
+United States of America,"Kodiak, AK",Education,Middle School,Kodiak Middle School,Kodiak_Middle_School
+United States of America,"Kodiak, AK",Education,High School,Kodiak High School,Kodiak_High_School
+United States of America,"Kodiak, AK",Education,Higher Education,Kodiak Community College,Kodiak_Community_College
+
+
+
+
+
+

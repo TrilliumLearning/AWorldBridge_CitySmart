@@ -8,19 +8,19 @@ $(document).ready(function() {
     var elem = document.activeElement;
     if(elem && elem.tagName == 'IFRAME#g1'){
 	$("#kw_button").click();
-        console.log(elem.id + " Clicked");
+        //console.log(elem.id + " Clicked");
         clearInterval(monitor);
     }
 
     if(elem && elem.tagName == 'IFRAME#g2'){
 	$("#ws_button").click();
-        console.log(elem.id + " Clicked");
+        //console.log(elem.id + " Clicked");
         clearInterval(monitor);
     }
 
 if(elem && elem.tagName == 'IFRAME#g3'){
 	$("#rpm_button").click();
-        console.log(elem.id + " Clicked");
+        //console.log(elem.id + " Clicked");
         clearInterval(monitor);
     }
 }, 100);
@@ -29,12 +29,12 @@ if(elem && elem.tagName == 'IFRAME#g3'){
      var myJSON = 0;
 
     //var URL = './tsconfig.json'
-    var URL = '/wwdev/gaugetest/WindData/Windspeed_and_RPM.json';
-
+    //var URL = '/wwdev/gaugetest/WindData/Windspeed_and_RPM.json';
+    var URL = '../Json_Data/KEA_Json/windspeed_and_rpm.json';
     var oReq = new XMLHttpRequest({cache: false});
     var result = [];
     var data = [];
-    var title = "WindSpeed and RPM";
+    var title = "Wind Speed and RPM";
 
 
     oReq.addEventListener("load", reqListener);
@@ -50,7 +50,7 @@ if(elem && elem.tagName == 'IFRAME#g3'){
     var windSpeed_and_RPM = new Dygraph(document.getElementById("GRAPH"), data,
         {
             drawPoints: true,
-            showRoller: true,
+            showRoller: false,
             title: title,
             labels: ['TimeStamp', 'Wind Speed', 'RPM' ],
 
@@ -97,14 +97,15 @@ if(elem && elem.tagName == 'IFRAME#g3'){
 
     }
 
-    windSpeed_and_RPM.resize(1000, 400)
+    windSpeed_and_RPM.resize(1000, 400);
 
 
 $("#g1").click(function () {
 
 
         var myJSON = 0;
-        var URL = '/wwdev/gaugetest/WindData/kilowatthours.json';
+        //var URL = '/wwdev/gaugetest/WindData/kilowatthours.json';
+        var URL = '../Json_Data/KEA_Json/kilowatt_hours.json';
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
@@ -124,7 +125,7 @@ $("#g1").click(function () {
         KilowattHours = new Dygraph(document.getElementById("GRAPH"), data,
             {
                 drawPoints: true,
-                showRoller: true,
+                showRoller: false,
                 title: title,
                 labels: ['TimeStamp', 'Kilowatt Hours'],
                 showRangeSelector: true,
@@ -205,7 +206,8 @@ $("#g1").click(function () {
 
 
         var myJSON = 0;
-        var URL = '/wwdev/gaugetest/WindData/kilowatthours.json';
+        //var URL = '/wwdev/gaugetest/WindData/kilowatthours.json';
+        var URL = '../Json_Data/KEA_Json/kilowatt_hours.json';
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
@@ -225,7 +227,7 @@ $("#g1").click(function () {
         KilowattHours = new Dygraph(document.getElementById("GRAPH"), data,
             {
                 drawPoints: true,
-                showRoller: true,
+                showRoller: false,
                 title: title,
                 labels: ['TimeStamp', 'Kilowatt Hours'],
                 showRangeSelector: true,
@@ -308,11 +310,12 @@ $("#g2").click(function () {
 
 
         var myJSON = 0;
-        var URL = '/wwdev/gaugetest/WindData/windspeed.json';
+        //var URL = '/wwdev/gaugetest/WindData/windspeed.json';
+        var URL = '../Json_Data/KEA_Json/windspeed.json';
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
-        var title = "Windspeed";
+        var title = "Wind Speed";
 
 
         oReq.addEventListener("load", reqListener);
@@ -328,9 +331,9 @@ $("#g2").click(function () {
         var windSpeed = new Dygraph(document.getElementById("GRAPH"), data,
             {
                 drawPoints: true,
-                showRoller: true,
+                showRoller: false,
                 title: title,
-                labels: ['TimeStamp', 'Windspeed'],
+                labels: ['TimeStamp', 'Wind Speed'],
                 showRangeSelector: true,
                 //rangeSelectorHeight: 100,
                 //valueRange: [xmin, xmax],
@@ -409,11 +412,12 @@ $("#g2").click(function () {
 
 
         var myJSON = 0;
-        var URL = '/wwdev/gaugetest/WindData/windspeed.json';
+        //var URL = '/wwdev/gaugetest/WindData/windspeed.json';
+        var URL = '../Json_Data/KEA_Json/windspeed.json';
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
-        var title = "Windspeed";
+        var title = "Wind Speed";
 
 
         oReq.addEventListener("load", reqListener);
@@ -429,9 +433,9 @@ $("#g2").click(function () {
         var windSpeed = new Dygraph(document.getElementById("GRAPH"), data,
             {
                 drawPoints: true,
-                showRoller: true,
+                showRoller: false,
                 title: title,
-                labels: ['TimeStamp', 'Windspeed'],
+                labels: ['TimeStamp', 'Wind Speed'],
                 showRangeSelector: true,
                 //rangeSelectorHeight: 100,
                 //valueRange: [xmin, xmax],
@@ -513,7 +517,8 @@ $("#g3").click(function () {
 
 
         var myJSON = 0;
-        var URL = '/wwdev/gaugetest/WindData/rpm.json';
+        //var URL = '/wwdev/gaugetest/WindData/rpm.json';
+        var URL = '../Json_Data/KEA_Json/rpm.json';
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
@@ -533,7 +538,7 @@ $("#g3").click(function () {
         var rpm = new Dygraph(document.getElementById("GRAPH"), data,
             {
                 drawPoints: true,
-                showRoller: true,
+                showRoller: false,
                 title: title,
                 labels: ['TimeStamp', 'RPM'],
                 showRangeSelector: true,
@@ -614,7 +619,8 @@ $("#g3").click(function () {
 
 
         var myJSON = 0;
-        var URL = '/wwdev/gaugetest/WindData/rpm.json';
+        //var URL = '/wwdev/gaugetest/WindData/rpm.json';
+        var URL = '../Json_Data/KEA_Json/rpm.json';
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
@@ -634,7 +640,7 @@ $("#g3").click(function () {
         var rpm = new Dygraph(document.getElementById("GRAPH"), data,
             {
                 drawPoints: true,
-                showRoller: true,
+                showRoller: false,
                 title: title,
                 labels: ['TimeStamp', 'RPM'],
                 showRangeSelector: true,
@@ -720,12 +726,13 @@ $("#g4").click(function () {
     var myJSON = 0;
 
     //var URL = './tsconfig.json'
-    var URL = '/wwdev/gaugetest/WindData/Windspeed_and_RPM.json';
+    //var URL = '/wwdev/gaugetest/WindData/Windspeed_and_RPM.json';
+    var URL = '../Json_Data/KEA_Json/windspeed_and_rpm.json';
 
     var oReq = new XMLHttpRequest({cache: false});
     var result = [];
     var data = [];
-    var title = "WindSpeed and RPM";
+    var title = "Wind Speed and RPM";
 
 
     oReq.addEventListener("load", reqListener);
@@ -741,7 +748,7 @@ $("#g4").click(function () {
     var windSpeed_and_RPM = new Dygraph(document.getElementById("GRAPH"), data,
         {
             drawPoints: true,
-            showRoller: true,
+            showRoller: false,
             title: title,
             labels: ['TimeStamp', 'Wind Speed', 'RPM' ],
 
@@ -839,12 +846,13 @@ $("#g4").click(function () {
         var myJSON = 0;
 
         //var URL = './tsconfig.json'
-        var URL = '/wwdev/gaugetest/WindData/Windspeed_and_RPM.json';
+        //var URL = '/wwdev/gaugetest/WindData/Windspeed_and_RPM.json';
+        var URL = '../Json_Data/KEA_Json/windspeed_and_rpm.json';
 
         var oReq = new XMLHttpRequest({cache: false});
         var result = [];
         var data = [];
-        var title = "WindSpeed and RPM";
+        var title = "Wind Speed and RPM";
 
 
         oReq.addEventListener("load", reqListener);
@@ -860,7 +868,7 @@ $("#g4").click(function () {
         var windSpeed_and_RPM = new Dygraph(document.getElementById("GRAPH"), data,
             {
                 drawPoints: true,
-                showRoller: true,
+                showRoller: false,
                 title: title,
                 labels: ['TimeStamp', 'Wind Speed', 'RPM' ],
 

@@ -1,5 +1,15 @@
 var temporaryCountryValue = -1;
 
+
+
+function replaceSpace(str){
+
+    newString = str.replace(/\s/g, '');
+
+    return newString
+}
+
+
 var countryString = `
     <p><label>Country</label><select id="myListCountry">
     <option value="-1">-Select a Country-</option>
@@ -28,21 +38,43 @@ var accordianEnd = `
 function interfaceCityCreation() {
 
 
-    if (Number($('#myListCountry').val()) === -1){
+    if (Number($('#myListCountry').val()) === temporaryCountryValue){}
+    else if (typeof Number($('#myListCountry').val()) === 'undefined'){
+
+        var b = document.getElementById("Layer Menu");
+
+        b.innerHTML = ``;
+
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;
+        }
+
+    }
+
+
+    else if (Number($('#myListCountry').val()) === -1){
+
 
         var e = document.getElementById("myListCity");
 
         e.innerHTML = `
         <option value="-1">-Select a City-</option>
-        `
-
+        `;
 
         var b = document.getElementById("Layer Menu");
 
-        b.innerHTML = ``
+        b.innerHTML = ``;
+
+
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;
+        }
 
     }
     else if (Number($('#myListCountry').val()) === -2){
+
 
         var e = document.getElementById("myListCity");
 
@@ -50,17 +82,24 @@ function interfaceCityCreation() {
         <option value="-2">All Layers</option>
         `;
 
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;
+        }
+
         interfaceCreation();
 
     }
-    else if (Number($('#myListCountry').val()) === temporaryCountryValue){}
-    else if (typeof Number($('#myListCountry').val()) === 'undefined'){}
     else{
 
         var q = document.getElementById('Layer Menu');
 
-
         q.innerHTML = ``;
+
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;
+        }
         //console.log(typeof Number($('#myListCountry').val()));
         //console.log($('#myListCountry').val());
 
@@ -91,22 +130,54 @@ function interfaceCityCreation() {
 
     }
 
+
     temporaryCountryValue = $('#myListCountry').val()
 
 }
 
 
 
+$('#myListCountry').change(function(){interfaceCityCreation()});
+
+
 
 function interfaceCreation() {
 
+    if (Number($('#myListCity').val()) === temporaryCountryValue) {
+    }
+    else if (typeof Number($('#myListCity').val()) === 'undefined') {
 
-    if (Number($('#myListCity').val()) === -1) {
+
+
+        var b = document.getElementById("Layer Menu");
+
+        b.innerHTML = ``;
+
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;}
+
     }
-    else if (Number($('#myListCity').val()) === temporaryCountryValue) {
+
+    else if (Number($('#myListCity').val()) === -1) {
+
+        var q = document.getElementById('Layer Menu');
+
+        q.innerHTML = ``;
+
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;
+        }
     }
+
     else if (Number($('#myListCity').val()) === -2) {
 
+
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;
+        }
 
 
         stringStorage = [];
@@ -114,23 +185,16 @@ function interfaceCreation() {
         for (b = 0; b < ALLcategory.length; b++) {
             SBC = ALLsubCategory[b];
 
-            /*
-             categoryAccordianStart = `
-             <ul class="accordion" data-accordion="mw6gud-accordion" role="tablist" data-allow-all-closed="true">
-             <li class="accordion-item">
-             <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Ca2[b] + `</h5></a>
-             <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading" aria-hidden="true" style="display:none;">
-             `;
-             */
+
 
             categoryAccordianStart = `
 
-        <ul id="` + ALLcategory[b] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+        <ul id="` + replaceSpace(ALLcategory[b]) + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                 <li class="accordion-item">
-                <a style="height:55px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h6>` + ALLcategory[b] + `</h6></a>
-            <div id="` + ALLcategory[b] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+                <a style="height:55px"  role="tab" class="accordion-title" id="` + replaceSpace(ALLcategory[b]) + `" ><h6 id="` + replaceSpace(ALLcategory[b]) + "-word" + `">` + ALLcategory[b] + `</h6></a>
+            <div id="` + replaceSpace(ALLcategory[b]) + `" class="accordion-content" role="tabpanel" data-tab-content >
 `;
-
+//href="#panel173"     id="panel173-heading"        aria-controls="panel173"          aria-labelledby="panel173-heading"
 
             stringStorage.push(categoryAccordianStart);
 
@@ -146,10 +210,11 @@ function interfaceCreation() {
 
         <ul id="` + SBC[c] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                 <li class="accordion-item">
-                <a style="height:55px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h6>` + SBC[c] + `</h6></a>
-            <div id="` + SBC[c] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+                <a style="height:55px"  role="tab" class="accordion-title"  id="` + replaceSpace(SBC[c]) + `"><h6>` + SBC[c] + `</h6></a>
+            <div id="` + replaceSpace(SBC[c]) + `" class="accordion-content" role="tabpanel" data-tab-content >
 `;
 
+//href="#panel173"           id="panel173-heading"        aria-controls="panel173"       aria-labelledby="panel173-heading"
 
                 stringStorage.push(subCategoryAccordianStart);
 
@@ -209,10 +274,14 @@ function interfaceCreation() {
 
 
 
-    else if (typeof Number($('#myListCity').val()) === 'undefined') {
-    }
+
     else {
 
+
+        for (al = 6; al < wwd.layers.length; al ++) {
+
+            wwd.layers[al].enabled = false;
+        }
 
         CountryN = Number($('#myListCountry').val());
         CityN = Number($('#myListCity').val());
@@ -227,24 +296,17 @@ function interfaceCreation() {
             Sb2 = Sb1[CityN];
             Sb3 = Sb2[b];
 
-/*
-            categoryAccordianStart = `
-        <ul class="accordion" data-accordion="mw6gud-accordion" role="tablist" data-allow-all-closed="true">
-                <li class="accordion-item">
-                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Ca2[b] + `</h5></a>
-            <div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading" aria-hidden="true" style="display:none;">
-            `;
-*/
+
 
             categoryAccordianStart =`
 
-        <ul id="` + Ca2[b] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
+        <ul id="` + replaceSpace(Ca2[b]) + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                 <li class="accordion-item">
-                <a style="height:55px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h6>` + Ca2[b] + `</h6></a>
-            <div id="` + Ca2[b] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+                <a style="height:55px"  role="tab" class="accordion-title"  id="` + replaceSpace(Ca2[b]) + `"><h6 id="` + replaceSpace(Ca2[b]) + "-word" + `">` + Ca2[b] + `</h6></a>
+            <div id="` + replaceSpace(Ca2[b]) + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
 `;
 
-
+//href="#panel173"          id="panel173-heading" aria-controls="panel173"
 
 
 
@@ -255,22 +317,22 @@ function interfaceCreation() {
                 NR2 = NR1[CityN];
                 NR3 = NR2[b];
                 NR4 = NR3[c];
-/*
-                subCategoryAccordianStart = `
-        <ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
-                <li class="accordion-item">
-                <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>` + Sb3[c] + `</h5></a>
-            <div id="` + Sb3[c] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading" aria-hidden="true" style="display:none;">
 
-            `;
-*/
+
+
                 subCategoryAccordianStart =`
 
         <ul id="` + Sb3[c] + `" class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
                 <li class="accordion-item">
-                <a style="height:55px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h6>` + Sb3[c] + `</h6></a>
-            <div id="` + Sb3[c] + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
+                <a style="height:55px"  role="tab" class="accordion-title" ><h6>` + Sb3[c] + `</h6></a>
+            <div id="` + replaceSpace(Sb3[c]) + `" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
 `;
+
+//href="#panel173"            id="panel173-heading" aria-controls="panel173"
+
+
+
+
 
 
                 stringStorage.push(subCategoryAccordianStart);
@@ -339,14 +401,10 @@ function interfaceCreation() {
 
 }
 
-/*
-var accordianStart = `
-<ul class="accordion" data-accordion role="tablist" data-allow-all-closed="true">
-    <li class="accordion-item">
-    <a style="height:60px" href="#panel173" role="tab" class="accordion-title" id="panel173-heading" aria-controls="panel173"><h5>Category 1</h5></a>
-<div id="panel173" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel173-heading">
-`;
-*/
+
+
+$('#myListCity').change(function(){interfaceCreation()});
+
 
 
 

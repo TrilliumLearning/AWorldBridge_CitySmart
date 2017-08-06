@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <div data-sticky-container>
+            <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%">
+                <div class="top-bar-left">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                        <li class="menu-text">CitySmart-WorldWise</li>
+                        <li>
+                            <a style="color:white;" href="CitySmartFrameTestRe-Framed.html">Home</a>
+                        </li>
+                        <li>
+                            <a style="color:white;" href="http://aworldbridge.com/real-time-projects/nasa-europa-challenge/nasa-europa-challenge-helsi-2/">About us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-bar-right">
+</div>
+            </div>
+        </div>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CitySmart-WorldWise</title>
+        <link rel="stylesheet" href="css/foundationFRAME2.css" />
+        <script src="jquery.min.js"></script>
+        <script type="text/javascript" src="graphsftaaE.js"></script>
+        <style>
+            #selectDateTime {
+            display: none;
+            }
+            #graphdiv {
+            display: none;
+            }
+            #graphcanvas {
+            display: block;
+            }
+            .dygraph-title { text-align: center; font-weight: bold;}
+            .dygraph-xlabel { text-align: center;}
+</style>
+    </head>
+    <div class="row">
+        <div style="width:1000px height:100px ; " class="float-center">
+            <br />
+            <h3 style="color:black;" class="float-center">Fei Tian Academy of Arts Data Visualization </h3>
+            <ul class="breadcrumbs"> 
+                <li>
+                    <a href="GraphPageFTAA_WaterExp.html">Water Experiment</a>
+                </li>                 
+                <li>
+                    <a href="GraphPageFTAA_EnergyBudget.html">Energy Budget</a>
+                </li>                 
+                <li class="disabled">wil be updeted</li>                 
+            </ul>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+</div>
+    <body>
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="row">
+                    <!-- Thumbnails -->
+                    <div class="columns small-1 medium-1 large-1">
+                        <h3>&nbsp;</h3> 
+                    </div>
+                    <div class="columns float-left small-5 medium-5 large-5">
+                        <div>
+                            <br>
+                            <h4><p>
+                                Energy Budget</p></h4>
+                            <br>
+                            <select id="dropDown">
+                                <option value="null">Select</option>
+                                <option value="budget">Energy Budget</option>
+                                <option value="actual">Actual vs Prediction</option>
+                                <option value="Analysis">Budget Analysis</option>
+                            </select>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="columns float-left small-5 medium-5 large-5">
+                        <br>
+                        <br>
+                        <br>
+                        <div id="selectDateTime">
+                            <h4>Select Start Date Time: <input id="startDateTime"></h4>
+                            <br>
+                            <h4>Select End Date Time: <input id="endDateTime"></h4>
+                        </div>
+                        <input type="button" onclick="ajaxFunction();fun();" value="click here">
+                    </div>
+                </div>
+                <!-- End Thumbnails -->
+            </div>
+        </div>
+        <div id="graphdiv" style="width:1000px" class="float-center"></div>
+        <div class="columns small-3 medium-3 large-3 float-left">
+            <h3>&nbsp;</h3> 
+        </div>
+        <div class="row small-6 medium-6 large-6 float-center"> 
+            <br>
+            <div id="renewCanvas">
+                <canvas id="graphcanvas" class="float-center"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <br>
+            <div class="large-12 columns">
+                <div class="row">
+                    <!-- Content -->
+                    <div class="large-8- columns">
+                        <div class="callout">
+                            <div class="row">
+                                <div class="columns large-12 small-12 medium-12">
+                                    <h4>FTAA Data Collection</h4>
+                                    <hr />
+                                    <div id="textpic" class="float-center text-center small-text-center medium-text-center large-text-center"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Content -->
+                </div>
+            </div>
+        </div>
+        <div class="large-12 columns">
+            <hr>
+        </div>
+    </body>
+    <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+    <script src="https://unpkg.com/flatpickr"></script>
+    <link rel="stylesheet" href="http://dygraphs.com/dist/dygraph.css">
+    <script type="text/javascript" src="http://dygraphs.com/dist/dygraph.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    flatpickr("#startDateTime", {
+        enableTime: true,
+        dateFormat: "Y-m-d H:i:S",
+        minuteIncrement: 0,
+        time_24hr: true,
+        minDate: "2016-09-06",
+        maxDate: "2017-09-05"
+    });
+    flatpickr("#endDateTime", {
+        enableTime: true,
+        dateFormat: "Y-m-d H:i:S",
+        minuteIncrement: 0,
+        time_24hr: true,
+        minDate: "2016-09-06",
+        maxDate: "2017-09-05"
+    });
+    function ajaxFunction(){
+        var ajaxRequest;  // The variable that makes Ajax possible!
+        try{
+            // Opera 8.0+, Firefox, Safari
+            ajaxRequest = new XMLHttpRequest();
+        }catch (e){
+            // Internet Explorer Browsers
+            try{
+                ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+            }catch (e) {
+                try{
+                    ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                }catch (e){
+                    // Something went wrong
+                    alert("Your browser broke!");
+                    return false;
+                }
+            }
+        }
+        // Create a function that will receive data
+        // sent from the server and will update
+        // div section in the same page.
+        ajaxRequest.onreadystatechange = function(){
+            //alert("xhr status: " + ajaxRequest.readyState);
+            if (ajaxRequest.readyState == 4 || ajaxRequest.status == 200) {
+                var ajaxReturn = JSON.parse(ajaxRequest.responseText);
+                var graphdata = [];
+                var machineName = [];
+                var machineUsage = [];
+                var rgbaColor = [];
+                if (graphName === "budget") {
+                    for (var i = 0; i < ajaxReturn.length; i++) {
+                        if (!graphdata[i]) {
+                            graphdata[i] = [];
+                        }
+                        graphdata[i][0] = new Date(ajaxReturn[i].time);
+                        graphdata[i][1] = ajaxReturn[i].Electricity_Usage;
+                    }
+                    new Dygraph(document.getElementById("graphdiv"),
+                        graphdata,
+                        {
+                            title: "Energy_Budget",
+                            drawPoints: true,
+                            labels: ["Dates", "Electricity_Usage"],
+                            showRoller: false,
+                            showRangeSelector: true,
+                			rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                			rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
+                        }
+                    );
+                }
+                if (graphName === "actual") {
+                    for (var i = 0; i < ajaxReturn.length; i++) {
+                        if (!graphdata[i]) {
+                            graphdata[i] = [];
+                        }
+                        graphdata[i][0] = new Date(ajaxReturn[i].time);
+                        graphdata[i][1] = ajaxReturn[i].Actual_Electricity_Usage;
+                        graphdata[i][2] = ajaxReturn[i].Predict_Electricity_Usage;
+                    }
+                    //http://dygraphs.com/tests/plotters.html
+                    function darkenColor(colorStr) {
+                        // Defined in dygraph-utils.js
+                        var color = Dygraph.toRGB_(colorStr);
+                        color.r = Math.floor((255 + color.r) / 2);
+                        color.g = Math.floor((255 + color.g) / 2);
+                        color.b = Math.floor((255 + color.b) / 2);
+                        return 'rgb(' + color.r + ',' + color.g + ',' + color.b + ')';
+                    }
+                    //http://dygraphs.com/tests/plotters.html
+                    function multiColumnBarPlotter(e) {
+                        // We need to handle all the series simultaneously.
+                        if (e.seriesIndex !== 0) return;
+                        var g = e.dygraph;
+                        var ctx = e.drawingContext;
+                        var sets = e.allSeriesPoints;
+                        var y_bottom = e.dygraph.toDomYCoord(0);
+                        // Find the minimum separation between x-values.
+                        // This determines the bar width.
+                        var min_sep = Infinity;
+                        for (var j = 0; j < sets.length; j++) {
+                            var points = sets[j];
+                            for (var i = 1; i < points.length; i++) {
+                                var sep = points[i].canvasx - points[i - 1].canvasx;
+                                if (sep < min_sep) min_sep = sep;
+                            }
+                        }
+                        var bar_width = Math.floor(2.0 / 3 * min_sep);
+                        var fillColors = [];
+                        var strokeColors = g.getColors();
+                        for (var i = 0; i < strokeColors.length; i++) {
+                            fillColors.push(darkenColor(strokeColors[i]));
+                        }
+                        for (var j = 0; j < sets.length; j++) {
+                            ctx.fillStyle = fillColors[j];
+                            ctx.strokeStyle = strokeColors[j];
+                            for (var i = 0; i < sets[j].length; i++) {
+                                var p = sets[j][i];
+                                var center_x = p.canvasx;
+                                var x_left = center_x - (bar_width / 2) * (1 - j/(sets.length-1));
+                                ctx.fillRect(x_left, p.canvasy,
+                                    bar_width/sets.length, y_bottom - p.canvasy);
+                                ctx.strokeRect(x_left, p.canvasy,
+                                    bar_width/sets.length, y_bottom - p.canvasy);
+                            }
+                        }
+                    }
+                    new Dygraph(document.getElementById("graphdiv"),
+                        graphdata,
+                        {
+                            title: "Actual vs Predict",
+                            drawPoints: true,
+                            labels: ["Month", "Actual_Electricity_Usage", "Predict_Electricity_Usage"],
+                            xlabel: "Month",
+                            ylabel: "kWh",
+                            showRoller: false,
+                            showRangeSelector: true,
+                			rangeSelectorPlotFillColor: 'MediumSlateBlue',
+                			rangeSelectorPlotFillGradientColor: 'rgba(123, 104, 238, 0)',
+                            dateWindow: [ Date.parse("2016/08/01"), Date.parse("2017/09/01") ],
+                            plotter: multiColumnBarPlotter
+                        }
+                    );
+                }
+                if (graphName === "Analysis") {
+                    //var groupedObjects = [];
+                    $.each(ajaxReturn, function (ix, obj) {
+                        if ($.inArray(obj.Machine_Name, machineName) >= 0) {
+                            // Get index of existing object width date == obj.Date
+                            /*
+                            var index = groupedObjects.map(function(o, i) {
+                                if(o.Machine_Name == obj.Machine_Name)return i;
+                            }).filter(isFinite);
+                            */
+                            //alert("before: " + machineUsage[$.inArray(obj.Machine_Name, machineName)]);
+                            machineUsage[$.inArray(obj.Machine_Name, machineName)] += obj.Electricity_Usage;
+                            //alert("after: " + machineUsage[$.inArray(obj.Machine_Name, machineName)]);
+                        } else {
+                            machineUsage.push(obj.Electricity_Usage);
+                            machineName.push(obj.Machine_Name);
+                            rgbaColor.push("rgba(" + [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), 0.2] + ")");
+                        }
+                    });
+                    for (var i = 0; i < machineUsage.length; i++) {
+                        machineUsage[i] = Math.round(machineUsage[i] * 1000) / 1000;
+                    }
+                    new Chart(document.getElementById("graphcanvas").getContext('2d'), {
+                        // The type of chart we want to create
+                        type: 'polarArea',
+                        // The data for our dataset
+                        data: {
+                            labels: machineName,
+                            datasets: [{
+                                data: machineUsage,
+                                backgroundColor: rgbaColor,
+                            }]
+                        },
+                        // Configuration options go here
+                        options: {
+                            title: {
+                                display: true,
+                                text: "Budget Analysis (" + startDateTime + " to " + endDateTime + ")"
+                            }
+                        }
+                    });
+                }
+            }
+        };
+        var graphSelect = document.getElementById("dropDown");
+        var graphName = graphSelect.options[graphSelect.selectedIndex].value;
+        var queryString1 = "?keywords=" + graphName;
+        var selectDateTime = document.getElementById('selectDateTime');
+        var graphdiv = document.getElementById('graphdiv');
+        var graphcanvas = document.getElementById('graphcanvas');
+        var renewCanvas = document.getElementById('renewCanvas');
+        //alert("QueryString: " + queryString1);
+        if (graphName === "budget" || graphName === "actual") {
+            selectDateTime.style.display = 'none';
+            graphdiv.style.display = 'block';
+            graphcanvas.style.display = 'none';
+            document.getElementById("startDateTime").value = "";
+            document.getElementById("endDateTime").value = "";
+            ajaxRequest.open("GET", "//aworldbridgelabs.com:9085/graph" + queryString1, true);
+            ajaxRequest.send(queryString1);
+        } else if (graphName === "Analysis") {
+            selectDateTime.style.display = 'block';
+            graphdiv.style.display = 'none';
+            graphcanvas.style.display = 'block';
+            if (graphcanvas) {
+                graphcanvas.remove();
+                var newCanvas = document.createElement("Canvas");
+                newCanvas.setAttribute("id", "graphcanvas");
+                renewCanvas.appendChild(newCanvas);
+            }
+            var startDateTime = document.getElementById("startDateTime").value;
+            var endDateTime = document.getElementById("endDateTime").value;
+            var queryString2 = "?startDateTime=" + startDateTime + "&endDateTime=" + endDateTime;
+            //alert("QueryString: " + queryString2);
+            if (startDateTime !== "" && endDateTime !== "") {
+                ajaxRequest.open("GET", "//aworldbridgelabs.com:9085/graph" + queryString2, true);
+                ajaxRequest.send(queryString2);
+            }
+        }
+    }
+    //-->
+</script>
+</html>

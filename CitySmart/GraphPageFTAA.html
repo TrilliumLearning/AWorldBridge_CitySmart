@@ -3,7 +3,6 @@
     <script src="dygraph-combined.js"></script>
     <script src="jquery.min.js"></script>
     <script src="gauge.min.js"></script>
-    <script src="graphsFTAAdata.js"></script>
     <link rel="stylesheet" href="http://dygraphs.com/dist/dygraph.css">
     <script type="text/javascript" src="http://dygraphs.com/dist/dygraph.js"></script>
     <head>
@@ -54,7 +53,7 @@
                     <img style="height:50px" src="Placeholder-White.png" class="float-left" />
                     <div class="columns large-5 medium-5 small-5 float-left">
                         <div>
-                            <p><H6>Ion Graph</H6><label>description </label><br><select id="dropDown">
+                            <p><H6>Water Quality Graph</H6><br><select id="dropDown">
                                     <option value="null">Select</option>
                                     <option value="Calcium">Calcium Ion-Selective Electrode</option>
                                     <option value="Ammonium">Ammonium Ion-Selective Electrode</option>
@@ -95,7 +94,7 @@
                                 <div class="small-6 columns large-12">
                                     <h4>FTAA Data Collection</h4>
                                     <hr />
-                                    <h5>Description.&nbsp;<br></h5>
+                                    <h5>The Fei Tian Academy of the Arts is fully engaged in NASA CitySmart-WorldWise model development with Kodiak students. FTAA students are in the process of generating experimental data for the design and development of a Sustainable Campus. Their current data includes energy, water and food budgets, renewable energy solutions, water quality testing and purification processes. Additionally, students are building campus energy, water, food (greenhouse) and transportation grids for visualization on WebWorldWind.<br></h5>
                                 </div>
                             </div>
                         </div>
@@ -164,7 +163,7 @@
 
                 //alert(graphdata[2][5]);
 
-                new Dygraph(document.getElementById("graphdiv"),
+                new Dygraph(document.getElementById("Graphs"),
                     graphdata,
                     {
                         title: selectedValue + " (Benchmark: " + ajaxReturn[0].Remark + ")",
@@ -178,6 +177,7 @@
                         showRangeSelector: false,
                     }
                 );
+
             }
         };
 
@@ -185,7 +185,7 @@
         var selectedValue = option.options[option.selectedIndex].value;
         var queryString = "?keywords=" + selectedValue;
 
-        alert("QueryString: " + queryString);
+        //alert("QueryString: " + queryString);
 
         ajaxRequest.open("GET", "//aworldbridgelabs.com:9084/graph" + queryString, true);
         ajaxRequest.send(queryString);

@@ -9,6 +9,120 @@
  */
 
 
+function replaceSpace(str){
+
+    newString = str.replace(/\s/g, '');
+
+    return newString
+}
+
+
+
+
+var accordionCategories = [
+
+    "Energy",
+    "Water",
+    "Agriculture",
+    "Transportation",
+    "Economics",
+    "HealthServices",
+    "RiskManagement",
+    "Education"
+
+];
+
+function GetID(e){
+
+    e = e || window.event;
+    e = e.target || e.srcElement;
+
+    return e.id
+}
+
+/*
+function accordionToggling(Exemption) {
+
+
+
+
+
+
+    for (i = 0; i < accordionCategories.length; i++) {
+
+        if (replaceSpace(accordionCategories[i]) === Exemption) {if (TACCNUM === -1) {TACCNUM = i} else{ACCNUM = i}}
+        else {
+            if ($(("#" + replaceSpace(accordionCategories[i]))).attr("aria-selected") === "false") {
+            }
+            else {
+                if(i === TACCNUM){}
+                else {
+                    TACCNUM = ACCNUM;
+                    document.getElementById(accordionCategories[i]).click();
+                }
+            }
+        }
+    }
+
+
+}
+
+*/
+
+
+
+
+
+
+function accordionToggling() {
+
+    Elephant = GetID();
+
+    for (z = 0; z < accordionCategories.length; z++) {
+
+        if (Elephant === ((accordionCategories[z] + "-label")) || Elephant === (accordionCategories[z] + "-word")) {
+
+            z = accordionCategories.length;
+
+            for (x = 0; x < accordionCategories.length; x++) {
+
+                if (Elephant === ((accordionCategories[x] + "-label")) || Elephant === ((accordionCategories[x] + "-word"))) {
+                }
+
+                else {
+                    if ($(("#" + accordionCategories[x] + "-label")).attr("aria-selected") === "false") {
+                    }
+                    else {
+                        Elephant_2 = "#" + accordionCategories[x];
+                        $(Elephant_2).foundation('down',$(Elephant_2))
+                    }
+                }
+
+
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function contains(Array_Name, Variable) {
 
     if (Array_Name.indexOf(Variable) === -1) {
@@ -136,6 +250,20 @@ function Placemark_Creation(Layer_Name,RGB) {
         document.getElementById("Layer Menu").setAttribute("style", "display: block;");
         document.getElementById('Layer Menu').setAttribute('aria-hidden','false');
 
+
+
+
+
+
+
+
+        document.addEventListener("click",function(){accordionToggling()});
+
+
+
+
+
+
         Ortho1();
         Geo()
     }
@@ -230,8 +358,6 @@ function ParseCSV(url) {
 
 
 
-
-
 function First_Function () {
 
     //CSV_NAME = Point_Layers[k][1];
@@ -256,17 +382,6 @@ function First_Function () {
 //RGB Blue 'rgb(0,0,255)'
 //Light Purple 'rgb(204, 204, 255)'
 
-
-/*
-var Point_Layers = [
-    ["US A World Bridge Sites","World_Bridge_Sites.csv",['rgb(187,0,255)','rgb(0,255,0)','rgb(187,0,255)']],
-    ["KIBSD Turbine","KHS_Wind_Turbine.csv",['rgb(255,192,203)','rgb(255,0,0)','rgb(255,192,203)']],
-    ["KEA Turbine","KEA_Wind_Turbine.csv",['rgb(204, 204, 255)','rgb(0,0,255)','rgb(204, 204, 255)']],
-    ["Bear Valley Golf Course","BVGC.csv",['rgb(0,0,255)','rgb(255,192,203)','rgb(0,0,255)']]
-
-
-];
-*/
 var name_Array = [];
 var new_list = [];
 
