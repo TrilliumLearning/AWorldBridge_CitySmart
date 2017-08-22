@@ -209,6 +209,7 @@ sub
 /**
    * Remove border when inside `a` element in IE 8/9/10.
    */
+
 #Logo
 {
     height: 20px;
@@ -239,8 +240,8 @@ sub
     display: table;
 }
 
-
-.img-circle {
+.img-circle
+{
     border-radius: 50%;
 }
 
@@ -249,16 +250,18 @@ img
     border: 0;
 }
 
-.image { 
-   position: relative; 
-   width: 100%; /* for IE 6 */
+.image
+{
+    position: relative;
+    width: 100%;
 }
 
-h2 { 
-   position: absolute; 
-   top: 175px; 
-   left: 0; 
-   width: 100%; 
+h2
+{
+    position: absolute;
+    top: 175px;
+    left: 0;
+    width: 100%;
 }
 
 h2 span { 
@@ -2739,6 +2742,13 @@ select[multiple]
     outline: 0;
 }
 
+.anchor{
+	display: block;
+  height: 250px; /*same height as header*/
+  margin-top: -250px; /*same height as header*/
+  visibility: hidden;
+}
+
 .button:hover, .button:focus
 {
     background-color: #0073d1;
@@ -3113,7 +3123,7 @@ input:checked + .slider:before
 
 .is-active > .accordion-title::before
 {
-    content: '–';
+    content: 'â€“';
 }
 
 .accordion-content
@@ -4924,7 +4934,7 @@ body
     bottom: 0;
 }
 
-.sticky.is-anchored
+.sticky.is-ed
 {
     position: absolute;
     left: auto;
@@ -5537,13 +5547,14 @@ table.hover tr:nth-of-type(even):hover
     cursor: help;
 }
 
-.tooltip {
+.tooltip
+{
     position: relative;
     display: inline-block;
-   
 }
 
-.tooltip .tooltiptext {
+.tooltip .tooltiptext
+{
     visibility: hidden;
     width: 120px;
     background-color: black;
@@ -5558,7 +5569,8 @@ table.hover tr:nth-of-type(even):hover
     margin-left: -60px;
 }
 
-.tooltip .tooltiptext::after {
+.tooltip .tooltiptext::after
+{
     content: "";
     position: absolute;
     bottom: 100%;
@@ -5569,7 +5581,8 @@ table.hover tr:nth-of-type(even):hover
     border-color: transparent transparent black transparent;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext
+{
     visibility: visible;
 }
 
@@ -5845,7 +5858,6 @@ table.hover tr:nth-of-type(even):hover
 {
     clear: both;
 }
-
 
 /*# sourceMappingURL=foundation.css.map */
 
